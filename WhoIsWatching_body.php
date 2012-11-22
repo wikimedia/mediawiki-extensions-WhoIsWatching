@@ -101,10 +101,11 @@ function fnShowWatchingCount( &$template, &$tpl ) {
 	if ( $wgPageShowWatchingUsers && $whoiswatching_showifzero ) {
 		$dbr = wfGetDB( DB_SLAVE );
 		$watchlist = $dbr->tableName( 'watchlist' );
-		$sql = "SELECT COUNT(*) AS n FROM $watchlist
-			WHERE wl_title='" . $dbr->strencode( $template->mTitle->getDBkey()) .
-			"' AND wl_namespace=" . $template->mTitle->getNamespace();
-		$res = $dbr->query( $sql, 'SkinTemplate::outputPage' );
+		$t = $template->getTitle();
+		$res = $dbr->select( 'watchlist', 'COUNT(*) n', array(
+			'wl_namespace' => $t->getNamespace(),
+			'wl_title' => $t->getDBkey(),
+		), 'SkinTemplate::outputPage' );
 		$x = $dbr->fetchObject( $res );
 		$numberofwatchingusers = $x->n;
 		$msg = wfMsgExt(
