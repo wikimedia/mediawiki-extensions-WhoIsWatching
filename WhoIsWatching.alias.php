@@ -143,7 +143,7 @@ $specialPageAliases['ksh'] = array(
 
 /** Cornish (kernowek) */
 $specialPageAliases['kw'] = array(
-	'WhoIsWatching' => array( 'PiwUjiOwKolya' ),
+	'WhoIsWatching' => array( 'PiwUjyOwColyas' ),
 );
 
 /** Luxembourgish (Lëtzebuergesch) */
