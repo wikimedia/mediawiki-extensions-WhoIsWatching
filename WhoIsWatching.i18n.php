@@ -916,6 +916,19 @@ Lütfen, bu özel sayfaya bir giriş noktası tanımlamak için [[MediaWiki:Numb
 	'specialwhoiswatchingaddbtn' => 'Seçili kullanıcıları ekleyin',
 );
 
+/** Ukrainian (українська)
+ * @author Base
+ */
+$messages['uk'] = array(
+	'whoiswatching' => 'Хто спостерігає за вікі-сторінкою',
+	'whoiswatching-desc' => 'Надає список користувачів, які слідкують за вікі-сторінкою',
+	'specialwhoiswatchingthepage' => 'Хто спостерігає %s',
+	'specialwhoiswatchingusage' => 'Ця спеціальна сторінка не може бути використана сама по собі.
+Будь ласка, використовуйте сторінку [[MediaWiki:Number_of_watching_users_pageview]] для визначення точки входу в цю спеціальну сторінку.',
+	'specialwhoiswatchingaddusers' => 'Додати користувачів для спостереження за сторінкою',
+	'specialwhoiswatchingaddbtn' => 'Додати вибраних користувачів',
+);
+
 /** Urdu (اردو)
  * @author පසිඳු කාවින්ද
  */
@@ -995,4 +1008,3 @@ $messages['zh-tw'] = array(
 	'specialwhoiswatchingaddusers' => '新增用戶以監視此頁',
 	'specialwhoiswatchingaddbtn' => '加入所選用戶',
 );
-
