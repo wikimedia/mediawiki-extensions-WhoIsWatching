@@ -13,8 +13,8 @@ $wgExtensionCredits['specialpage'][] = array(
 	'path'           => __FILE__,
 	'version'        => '0.10',
 	'name'           => 'WhoIsWatching',
-	'author'         => 'Paul Grinberg, Siebrand Mazeland',
-	'email'          => 'gri6507 at yahoo dot com',
+	'author'         => 'Paul Grinberg, Siebrand Mazeland, Vitaliy Filippov',
+	'email'          => 'vitalif at yourcmc dot ru',
 	'url'            => 'https://www.mediawiki.org/wiki/Extension:WhoIsWatching',
 	'descriptionmsg' => 'whoiswatching-desc',
 );
@@ -25,8 +25,6 @@ $wgExtensionMessagesFiles['WhoIsWatching'] = $dir . 'WhoIsWatching.i18n.php';
 $wgExtensionMessagesFiles['WhoIsWatchingAlias'] = $dir . 'WhoIsWatching.alias.php';
 $wgSpecialPages['WhoIsWatching'] = 'WhoIsWatching';
 
-require_once( "$IP/includes/SpecialPage.php" );
-require_once($dir . 'WhoIsWatching_body.php');
 $wgHooks['SkinTemplateOutputPageBeforeExec'][] = 'fnShowWatchingCount';
 
 # Set the following to either 'UserName' or 'RealName' to display the list of watching users as such.
@@ -37,3 +35,26 @@ $whoiswatching_allowaddingpeople = true;
 
 # Set the following to either True or False to optionally display a count of zero users watching a particular page
 $whoiswatching_showifzero = true;
+
+function fnShowWatchingCount( &$template, &$tpl ) {
+	global $wgLang, $wgPageShowWatchingUsers, $whoiswatching_showifzero, $wgOut;
+
+	if ( $wgPageShowWatchingUsers && $whoiswatching_showifzero ) {
+		$dbr = wfGetDB( DB_SLAVE );
+		$watchlist = $dbr->tableName( 'watchlist' );
+		$t = $template->getTitle();
+		$res = $dbr->select( 'watchlist', 'COUNT(*) n', array(
+			'wl_namespace' => $t->getNamespace(),
+			'wl_title' => $t->getDBkey(),
+		), 'SkinTemplate::outputPage' );
+		$x = $dbr->fetchObject( $res );
+		$numberofwatchingusers = $x->n;
+		$msg = wfMsgExt(
+			'number_of_watching_users_pageview', array( 'parseinline' ),
+			$wgLang->formatNum( $numberofwatchingusers )
+		);
+		$tpl->set( 'numberofwatchingusers', $msg );
+	}
+
+	return true;
+}
