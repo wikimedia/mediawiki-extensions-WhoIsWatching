@@ -24,7 +24,14 @@ Please use the page [[MediaWiki:Number_of_watching_users_pageview]] to define an
  * @author Siebrand
  */
 $messages['qqq'] = array(
-	'whoiswatching-desc' => '{{desc}}',
+	'whoiswatching' => 'Title of [[Special:WhoIsWatching]]',
+	'whoiswatching-desc' => '{{desc|name=Who Is Watching|url=http://www.mediawiki.org/wiki/Extension:WhoIsWatching}}',
+	'specialwhoiswatchingthepage' => 'Title of watching users list',
+	'specialwhoiswatchingusage' => 'Message that gets displayed when someone tries to just open [[Special:WhoIsWatching]].
+This special page cannot be used on its own.
+Please use the page [[MediaWiki:Number_of_watching_users_pageview]] to define an entry point to this special page.',
+	'specialwhoiswatchingaddusers' => 'Add users to watch the page',
+	'specialwhoiswatchingaddbtn' => 'Add selected users',
 );
 
 /** Gheg Albanian (Gegë)
