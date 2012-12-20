@@ -231,6 +231,11 @@ $specialPageAliases['tr'] = array(
 	'WhoIsWatching' => array( 'Kimİzliyor' ),
 );
 
+/** Vietnamese (Tiếng Việt) */
+$specialPageAliases['vi'] = array(
+	'WhoIsWatching' => array( 'Ai_theo_dõi' ),
+);
+
 /** Yiddish (ייִדיש) */
 $specialPageAliases['yi'] = array(
 	'WhoIsWatching' => array( 'ווער_פאסט_אויף' ),
