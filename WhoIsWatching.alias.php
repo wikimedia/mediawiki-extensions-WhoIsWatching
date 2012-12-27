@@ -240,3 +240,8 @@ $specialPageAliases['vi'] = array(
 $specialPageAliases['yi'] = array(
 	'WhoIsWatching' => array( 'ווער_פאסט_אויף' ),
 );
+
+/** Traditional Chinese (中文（繁體）‎) */
+$specialPageAliases['zh-hant'] = array(
+	'WhoIsWatching' => array( '誰在監視' ),
+);
