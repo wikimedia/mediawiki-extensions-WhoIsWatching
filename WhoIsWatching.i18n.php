@@ -97,6 +97,19 @@ $messages['avk'] = array(
 	'specialwhoiswatchingaddbtn' => 'Loplekura va reban favesik',
 );
 
+/** South Azerbaijani (تورکجه)
+ * @author Mousa
+ */
+$messages['azb'] = array(
+	'whoiswatching' => 'کیم بیر ویکی صحیفه‌سینی ایزله‌ییر',
+	'whoiswatching-desc' => 'بیر ویکی صحیفه‌سینی ایزله‌ین ایستیفاده‌چیلرین لیستینی وئریر',
+	'specialwhoiswatchingthepage' => 'کیم %s-ی ایزله‌ییر',
+	'specialwhoiswatchingusage' => 'بو اؤزل صحیفه‌نی اؤز باشینا ایشلتمک اولماز.
+لوطفاً بو اؤزل صحیفه‌یه گیریش نوقطه‌سی بیلیندیرمک اوچون، [[MediaWiki:Number_of_watching_users_pageview]] صحیفه‌دن ایستیفاده ائدین.',
+	'specialwhoiswatchingaddusers' => 'صحیفه‌نی ایزله‌مک اوچون ایستیفاده‌چی آرتیر',
+	'specialwhoiswatchingaddbtn' => 'سئچیلمیش ایستیفاده‌چیلری آرتیر',
+);
+
 /** Belarusian (Taraškievica orthography) (беларуская (тарашкевіца)‎)
  * @author EugeneZelenko
  * @author Jim-by
