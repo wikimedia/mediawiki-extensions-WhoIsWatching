@@ -41,7 +41,7 @@ $messages['aln'] = array(
 	'whoiswatching' => 'Kush është shikuar një faqe wiki',
 	'whoiswatching-desc' => 'Ofron një listë e përdoruesve shikuar një faqe wiki',
 	'specialwhoiswatchingthepage' => 'Kush është shikuar%s',
-	'specialwhoiswatchingusage' => 'Kjo faqe të veçanta nuk mund të përdoret më vete. Ju lutem përdorni faqen e [[MediaWiki: Number_of_watching_users_pageview]] për të përcaktuar një pikë hyrje në këtë faqe të veçantë.',
+	'specialwhoiswatchingusage' => 'Kjo faqe të veçanta nuk mund të përdoret më vete. Ju lutem përdorni faqen e [[MediaWiki: Number_of_watching_users_pageview]] për të përcaktuar një pikë hyrje në këtë faqe të veçantë.', # Fuzzy
 	'specialwhoiswatchingaddusers' => 'Shto përdoruesit për të parë faqe',
 	'specialwhoiswatchingaddbtn' => 'Shto përdoruesit e zgjedhur',
 );
