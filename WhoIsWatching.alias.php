@@ -176,7 +176,7 @@ $specialPageAliases['nb'] = array(
 	'WhoIsWatching' => array( 'Hvem_overvåker' ),
 );
 
-/** Nedersaksies (Nedersaksies) */
+/** Low Saxon (Netherlands) (Nedersaksies) */
 $specialPageAliases['nds-nl'] = array(
 	'WhoIsWatching' => array( 'Wee_volgt' ),
 );
