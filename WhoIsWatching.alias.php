@@ -156,6 +156,11 @@ $specialPageAliases['lt'] = array(
 	'WhoIsWatching' => array( 'Kas stebi' ),
 );
 
+/** Minangkabau (Baso Minangkabau) */
+$specialPageAliases['min'] = array(
+	'WhoIsWatching' => array( 'SiaMamantau' ),
+);
+
 /** Macedonian (македонски) */
 $specialPageAliases['mk'] = array(
 	'WhoIsWatching' => array( 'КојНабљудува' ),
