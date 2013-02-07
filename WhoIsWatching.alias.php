@@ -176,7 +176,7 @@ $specialPageAliases['mr'] = array(
 	'WhoIsWatching' => array( 'कोणकोणबघतय' ),
 );
 
-/** Norwegian Bokmål (norsk (bokmål)‎) */
+/** Norwegian Bokmål (norsk bokmål) */
 $specialPageAliases['nb'] = array(
 	'WhoIsWatching' => array( 'Hvem_overvåker' ),
 );
