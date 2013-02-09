@@ -756,6 +756,7 @@ Te rugăm să folosești pagina [[MediaWiki:Number_of_watching_users_pageview]] 
  * @author Joetaras
  */
 $messages['roa-tara'] = array(
+	'whoiswatching' => "Ce ste uarde 'na pàgene de uicchi",
 	'specialwhoiswatchingaddbtn' => "Aggiunge l'utinde selezionate",
 );
 
