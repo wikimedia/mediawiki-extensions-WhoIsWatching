@@ -538,6 +538,13 @@ ene Eijnshtiish för di Söndersigg enreschte.',
 	'specialwhoiswatchingaddbtn' => 'Donn dä makeete Metmaacher dobei',
 );
 
+/** Kurdish (Latin script) (Kurdî (latînî)‎)
+ * @author George Animal
+ */
+$messages['ku-latn'] = array(
+	'specialwhoiswatchingaddbtn' => 'Bikarhênerên bijartî lê zêde bike',
+);
+
 /** Luxembourgish (Lëtzebuergesch)
  * @author Robby
  */
