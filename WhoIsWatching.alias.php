@@ -246,6 +246,11 @@ $specialPageAliases['yi'] = array(
 	'WhoIsWatching' => array( 'ווער_פאסט_אויף' ),
 );
 
+/** Simplified Chinese (中文（简体）‎) */
+$specialPageAliases['zh-hans'] = array(
+	'WhoIsWatching' => array( '谁在监视' ),
+);
+
 /** Traditional Chinese (中文（繁體）‎) */
 $specialPageAliases['zh-hant'] = array(
 	'WhoIsWatching' => array( '誰在監視' ),
