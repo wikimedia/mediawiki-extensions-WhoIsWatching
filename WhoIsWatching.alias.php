@@ -51,6 +51,11 @@ $specialPageAliases['dsb'] = array(
 	'WhoIsWatching' => array( 'Chto wobglědujo' ),
 );
 
+/** Esperanto (Esperanto) */
+$specialPageAliases['eo'] = array(
+	'WhoIsWatching' => array( 'Kio_vidas?' ),
+);
+
 /** Spanish (español) */
 $specialPageAliases['es'] = array(
 	'WhoIsWatching' => array( 'Quién_esta_vigilando' ),
