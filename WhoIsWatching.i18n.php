@@ -21,10 +21,11 @@ Please use the page [[MediaWiki:Number_of_watching_users_pageview]] to define an
 /** Message documentation (Message documentation)
  * @author Fryed-peach
  * @author Purodha
+ * @author Shirayuki
  * @author Siebrand
  */
 $messages['qqq'] = array(
-	'whoiswatching' => 'Title of [[Special:WhoIsWatching]]',
+	'whoiswatching' => '{{doc-special|WhoIsWatching|unlisted=1}}',
 	'whoiswatching-desc' => '{{desc|name=Who Is Watching|url=http://www.mediawiki.org/wiki/Extension:WhoIsWatching}}',
 	'specialwhoiswatchingthepage' => 'Title of watching users list',
 	'specialwhoiswatchingusage' => 'Message that gets displayed when someone tries to just open [[Special:WhoIsWatching]].
