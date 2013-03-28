@@ -766,6 +766,11 @@ Te rugăm să folosești pagina [[MediaWiki:Number_of_watching_users_pageview]] 
  */
 $messages['roa-tara'] = array(
 	'whoiswatching' => "Ce ste uarde 'na pàgene de uicchi",
+	'whoiswatching-desc' => "Dèje 'n'elenghe de nome utinde ca stonne a uardane 'na vôsce de uicchi",
+	'specialwhoiswatchingthepage' => 'Ci è ca ste uarde %s',
+	'specialwhoiswatchingusage' => "Sta pàgena speciale non ge pò essere ausate da se stesse.
+Pe piacere ause 'a pàgene [[MediaWiki:Number_of_watching_users_pageview]] pe definì 'nu punde de trasute jndr'à sta pàgena speciale.",
+	'specialwhoiswatchingaddusers' => "Aggiunge le utinde pe vedè 'a pàgene",
 	'specialwhoiswatchingaddbtn' => "Aggiunge l'utinde selezionate",
 );
 
