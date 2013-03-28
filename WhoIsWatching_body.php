@@ -78,11 +78,11 @@ class WhoIsWatching extends SpecialPage {
 				$u = User::newFromName( $row->user_name );
 				if ( !array_key_exists( $u->getID(), $watchingusers ) &&
 					$u->isAllowed( 'read' ) && $u->getEmail() ) {
-					$users[strtolower( $u->getRealName() )] = $u->getID();
+					$users[ $u->getID() ] = $u->getRealName() ? $u->getRealName() : $u->getName();
 				}
 			}
-			ksort( $users );
-			foreach ( $users as $name => $id ) {
+			asort( $users );
+			foreach ( $users as $id => $name ) {
 				$wgOut->addHTML( "<option value=\"".$id."\">".$name."</option>" );
 			}
 			$wgOut->addHTML( '</select></td><td>' );
