@@ -43,7 +43,7 @@ $specialPageAliases['de'] = array(
 
 /** Zazaki (Zazaki) */
 $specialPageAliases['diq'] = array(
-	'WhoIsWatching' => array( 'KamoWeyneno' ),
+	'WhoIsWatching' => array( 'KamWeyna' ),
 );
 
 /** Lower Sorbian (dolnoserbski) */
