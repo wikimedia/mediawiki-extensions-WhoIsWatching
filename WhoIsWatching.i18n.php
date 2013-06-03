@@ -18,10 +18,7 @@ Please use the page [[MediaWiki:Number_of_watching_users_pageview]] to define an
 	'specialwhoiswatchingaddbtn' => 'Add selected users',
 );
 
-/** Message documentation (This is the name of the message documentation language code (qqq). Follow the rules of your languages and use small first letter if it doesn't capitalize language names always.
-
-It might be easier to translate it as "translation guidelines" or "translation help".
-{{Identical|Message documentation}})
+/** Message documentation (Message documentation)
  * @author Fryed-peach
  * @author Purodha
  * @author Shirayuki
@@ -631,7 +628,7 @@ $messages['nah'] = array(
 	'specialwhoiswatchingthepage' => 'Āquin tēchiya %',
 );
 
-/** Norwegian Bokmål (norsk (bokmål)‎)
+/** Norwegian Bokmål (norsk bokmål)
  * @author Nghtwlkr
  */
 $messages['nb'] = array(
@@ -656,7 +653,7 @@ $messages['nl'] = array(
 	'specialwhoiswatchingaddbtn' => 'Geselecteerde gebruikers toevoegen',
 );
 
-/** Norwegian Nynorsk (norsk (nynorsk)‎)
+/** Norwegian Nynorsk (norsk nynorsk)
  * @author Eirik
  * @author Frokor
  */
