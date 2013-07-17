@@ -186,6 +186,14 @@ $messages['ca'] = array(
 	'specialwhoiswatchingthepage' => 'Qui està mirant %s',
 );
 
+/** Chechen (нохчийн)
+ * @author Умар
+ */
+$messages['ce'] = array(
+	'specialwhoiswatchingaddusers' => 'ТӀетоха декъашхой агӀона тергам ба',
+	'specialwhoiswatchingaddbtn' => 'ТӀетоха къастина болу декъашхой',
+);
+
 /** Czech (česky)
  * @author Matěj Grabovský
  */
