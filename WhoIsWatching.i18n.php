@@ -731,6 +731,7 @@ $messages['ps'] = array(
 );
 
 /** Portuguese (português)
+ * @author Luckas
  * @author Malafaya
  * @author Waldir
  */
@@ -740,7 +741,7 @@ $messages['pt'] = array(
 	'specialwhoiswatchingthepage' => 'Quem está a vigiar %s',
 	'specialwhoiswatchingusage' => 'Esta página especial não pode ser usada por si só. Por favor, utilize a página [[MediaWiki:Number_of_watching_users_pageview]] para definir um ponto de entrada para esta página especial.',
 	'specialwhoiswatchingaddusers' => 'Adicionar utilizadores à vigilância da página',
-	'specialwhoiswatchingaddbtn' => 'Adicionar Utilizadores seleccionados',
+	'specialwhoiswatchingaddbtn' => 'Adicionar utilizadores selecionados',
 );
 
 /** Brazilian Portuguese (português do Brasil)
