@@ -529,7 +529,7 @@ $messages['ko'] = array(
 	'specialwhoiswatchingthepage' => '%s 문서를 주시하는 사용자',
 	'specialwhoiswatchingusage' => '특수 문서는 문서 자체에 사용할 수 없습니다.
 이 특수 문서에 대한 입구를 정의하려면 [[MediaWiki:Number_of_watching_users_pageview]] 문서를 사용하세요.',
-	'specialwhoiswatchingaddusers' => '문서를 주시하는 사용자 더하기',
+	'specialwhoiswatchingaddusers' => '문서를 주시하는 사용자 추가',
 	'specialwhoiswatchingaddbtn' => '선택한 사용자 추가',
 );
 
