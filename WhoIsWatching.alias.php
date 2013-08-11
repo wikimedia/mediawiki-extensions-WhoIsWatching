@@ -36,6 +36,11 @@ $specialPageAliases['bs'] = array(
 	'WhoIsWatching' => array( 'KoPregleda' ),
 );
 
+/** Min Dong Chinese (Mìng-dĕ̤ng-ngṳ̄) */
+$specialPageAliases['cdo'] = array(
+	'WhoIsWatching' => array( '底儂敆𡅏看' ),
+);
+
 /** German (Deutsch) */
 $specialPageAliases['de'] = array(
 	'WhoIsWatching' => array( 'Wer_beobachtet' ),
