@@ -525,7 +525,7 @@ $messages['km'] = array(
  */
 $messages['ko'] = array(
 	'whoiswatching' => '위키 문서를 주시하는 사용자',
-	'whoiswatching-desc' => '위키 문서를 주시하는 사용자의 목록을 제공',
+	'whoiswatching-desc' => '위키 문서를 주시하는 사용자의 목록을 제공합니다',
 	'specialwhoiswatchingthepage' => '%s 문서를 주시하는 사용자',
 	'specialwhoiswatchingusage' => '특수 문서는 문서 자체에 사용할 수 없습니다.
 이 특수 문서에 대한 입구를 정의하려면 [[MediaWiki:Number_of_watching_users_pageview]] 문서를 사용하세요.',
