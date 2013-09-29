@@ -727,7 +727,7 @@ Për piasì dovra la pàgina [[MediaWiki:Number_of_watching_users_pageview]] pë
 $messages['ps'] = array(
 	'whoiswatching' => 'څوک دي چې د ويکي يو مخ ګوري',
 	'specialwhoiswatchingthepage' => 'څوک دی چې %s ګوري',
-	'specialwhoiswatchingaddbtn' => 'ټاکلي کارنان ګډول',
+	'specialwhoiswatchingaddbtn' => 'ټاکلي کارنان گډول',
 );
 
 /** Portuguese (português)
