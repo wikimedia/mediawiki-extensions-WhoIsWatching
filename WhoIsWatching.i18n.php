@@ -194,7 +194,7 @@ $messages['ce'] = array(
 	'specialwhoiswatchingaddbtn' => 'ТӀетоха къастина болу декъашхой',
 );
 
-/** Czech (česky)
+/** Czech (čeština)
  * @author Matěj Grabovský
  */
 $messages['cs'] = array(
