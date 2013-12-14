@@ -294,10 +294,11 @@ $messages['et'] = array(
  * @author An13sa
  * @author Kobazulo
  * @author Theklan
+ * @author Xabier Armendaritz
  */
 $messages['eu'] = array(
 	'whoiswatching' => 'Nor ari da wiki orrialde bat zaintzen',
-	'whoiswatching-desc' => 'Wiki orrialde bat zaintzen ari diren erabiltzaileen zerrenda ematen du.',
+	'whoiswatching-desc' => 'Wiki orri bat zaintzen ari diren erabiltzaileen zerrenda ematen du.',
 	'specialwhoiswatchingthepage' => 'Nor ari da %s zaintzen',
 	'specialwhoiswatchingusage' => 'Orri berezi hau ezin da bere kabuz erabili.
 Mesedez [[MediaWiki:Number_of_watching_users_pageview]] orria erabili sarrerako puntu bat definitzeko orri berezi honi.',
