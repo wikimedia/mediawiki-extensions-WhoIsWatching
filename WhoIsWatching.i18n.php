@@ -486,6 +486,7 @@ $messages['ja'] = array(
 );
 
 /** Javanese (Basa Jawa)
+ * @author Bennylin
  * @author Meursault2004
  * @author Pras
  */
@@ -493,8 +494,8 @@ $messages['jv'] = array(
 	'whoiswatching' => 'Sapa sing ngawasi sawijining kaca wiki',
 	'whoiswatching-desc' => 'Nyadiakaké dhaptar panganggo sing ngawasi kaca wiki',
 	'specialwhoiswatchingthepage' => 'Sapa sing ngawasi %s',
-	'specialwhoiswatchingusage' => 'Kaca istiméwa iki ora bisa dianggo kanggo ngowahi kaca iki dhéwé.
-Mangga pigunakaké kaca [[MediaWiki:Number_of_watching_users_pageview]] kanggo nemtokaké titik mlebu menyang kaca istiméwa iki.',
+	'specialwhoiswatchingusage' => 'Kaca astamiwa iki ora bisa dianggo kanggo ngowahi kaca iki dhéwé.
+Mangga pigunakaké kaca [[MediaWiki:Number_of_watching_users_pageview]] kanggo nemtokaké titik mlebu menyang kaca astamiwa iki.',
 	'specialwhoiswatchingaddusers' => 'Tambahna panganggo kanggo ngawasi kaca iki',
 	'specialwhoiswatchingaddbtn' => 'Tambahna panganggo sing dipilih',
 );
