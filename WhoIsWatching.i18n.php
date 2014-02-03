@@ -306,6 +306,17 @@ Mesedez [[MediaWiki:Number_of_watching_users_pageview]] orria erabili sarrerako 
 	'specialwhoiswatchingaddbtn' => 'Gehitu aukeratutako lankideak',
 );
 
+/** Persian (فارسی)
+ * @author Armin1392
+ */
+$messages['fa'] = array(
+	'whoiswatching' => 'چه کسی صفحهٔ ویکی را مشاهده می‌کند',
+	'whoiswatching-desc' => 'ارائه کردن فهرست مشاهدهٔ نام‌های کاربری صفحهٔ ویکی',
+	'specialwhoiswatchingthepage' => 'چه کسی %s را مشاهده می‌کند',
+	'specialwhoiswatchingaddusers' => 'افزودن کاربران به مشاهدهٔ صفحه',
+	'specialwhoiswatchingaddbtn' => 'افزودن کاربران انتخاب شده',
+);
+
 /** Finnish (suomi)
  * @author Cimon Avaro
  * @author Crt
