@@ -313,6 +313,8 @@ $messages['fa'] = array(
 	'whoiswatching' => 'چه کسی صفحهٔ ویکی را مشاهده می‌کند',
 	'whoiswatching-desc' => 'ارائه کردن فهرست مشاهدهٔ نام‌های کاربری صفحهٔ ویکی',
 	'specialwhoiswatchingthepage' => 'چه کسی %s را مشاهده می‌کند',
+	'specialwhoiswatchingusage' => 'این صفحه ویژه نمی‌تواند به خودی خود مورد استفاده قرار گیرد.
+لطفا از صفحه [[MediaWiki:Number_of_watching_users_pageview]] برای تعریف یک نقطه ورود به این صفحه ویژه استفاده کنید.',
 	'specialwhoiswatchingaddusers' => 'افزودن کاربران به مشاهدهٔ صفحه',
 	'specialwhoiswatchingaddbtn' => 'افزودن کاربران انتخاب شده',
 );
