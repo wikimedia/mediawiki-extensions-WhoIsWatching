@@ -1,0 +1,13 @@
+{
+    "@metadata": {
+        "authors": [
+            "Sanbec"
+        ]
+    },
+    "whoiswatching": "Quien está vigilando una página",
+    "whoiswatching-desc": "Proporciona una lista de usuarios que vigilan una página de la wiki.",
+    "specialwhoiswatchingthepage": "Quién está vigilando %s",
+    "specialwhoiswatchingusage": "Esta página especial no puede ser usada por sí sola. Por favor usa la página [[MediaWiki:Number_of_watching_users_pageview]] para definir un punto de entrada a esta página especial.",
+    "specialwhoiswatchingaddusers": "Añade usuarios para que vigilen la página",
+    "specialwhoiswatchingaddbtn": "Añade los usuarios seleccionados"
+}

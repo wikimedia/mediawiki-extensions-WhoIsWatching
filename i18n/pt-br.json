@@ -1,0 +1,13 @@
+{
+    "@metadata": {
+        "authors": [
+            "Carla404"
+        ]
+    },
+    "whoiswatching": "Quem está vigiando uma página wiki",
+    "whoiswatching-desc": "Fornece uma lista dos usuários que estão vigiando uma página wiki",
+    "specialwhoiswatchingthepage": "Quem está vigiando %s",
+    "specialwhoiswatchingusage": "Esta página especial não pode ser usada individualmente.\nPor favor, utilize a página [[MediaWiki:Number_of_watching_users_pageview]] para definir um ponto de entrada para esta página especial.",
+    "specialwhoiswatchingaddusers": "Adicionar usuários para vigiar a página",
+    "specialwhoiswatchingaddbtn": "Adicionar os usuários selecionados"
+}

@@ -1,0 +1,14 @@
+{
+    "@metadata": {
+        "authors": [
+            "SPQRobin",
+            "Siebrand"
+        ]
+    },
+    "whoiswatching": "Wie volgen een pagina",
+    "whoiswatching-desc": "Levert een lijst met gebruikers die een wikipagina op hun volglijst hebben",
+    "specialwhoiswatchingthepage": "Wie volgen %s",
+    "specialwhoiswatchingusage": "Deze speciale pagina kan niet alleenstaand gebruikt worden. Gebruik de pagina [[MediaWiki:Number_of_watching_users_pageview]] om een ingangspunt voor deze speciale pagina te bepalen.",
+    "specialwhoiswatchingaddusers": "Deze pagina op de volglijst van gebruikers toevoegen",
+    "specialwhoiswatchingaddbtn": "Geselecteerde gebruikers toevoegen"
+}

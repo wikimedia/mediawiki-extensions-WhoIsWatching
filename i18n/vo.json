@@ -1,0 +1,13 @@
+{
+    "@metadata": {
+        "authors": [
+            "Smeira"
+        ]
+    },
+    "whoiswatching": "Kin galädon padi",
+    "whoiswatching-desc": "Gevon lisedi gebanas, kels galädons padi semik",
+    "specialwhoiswatchingthepage": "Kin galädon padi: %s",
+    "specialwhoiswatchingusage": "Pad patik at no dalon pagebön ito. Gebolös padi: [[MediaWiki:Number_of_watching_users_pageview]] ad miedetön nükömapüni lü pad patik at.",
+    "specialwhoiswatchingaddusers": "Läükön gebanis ad galädön padi at",
+    "specialwhoiswatchingaddbtn": "Läükön gebanis pevälöl"
+}

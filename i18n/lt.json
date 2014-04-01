@@ -1,0 +1,10 @@
+{
+    "@metadata": {
+        "authors": [
+            "Matasg"
+        ]
+    },
+    "whoiswatching": "Kas žiūri šį puslapį",
+    "specialwhoiswatchingthepage": "Kas žiūri %s",
+    "specialwhoiswatchingusage": "Šis specialus puslapis negali būti naudojamas paprastai. Prašome naudoti [[MediaWiki:Number_of_watching_users_pageview]] puslapį, kad apibrėžtumėte įėjimo punktą į šį specialųjį puslapį."
+}

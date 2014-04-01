@@ -1,0 +1,15 @@
+{
+    "@metadata": {
+        "authors": [
+            "Hydra",
+            "Liangent",
+            "Xiaomingyan"
+        ]
+    },
+    "whoiswatching": "正在监视某wiki页面的用户",
+    "whoiswatching-desc": "提供正在监视某wiki页面的用户名列表",
+    "specialwhoiswatchingthepage": "正在监视用户%s",
+    "specialwhoiswatchingusage": "此特殊页面不能自行使用。\n请使用页面 [[MediaWiki:Number_of_watching_users_pageview]] 定义的入口点，这种特殊的页面。",
+    "specialwhoiswatchingaddusers": "添加用户以监视本页面",
+    "specialwhoiswatchingaddbtn": "添加已选择用户"
+}

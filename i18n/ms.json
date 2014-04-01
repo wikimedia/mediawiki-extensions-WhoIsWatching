@@ -1,0 +1,13 @@
+{
+    "@metadata": {
+        "authors": [
+            "Aurora"
+        ]
+    },
+    "whoiswatching": "Siapa memantau laman wiki",
+    "whoiswatching-desc": "Menyediakan senarai nama pengguna memantau laman wiki",
+    "specialwhoiswatchingthepage": "Siapa memantau %",
+    "specialwhoiswatchingusage": "Laman khas ini tidak boleh digunakan sendirian.\nSila gunakan laman [[MediaWiki:Number_of_watching_users_pageview]] untuk menakrifkan titik masuk ke laman khas ini.",
+    "specialwhoiswatchingaddusers": "Tambah pengguna untuk memantau laman",
+    "specialwhoiswatchingaddbtn": "Tambah pengguna terpilih"
+}

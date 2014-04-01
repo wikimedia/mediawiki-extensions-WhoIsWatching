@@ -1,0 +1,14 @@
+{
+    "@metadata": {
+        "authors": [
+            "Bjankuloski06",
+            "Brest"
+        ]
+    },
+    "whoiswatching": "Кој набљудува вики страница",
+    "whoiswatching-desc": "Дава список на корисници што набљудуваат некоја вики-страница",
+    "specialwhoiswatchingthepage": "Кој набљудува %s",
+    "specialwhoiswatchingusage": "Оваа специјална страница не може да се користи самостојно.\nЗа дефинирање на влезна точка кон оваа специјална страница, Ве молиме користете се со оваа страница [[MediaWiki:Number_of_watching_users_pageview|тука]].",
+    "specialwhoiswatchingaddusers": "Додај корисници за набљудување на страницата",
+    "specialwhoiswatchingaddbtn": "Додај избрани корисници"
+}

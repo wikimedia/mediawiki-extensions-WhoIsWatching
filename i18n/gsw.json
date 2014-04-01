@@ -1,0 +1,13 @@
+{
+    "@metadata": {
+        "authors": [
+            "Als-Holder"
+        ]
+    },
+    "whoiswatching": "Wär beobachtet e Syte",
+    "whoiswatching-desc": "Zeigt e Lischt vu Benutzer, wu ne Syte beobachte",
+    "specialwhoiswatchingthepage": "Wär beobachtet %s",
+    "specialwhoiswatchingusage": "Die Spezialsyte cha nit elai bruucht wäre.\nBitte definier iber d Syte [[MediaWiki:Number_of_watching_users_pageview]] e Aafangssyte fir die Spezialsyte.",
+    "specialwhoiswatchingaddusers": "Fieg Benutzer zum Beobachte vu dr Syte dezue",
+    "specialwhoiswatchingaddbtn": "Fieg Benutzer dezue"
+}

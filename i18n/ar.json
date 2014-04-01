@@ -1,0 +1,13 @@
+{
+    "@metadata": {
+        "authors": [
+            "Meno25"
+        ]
+    },
+    "whoiswatching": "من يراقب صفحة ويكي",
+    "whoiswatching-desc": "يوفر قائمة بأسماء المستخدمين الذين يراقبون صفحة ويكي",
+    "specialwhoiswatchingthepage": "من يراقب %s",
+    "specialwhoiswatchingusage": "هذه الصفحة الخاصة لا يمكن استخدامها بمفردها.\nمن فضلك استخدم الصفحة [[MediaWiki:Number_of_watching_users_pageview]] لتعريف نقطة مدخل إلى هذه الصفحة الخاصة.",
+    "specialwhoiswatchingaddusers": "أضف مستخدمين لمراقبة الصفحة",
+    "specialwhoiswatchingaddbtn": "أضف مستخدمين مختارين"
+}

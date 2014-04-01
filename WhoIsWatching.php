@@ -11,7 +11,7 @@ EOT;
 
 $wgExtensionCredits['specialpage'][] = array(
 	'path'           => __FILE__,
-	'version'        => '0.10',
+	'version'        => '0.11.0',
 	'name'           => 'WhoIsWatching',
 	'author'         => 'Paul Grinberg, Siebrand Mazeland, Vitaliy Filippov',
 	'email'          => 'vitalif at yourcmc dot ru',
@@ -21,6 +21,7 @@ $wgExtensionCredits['specialpage'][] = array(
 
 $dir = dirname(__FILE__) . '/';
 $wgAutoloadClasses['WhoIsWatching'] = $dir . 'WhoIsWatching_body.php';
+$wgMessagesDirs['WhoIsWatching'] = __DIR__ . '/i18n';
 $wgExtensionMessagesFiles['WhoIsWatching'] = $dir . 'WhoIsWatching.i18n.php';
 $wgExtensionMessagesFiles['WhoIsWatchingAlias'] = $dir . 'WhoIsWatching.alias.php';
 $wgSpecialPages['WhoIsWatching'] = 'WhoIsWatching';

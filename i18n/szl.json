@@ -1,0 +1,13 @@
+{
+    "@metadata": {
+        "authors": [
+            "Lajsikonik"
+        ]
+    },
+    "whoiswatching": "Fto filuje w ta zajta",
+    "whoiswatching-desc": "Pokozuje lista użytkowńikůw kere majům ta zajta we zajtach na kere dowajům pozůr",
+    "specialwhoiswatchingthepage": "Fto filuje we %s",
+    "specialwhoiswatchingusage": "Ta ekstra zajta ńy może być użyto sama. Skorzistej ze zajty [[MediaWiki:Number_of_watching_users_pageview]], coby zdefińjować půnkt sztartowy lů tyj zajty.",
+    "specialwhoiswatchingaddusers": "Dodej użytkowńikůw kere filujům w ta zajta",
+    "specialwhoiswatchingaddbtn": "Dodej wybranych użytkowńikůw"
+}

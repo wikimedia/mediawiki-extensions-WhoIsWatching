@@ -1,0 +1,13 @@
+{
+    "@metadata": {
+        "authors": [
+            "McDutchie"
+        ]
+    },
+    "whoiswatching": "Qui observa un pagina wiki",
+    "whoiswatching-desc": "Forni un lista de nomines de usatores qui observa un pagina wiki",
+    "specialwhoiswatchingthepage": "Qui observa %s",
+    "specialwhoiswatchingusage": "Iste pagina special non pote esser usate sol.\nPer favor usa le pagina [[MediaWiki:Number_of_watching_users_pageview]] pro definir un puncto de entrata verso iste pagina special.",
+    "specialwhoiswatchingaddusers": "Adder usatores pro observar le pagina",
+    "specialwhoiswatchingaddbtn": "Adder le usatores seligite"
+}

@@ -1,0 +1,12 @@
+{
+    "@metadata": {
+        "authors": [
+            "ChrisPtDe"
+        ]
+    },
+    "whoiswatching": "Qui siut una pâge vouiqui",
+    "whoiswatching-desc": "Balye una lista ux usanciérs que siuvont una pâge vouiqui.",
+    "specialwhoiswatchingthepage": "Qui siut %s",
+    "specialwhoiswatchingaddusers": "Apondre los usanciérs por siuvre la pâge",
+    "specialwhoiswatchingaddbtn": "Apondre los usanciérs chouèsis"
+}
