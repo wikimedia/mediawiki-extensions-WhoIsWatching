@@ -64,7 +64,7 @@ $specialPageAliases['eo'] = array(
 
 /** Spanish (español) */
 $specialPageAliases['es'] = array(
-	'WhoIsWatching' => array( 'Quién_esta_vigilando' ),
+	'WhoIsWatching' => array( 'QuiénVigila' ),
 );
 
 /** Persian (فارسی) */
