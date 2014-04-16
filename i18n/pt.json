@@ -1,15 +1,15 @@
 {
-    "@metadata": {
-        "authors": [
-            "Luckas",
-            "Malafaya",
-            "Waldir"
-        ]
-    },
-    "whoiswatching": "Quem Está a Vigiar uma página wiki",
-    "whoiswatching-desc": "Apresenta uma listagem de utilizadores que vigiam uma dada página",
-    "specialwhoiswatchingthepage": "Quem está a vigiar %s",
-    "specialwhoiswatchingusage": "Esta página especial não pode ser usada por si só. Por favor, utilize a página [[MediaWiki:Number_of_watching_users_pageview]] para definir um ponto de entrada para esta página especial.",
-    "specialwhoiswatchingaddusers": "Adicionar utilizadores à vigilância da página",
-    "specialwhoiswatchingaddbtn": "Adicionar utilizadores selecionados"
+	"@metadata": {
+		"authors": [
+			"Luckas",
+			"Malafaya",
+			"Waldir"
+		]
+	},
+	"whoiswatching": "Quem Está a Vigiar uma página wiki",
+	"whoiswatching-desc": "Apresenta uma listagem de utilizadores que vigiam uma dada página",
+	"specialwhoiswatchingthepage": "Quem está a vigiar %s",
+	"specialwhoiswatchingusage": "Esta página especial não pode ser usada por si só. Por favor, utilize a página [[MediaWiki:Number_of_watching_users_pageview]] para definir um ponto de entrada para esta página especial.",
+	"specialwhoiswatchingaddusers": "Adicionar utilizadores à vigilância da página",
+	"specialwhoiswatchingaddbtn": "Adicionar utilizadores selecionados"
 }

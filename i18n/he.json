@@ -1,14 +1,14 @@
 {
-    "@metadata": {
-        "authors": [
-            "Agbad",
-            "Rotemliss"
-        ]
-    },
-    "whoiswatching": "מי עוקב אחרי דף הוויקי",
-    "whoiswatching-desc": "רשימת שמות המשתמשים העוקבים אחרי דף ויקי",
-    "specialwhoiswatchingthepage": "מי עוקב אחרי %s",
-    "specialwhoiswatchingusage": "לא ניתן להשתמש בדף מיוחד זה בפני עצמו.\nאנא השתמשו בדף [[MediaWiki:Number_of_watching_users_pageview]] כדי להגדיר נקודת כניסה לדף זה.",
-    "specialwhoiswatchingaddusers": "הוספת משתמשים למעקב אחרי דף זה",
-    "specialwhoiswatchingaddbtn": "הוספת המשתמשים שנבחרו"
+	"@metadata": {
+		"authors": [
+			"Agbad",
+			"Rotemliss"
+		]
+	},
+	"whoiswatching": "מי עוקב אחרי דף הוויקי",
+	"whoiswatching-desc": "רשימת שמות המשתמשים העוקבים אחרי דף ויקי",
+	"specialwhoiswatchingthepage": "מי עוקב אחרי %s",
+	"specialwhoiswatchingusage": "לא ניתן להשתמש בדף מיוחד זה בפני עצמו.\nאנא השתמשו בדף [[MediaWiki:Number_of_watching_users_pageview]] כדי להגדיר נקודת כניסה לדף זה.",
+	"specialwhoiswatchingaddusers": "הוספת משתמשים למעקב אחרי דף זה",
+	"specialwhoiswatchingaddbtn": "הוספת המשתמשים שנבחרו"
 }

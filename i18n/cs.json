@@ -1,13 +1,13 @@
 {
-    "@metadata": {
-        "authors": [
-            "Matěj Grabovský"
-        ]
-    },
-    "whoiswatching": "Kdo sleduje wiki stránku",
-    "whoiswatching-desc": "Poskytuje seznam uživatelů, kteří sledují určitou wiki stránku",
-    "specialwhoiswatchingthepage": "Kdo sleduje %s",
-    "specialwhoiswatchingusage": "Tuto speciální stránku není možné používat samostatně. Prosím pužijte [[MediaWiki:Number_of_watching_users_pageview]] pro definování vstupního bodu na tuto stránku.",
-    "specialwhoiswatchingaddusers": "Přidat uživatele sledující stránku",
-    "specialwhoiswatchingaddbtn": "Přidat zvolené uživatele"
+	"@metadata": {
+		"authors": [
+			"Matěj Grabovský"
+		]
+	},
+	"whoiswatching": "Kdo sleduje wiki stránku",
+	"whoiswatching-desc": "Poskytuje seznam uživatelů, kteří sledují určitou wiki stránku",
+	"specialwhoiswatchingthepage": "Kdo sleduje %s",
+	"specialwhoiswatchingusage": "Tuto speciální stránku není možné používat samostatně. Prosím pužijte [[MediaWiki:Number_of_watching_users_pageview]] pro definování vstupního bodu na tuto stránku.",
+	"specialwhoiswatchingaddusers": "Přidat uživatele sledující stránku",
+	"specialwhoiswatchingaddbtn": "Přidat zvolené uživatele"
 }

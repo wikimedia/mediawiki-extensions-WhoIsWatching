@@ -1,10 +1,10 @@
 {
-    "@metadata": {
-        "authors": [
-            "Gazeb"
-        ]
-    },
-    "whoiswatching": "Хто слїдує вікі сторінку",
-    "specialwhoiswatchingaddusers": "Придати хоснователїв слїдуючіх сторінку",
-    "specialwhoiswatchingaddbtn": "Придати выбраных хоснователїв"
+	"@metadata": {
+		"authors": [
+			"Gazeb"
+		]
+	},
+	"whoiswatching": "Хто слїдує вікі сторінку",
+	"specialwhoiswatchingaddusers": "Придати хоснователїв слїдуючіх сторінку",
+	"specialwhoiswatchingaddbtn": "Придати выбраных хоснователїв"
 }

@@ -1,14 +1,14 @@
 {
-    "@metadata": {
-        "authors": [
-            "Mahitgar",
-            "V.narsikar"
-        ]
-    },
-    "whoiswatching": "विकिपानावर कोणाचा पहारा आहे",
-    "whoiswatching-desc": "एखाद्या विकिपानावर पहारा देणाऱ्या सदस्यांची यादी पुरविते",
-    "specialwhoiswatchingthepage": "% कोण पहात आहे",
-    "specialwhoiswatchingusage": "हे विशेषपान स्वावलंबीपणे वापरता येत नाही. कृपया, या विशेष पानाचे एक प्रवेशस्थळ नक्की करण्याकरिता [[MediaWiki:Number_of_watching_users_pageview]] हे पान वापरा.",
-    "specialwhoiswatchingaddusers": "पानावर पहारा ठेवण्याकरिता सदस्य वाढवा",
-    "specialwhoiswatchingaddbtn": "निवडलेले सदस्य वाढवा"
+	"@metadata": {
+		"authors": [
+			"Mahitgar",
+			"V.narsikar"
+		]
+	},
+	"whoiswatching": "विकिपानावर कोणाचा पहारा आहे",
+	"whoiswatching-desc": "एखाद्या विकिपानावर पहारा देणाऱ्या सदस्यांची यादी पुरविते",
+	"specialwhoiswatchingthepage": "% कोण पहात आहे",
+	"specialwhoiswatchingusage": "हे विशेषपान स्वावलंबीपणे वापरता येत नाही. कृपया, या विशेष पानाचे एक प्रवेशस्थळ नक्की करण्याकरिता [[MediaWiki:Number_of_watching_users_pageview]] हे पान वापरा.",
+	"specialwhoiswatchingaddusers": "पानावर पहारा ठेवण्याकरिता सदस्य वाढवा",
+	"specialwhoiswatchingaddbtn": "निवडलेले सदस्य वाढवा"
 }

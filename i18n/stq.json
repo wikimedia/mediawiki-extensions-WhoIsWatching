@@ -1,13 +1,13 @@
 {
-    "@metadata": {
-        "authors": [
-            "Pyt"
-        ]
-    },
-    "whoiswatching": "Wäl beooboachtet ne Siede",
-    "whoiswatching-desc": "Wiest ne Lieste fon Benutsere an, do ne Siede beooboachtje",
-    "specialwhoiswatchingthepage": "Wäl beooboachtet %s",
-    "specialwhoiswatchingusage": "Disse Spezioalsiede kon nit ap sik sälwen anwoand wäide. Definier uur ju Siede [[MediaWiki:Number_of_watching_users_pageview]] ne Ienstiegssiede foar disse Spezioalsiede.",
-    "specialwhoiswatchingaddusers": "Föich Benutser tou dät Bekiekjen fon ju Siede bietou.",
-    "specialwhoiswatchingaddbtn": "Föich Benutser bietou"
+	"@metadata": {
+		"authors": [
+			"Pyt"
+		]
+	},
+	"whoiswatching": "Wäl beooboachtet ne Siede",
+	"whoiswatching-desc": "Wiest ne Lieste fon Benutsere an, do ne Siede beooboachtje",
+	"specialwhoiswatchingthepage": "Wäl beooboachtet %s",
+	"specialwhoiswatchingusage": "Disse Spezioalsiede kon nit ap sik sälwen anwoand wäide. Definier uur ju Siede [[MediaWiki:Number_of_watching_users_pageview]] ne Ienstiegssiede foar disse Spezioalsiede.",
+	"specialwhoiswatchingaddusers": "Föich Benutser tou dät Bekiekjen fon ju Siede bietou.",
+	"specialwhoiswatchingaddbtn": "Föich Benutser bietou"
 }

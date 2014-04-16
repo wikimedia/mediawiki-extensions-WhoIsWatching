@@ -1,11 +1,11 @@
 {
-    "@metadata": {
-        "authors": [
-            "Avjoska",
-            "Pikne"
-        ]
-    },
-    "whoiswatching": "Kes jälgib vikilehekülge",
-    "specialwhoiswatchingaddusers": "Lisa kasutajaid seda lehekülge jälgima",
-    "specialwhoiswatchingaddbtn": "Lisa valitud kasutajaid"
+	"@metadata": {
+		"authors": [
+			"Avjoska",
+			"Pikne"
+		]
+	},
+	"whoiswatching": "Kes jälgib vikilehekülge",
+	"specialwhoiswatchingaddusers": "Lisa kasutajaid seda lehekülge jälgima",
+	"specialwhoiswatchingaddbtn": "Lisa valitud kasutajaid"
 }

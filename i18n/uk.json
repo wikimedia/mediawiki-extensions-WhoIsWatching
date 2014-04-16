@@ -1,13 +1,13 @@
 {
-    "@metadata": {
-        "authors": [
-            "Base"
-        ]
-    },
-    "whoiswatching": "Хто спостерігає за вікі-сторінкою",
-    "whoiswatching-desc": "Надає список користувачів, які слідкують за вікі-сторінкою",
-    "specialwhoiswatchingthepage": "Хто спостерігає %s",
-    "specialwhoiswatchingusage": "Ця спеціальна сторінка не може бути використана сама по собі.\nБудь ласка, використовуйте сторінку [[MediaWiki:Number_of_watching_users_pageview]] для визначення точки входу в цю спеціальну сторінку.",
-    "specialwhoiswatchingaddusers": "Додати користувачів для спостереження за сторінкою",
-    "specialwhoiswatchingaddbtn": "Додати вибраних користувачів"
+	"@metadata": {
+		"authors": [
+			"Base"
+		]
+	},
+	"whoiswatching": "Хто спостерігає за вікі-сторінкою",
+	"whoiswatching-desc": "Надає список користувачів, які слідкують за вікі-сторінкою",
+	"specialwhoiswatchingthepage": "Хто спостерігає %s",
+	"specialwhoiswatchingusage": "Ця спеціальна сторінка не може бути використана сама по собі.\nБудь ласка, використовуйте сторінку [[MediaWiki:Number_of_watching_users_pageview]] для визначення точки входу в цю спеціальну сторінку.",
+	"specialwhoiswatchingaddusers": "Додати користувачів для спостереження за сторінкою",
+	"specialwhoiswatchingaddbtn": "Додати вибраних користувачів"
 }

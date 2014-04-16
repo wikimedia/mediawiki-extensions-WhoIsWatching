@@ -1,13 +1,13 @@
 {
-    "@metadata": {
-        "authors": [
-            "Purodha"
-        ]
-    },
-    "whoiswatching": "Wä op en Sigg oppass",
-    "whoiswatching-desc": "Jivv_en Leß met de Metmaacher ier Name, di op en Sigg em Wiki op am passe sin.",
-    "specialwhoiswatchingthepage": "Wä paß op „%s“ op",
-    "specialwhoiswatchingusage": "Die Sigg kann nit för sesch allein jebruch wäde.\nBes esu joot un donn övver de Sigg\n<i lang=\"en\">[[MediaWiki:Number_of_watching_users_pageview]]</i>\nene Eijnshtiish för di Söndersigg enreschte.",
-    "specialwhoiswatchingaddusers": "Don ene Metmaacher dobei, op di Sigg opzepasse",
-    "specialwhoiswatchingaddbtn": "Donn dä makeete Metmaacher dobei"
+	"@metadata": {
+		"authors": [
+			"Purodha"
+		]
+	},
+	"whoiswatching": "Wä op en Sigg oppass",
+	"whoiswatching-desc": "Jivv_en Leß met de Metmaacher ier Name, di op en Sigg em Wiki op am passe sin.",
+	"specialwhoiswatchingthepage": "Wä paß op „%s“ op",
+	"specialwhoiswatchingusage": "Die Sigg kann nit för sesch allein jebruch wäde.\nBes esu joot un donn övver de Sigg\n<i lang=\"en\">[[MediaWiki:Number_of_watching_users_pageview]]</i>\nene Eijnshtiish för di Söndersigg enreschte.",
+	"specialwhoiswatchingaddusers": "Don ene Metmaacher dobei, op di Sigg opzepasse",
+	"specialwhoiswatchingaddbtn": "Donn dä makeete Metmaacher dobei"
 }

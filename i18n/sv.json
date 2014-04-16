@@ -1,15 +1,15 @@
 {
-    "@metadata": {
-        "authors": [
-            "Boivie",
-            "Lejonel",
-            "Najami"
-        ]
-    },
-    "whoiswatching": "Användare som bevakar en sida",
-    "whoiswatching-desc": "Visar en lista över användare som bevakar en viss sida",
-    "specialwhoiswatchingthepage": "Vem bevakar %s",
-    "specialwhoiswatchingusage": "Den här specialsidan kan inte användas utan parametrar.\nAnvänd [[MediaWiki:Number_of_watching_users_pageview]] för att ange en ingång till denna specialsida.",
-    "specialwhoiswatchingaddusers": "Lägg till användare som bevakare av sidan",
-    "specialwhoiswatchingaddbtn": "Lägg till valda"
+	"@metadata": {
+		"authors": [
+			"Boivie",
+			"Lejonel",
+			"Najami"
+		]
+	},
+	"whoiswatching": "Användare som bevakar en sida",
+	"whoiswatching-desc": "Visar en lista över användare som bevakar en viss sida",
+	"specialwhoiswatchingthepage": "Vem bevakar %s",
+	"specialwhoiswatchingusage": "Den här specialsidan kan inte användas utan parametrar.\nAnvänd [[MediaWiki:Number_of_watching_users_pageview]] för att ange en ingång till denna specialsida.",
+	"specialwhoiswatchingaddusers": "Lägg till användare som bevakare av sidan",
+	"specialwhoiswatchingaddbtn": "Lägg till valda"
 }

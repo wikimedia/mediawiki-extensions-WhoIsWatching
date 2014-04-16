@@ -1,14 +1,14 @@
 {
-    "@metadata": {
-        "authors": [
-            "Ghaly",
-            "Meno25"
-        ]
-    },
-    "whoiswatching": "من يراقب صفحة ويكي",
-    "whoiswatching-desc": "يوفر لستة بأسماء اليوزرز اللى بيراقبو صفحة ويكى",
-    "specialwhoiswatchingthepage": "من يراقب %s",
-    "specialwhoiswatchingusage": "هذه الصفحة الخاصة لا يمكن استخدامها بمفردها.\nمن فضلك استخدم الصفحة [[MediaWiki:Number_of_watching_users_pageview]] لتعريف نقطة مدخل إلى هذه الصفحة الخاصة.",
-    "specialwhoiswatchingaddusers": "ضيف يوزرز لمراقبة الصفحة",
-    "specialwhoiswatchingaddbtn": "ضيف يوزرز مختارين"
+	"@metadata": {
+		"authors": [
+			"Ghaly",
+			"Meno25"
+		]
+	},
+	"whoiswatching": "من يراقب صفحة ويكي",
+	"whoiswatching-desc": "يوفر لستة بأسماء اليوزرز اللى بيراقبو صفحة ويكى",
+	"specialwhoiswatchingthepage": "من يراقب %s",
+	"specialwhoiswatchingusage": "هذه الصفحة الخاصة لا يمكن استخدامها بمفردها.\nمن فضلك استخدم الصفحة [[MediaWiki:Number_of_watching_users_pageview]] لتعريف نقطة مدخل إلى هذه الصفحة الخاصة.",
+	"specialwhoiswatchingaddusers": "ضيف يوزرز لمراقبة الصفحة",
+	"specialwhoiswatchingaddbtn": "ضيف يوزرز مختارين"
 }

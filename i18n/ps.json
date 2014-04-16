@@ -1,10 +1,10 @@
 {
-    "@metadata": {
-        "authors": [
-            "Ahmed-Najib-Biabani-Ibrahimkhel"
-        ]
-    },
-    "whoiswatching": "څوک دي چې د ويکي يو مخ ګوري",
-    "specialwhoiswatchingthepage": "څوک دی چې %s ګوري",
-    "specialwhoiswatchingaddbtn": "ټاکلي کارنان گډول"
+	"@metadata": {
+		"authors": [
+			"Ahmed-Najib-Biabani-Ibrahimkhel"
+		]
+	},
+	"whoiswatching": "څوک دي چې د ويکي يو مخ ګوري",
+	"specialwhoiswatchingthepage": "څوک دی چې %s ګوري",
+	"specialwhoiswatchingaddbtn": "ټاکلي کارنان گډول"
 }

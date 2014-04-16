@@ -1,15 +1,15 @@
 {
-    "@metadata": {
-        "authors": [
-            "ChrisiPK",
-            "Purodha",
-            "Raimond Spekking"
-        ]
-    },
-    "whoiswatching": "Wer beobachtet eine Seite",
-    "whoiswatching-desc": "Zeigt eine Liste von Benutzern an, die eine Seite beobachten",
-    "specialwhoiswatchingthepage": "Wer beobachtet %s",
-    "specialwhoiswatchingusage": "Diese Spezialseite ist nicht auf sich allein gestellt einsetzbar.\nBitte definiere über die Seite [[MediaWiki:Number_of_watching_users_pageview]] eine Einstiegsseite für diese Spezialseite.",
-    "specialwhoiswatchingaddusers": "Füge Benutzer zum Beobachten der Seite hinzu",
-    "specialwhoiswatchingaddbtn": "Füge Benutzer hinzu"
+	"@metadata": {
+		"authors": [
+			"ChrisiPK",
+			"Purodha",
+			"Raimond Spekking"
+		]
+	},
+	"whoiswatching": "Wer beobachtet eine Seite",
+	"whoiswatching-desc": "Zeigt eine Liste von Benutzern an, die eine Seite beobachten",
+	"specialwhoiswatchingthepage": "Wer beobachtet %s",
+	"specialwhoiswatchingusage": "Diese Spezialseite ist nicht auf sich allein gestellt einsetzbar.\nBitte definiere über die Seite [[MediaWiki:Number_of_watching_users_pageview]] eine Einstiegsseite für diese Spezialseite.",
+	"specialwhoiswatchingaddusers": "Füge Benutzer zum Beobachten der Seite hinzu",
+	"specialwhoiswatchingaddbtn": "Füge Benutzer hinzu"
 }

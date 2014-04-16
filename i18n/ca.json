@@ -1,11 +1,11 @@
 {
-    "@metadata": {
-        "authors": [
-            "SMP",
-            "Solde"
-        ]
-    },
-    "whoiswatching": "Qui està una pàgina wiki",
-    "whoiswatching-desc": "Proporciona una llista dels usuaris que estan mirant una pàgina wiki",
-    "specialwhoiswatchingthepage": "Qui està mirant %s"
+	"@metadata": {
+		"authors": [
+			"SMP",
+			"Solde"
+		]
+	},
+	"whoiswatching": "Qui està una pàgina wiki",
+	"whoiswatching-desc": "Proporciona una llista dels usuaris que estan mirant una pàgina wiki",
+	"specialwhoiswatchingthepage": "Qui està mirant %s"
 }
