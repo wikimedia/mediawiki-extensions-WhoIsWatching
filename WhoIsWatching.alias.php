@@ -22,6 +22,11 @@ $specialPageAliases['arz'] = array(
 	'WhoIsWatching' => array( 'مين_بيراقب' ),
 );
 
+/** Western Balochi (بلوچی رخشانی) */
+$specialPageAliases['bgn'] = array(
+	'WhoIsWatching' => array( 'کَێ_پدگیری_ئه_کنت' ),
+);
+
 /** Banjar (Bahasa Banjar) */
 $specialPageAliases['bjn'] = array(
 	'WhoIsWatching' => array( 'Siapa_nang_maitihi' ),
