@@ -169,7 +169,7 @@ $specialPageAliases['lb'] = array(
 
 /** Lithuanian (lietuvių) */
 $specialPageAliases['lt'] = array(
-	'WhoIsWatching' => array( 'Kas stebi' ),
+	'WhoIsWatching' => array( 'Kas_stebi' ),
 );
 
 /** Minangkabau (Baso Minangkabau) */
