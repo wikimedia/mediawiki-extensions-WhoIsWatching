@@ -17,7 +17,7 @@ $specialPageAliases['ar'] = array(
 	'WhoIsWatching' => array( 'من_يراقب' ),
 );
 
-/** Egyptian Spoken Arabic (مصرى) */
+/** Egyptian Arabic (مصرى) */
 $specialPageAliases['arz'] = array(
 	'WhoIsWatching' => array( 'مين_بيراقب' ),
 );
@@ -87,7 +87,7 @@ $specialPageAliases['fr'] = array(
 	'WhoIsWatching' => array( 'Qui_a_en_suivi', 'QuiAEnSuivi' ),
 );
 
-/** Franco-Provençal (arpetan) */
+/** Arpitan (arpetan) */
 $specialPageAliases['frp'] = array(
 	'WhoIsWatching' => array( 'Qui_at_en_survelyence', 'QuiAtEnSurvelyence' ),
 );
