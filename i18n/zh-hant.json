@@ -11,5 +11,5 @@
 	"specialwhoiswatchingthepage": "誰正在監視 %s",
 	"specialwhoiswatchingusage": "此特殊頁面不能自行使用。\n請使用頁面 [[MediaWiki:Number_of_watching_users_pageview]] 定義的入口點，這種特殊的頁面。",
 	"specialwhoiswatchingaddusers": "新增使用者以監視本頁面",
-	"specialwhoiswatchingaddbtn": "新增已選擇用戶"
+	"specialwhoiswatchingaddbtn": "新增已選擇使用者"
 }
