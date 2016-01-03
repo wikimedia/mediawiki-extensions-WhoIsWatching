@@ -12,7 +12,7 @@ class WhoIsWatching extends SpecialPage {
 		global $whoiswatching_nametype, $whoiswatching_allowaddingpeople;
 
 		$this->setHeaders();
-		$wgOut->setPagetitle( wfMsg( 'whoiswatching' ) );
+		$wgOut->setPagetitle( $this->msg( 'whoiswatching' ) );
 
 		$title = $wgRequest->getVal( 'page' );
 		$ns = $wgRequest->getVal( 'ns', '' );
@@ -40,7 +40,7 @@ class WhoIsWatching extends SpecialPage {
 			return;
 		}
 
-		$wgOut->addWikiText( "== ".sprintf( wfMsg( 'specialwhoiswatchingthepage' ), "[[:$pageTitle]] ==" ) );
+		$wgOut->addWikiText( "== ".sprintf( $this->msg( 'specialwhoiswatchingthepage' )->text(), "[[:$pageTitle]] ==" ) );
 
 		$dbr = wfGetDB( DB_SLAVE );
 		$watchingusers = array();
@@ -66,7 +66,7 @@ class WhoIsWatching extends SpecialPage {
 		$wgOut->addWikiText( $out );
 
 		if ( $whoiswatching_allowaddingpeople ) {
-			$wgOut->addWikiText( "== ".wfMsg( 'specialwhoiswatchingaddusers')." ==" );
+			$wgOut->addWikiText( "== ".$this->msg( 'specialwhoiswatchingaddusers')->text()." ==" );
 			$wgOut->addHTML( "<form method=\"post\">" );
 			$wgOut->addHTML( "<input type=\"hidden\" value=\"".$wgUser->getEditToken()."\" name=\"token\" />" );
 			$wgOut->addHTML( "<div style=\"border: thin solid #000000\"><table cellpadding=\"15\" cellspacing=\"0\" border=\"0\">" );
@@ -86,7 +86,7 @@ class WhoIsWatching extends SpecialPage {
 				$wgOut->addHTML( "<option value=\"".$id."\">".$name."</option>" );
 			}
 			$wgOut->addHTML( '</select></td><td>' );
-			$wgOut->addHTML( "<input type=\"submit\" value=\"".wfMsg( 'specialwhoiswatchingaddbtn' )."\" />" );
+			$wgOut->addHTML( "<input type=\"submit\" value=\"".$this->msg( 'specialwhoiswatchingaddbtn' )->escaped()."\" />" );
 			$wgOut->addHTML( "</td></tr></table></div></form>" );
 		}
 	}
