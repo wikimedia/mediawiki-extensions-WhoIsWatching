@@ -13,8 +13,7 @@ $wgExtensionCredits['specialpage'][] = array(
 	'path'           => __FILE__,
 	'version'        => '0.11.0',
 	'name'           => 'WhoIsWatching',
-	'author'         => 'Paul Grinberg, Siebrand Mazeland, Vitaliy Filippov',
-	'email'          => 'vitalif at yourcmc dot ru',
+	'author'         => array( 'Paul Grinberg', 'Siebrand Mazeland', 'Vitaliy Filippov' ),
 	'url'            => 'https://www.mediawiki.org/wiki/Extension:WhoIsWatching',
 	'descriptionmsg' => 'whoiswatching-desc',
 );
