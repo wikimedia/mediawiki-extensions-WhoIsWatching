@@ -3,13 +3,14 @@
 		"authors": [
 			"Bennylin",
 			"Meursault2004",
-			"Pras"
+			"Pras",
+			"NoiX180"
 		]
 	},
 	"whoiswatching": "Sapa sing ngawasi sawijining kaca wiki",
 	"whoiswatching-desc": "Nyadiakaké dhaptar panganggo sing ngawasi kaca wiki",
 	"specialwhoiswatchingthepage": "Sapa sing ngawasi %s",
-	"specialwhoiswatchingusage": "Kaca astamiwa iki ora bisa dianggo kanggo ngowahi kaca iki dhéwé.\nMangga pigunakaké kaca [[MediaWiki:Number_of_watching_users_pageview]] kanggo nemtokaké titik mlebu menyang kaca astamiwa iki.",
+	"specialwhoiswatchingusage": "Kaca mirunggan iki ora bisa dianggo dhéwékan.\nMangga anggoa kaca [[MediaWiki:Number_of_watching_users_pageview|iki]] saprelu mratélakaké titi isi kanggo kaca mirunggan iki.",
 	"specialwhoiswatchingaddusers": "Tambahna panganggo kanggo ngawasi kaca iki",
 	"specialwhoiswatchingaddbtn": "Tambahna panganggo sing dipilih"
 }
