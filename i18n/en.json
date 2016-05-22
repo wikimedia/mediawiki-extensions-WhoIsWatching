@@ -2,10 +2,27 @@
 	"@metadata": {
 		"authors": []
 	},
+	"right-addpagetoanywatchlist": "[[Special:WhoIsWatching|Add pages to watchlists of other users]]",
+	"action-addpagetoanywatchlist": "add pages to watchlists of other users",
+	"right-seepagewatchers": "See which users are [[Special:WhoIsWatching|watching a page]]",
+	"action-seepagewatchers": "see which users are watching a page",
 	"whoiswatching": "Who is watching a wiki page",
 	"whoiswatching-desc": "Provides a listing of usernames watching a wiki page",
-	"specialwhoiswatchingthepage": "Who is watching %s",
-	"specialwhoiswatchingusage": "This special page cannot be used on its own.\nPlease use the page [[MediaWiki:Number_of_watching_users_pageview]] to define an entry point to this special page.",
+	"specialwhoiswatchingpage": "Watchers on [[$1]]",
+	"specialwhoiswatchingusage": "This special page cannot be used on its own.",
 	"specialwhoiswatchingaddusers": "Add users to watch the page",
-	"specialwhoiswatchingaddbtn": "Add selected users"
+	"specialwhoiswatchingaddbtn": "Add selected users",
+	"whoiswatching_users_pageview": "[{{fullurl:Special:WhoIsWatching/{{FULLPAGENAMEE}}}} $1] watching {{PLURAL:$1|user|users}}",
+	"whoiswatching-not-possible-title": "Impossible page to watch",
+	"whoiswatching-not-possible": "It is not possible to watch the [[$1]] page.",
+	"whoiswatching-usage-title": "How to use this page",
+	"whoiswatching-user-editname": "Type a username:",
+	"whoiswatching-adduser": "Add user",
+	"whoiswatching-deluser": "Remove user",
+	"whoiswatching-lookup-user": "User lookup",
+	"whoiswatching-permission-denied-title": "Permission denied",
+	"whoiswatching-permission-denied": "You can't do anything on this page.\n\nAt lease one of these permissions are needed: $1",
+	"whoiswatching-lookup-title": "Title lookup",
+	"whoiswatching-title": "Type a title",
+	"whoiswatching-select-title": "See watchlist"
 }

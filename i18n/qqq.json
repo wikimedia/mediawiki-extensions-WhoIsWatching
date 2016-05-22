@@ -5,13 +5,31 @@
 			"Purodha",
 			"Shirayuki",
 			"Siebrand",
-			"Umherirrender"
+			"Umherirrender",
+			"MarkAHershberger"
 		]
 	},
+	"right-addpagetoanywatchlist": "{{doc-right|addpagetoanywatchlist}}",
+	"action-addpagetoanywatchlist": "{{doc-action|addpagetoanywatchlist}}",
+	"right-seepagewatchers": "{{doc-right|seepagewatchers}}",
+	"action-seepagewatchers": "{{doc-action|seepagewatchers}}",
 	"whoiswatching": "{{doc-special|WhoIsWatching|unlisted=1}}",
 	"whoiswatching-desc": "{{desc|name=Who Is Watching|url=https://www.mediawiki.org/wiki/Extension:WhoIsWatching}}",
-	"specialwhoiswatchingthepage": "Title of watching users list",
-	"specialwhoiswatchingusage": "Message that gets displayed when someone tries to just open [[Special:WhoIsWatching]].\nThis special page cannot be used on its own.\nPlease use the page [[MediaWiki:Number_of_watching_users_pageview]] to define an entry point to this special page.",
+	"specialwhoiswatchingpage": "Title of watching users list",
+	"specialwhoiswatchingusage": "Message that gets displayed when someone tries to just open [[Special:WhoIsWatching]].",
 	"specialwhoiswatchingaddusers": "Add users to watch the page",
-	"specialwhoiswatchingaddbtn": "Add selected users"
+	"specialwhoiswatchingaddbtn": "Add selected users",
+	"whoiswatching_users_pageview": "Message displayed at the bottom of the page with the number of watchers.",
+	"whoiswatching-not-possible-title": "Title of error page displayed on WhoIsWatching when a page cannot be watched.",
+	"whoiswatching-not-possible": "Text of error page displayed when the page is not watchable",
+	"whoiswatching-usage-title": "Title of the error page that shows the usage",
+	"whoiswatching-user-editname": "Prompt to enter a user name",
+	"whoiswatching-adduser": "Label for button to submit form",
+	"whoiswatching-deluser": "Label for button to submit form",
+	"whoiswatching-lookup-user": "User lookup",
+	"whoiswatching-permission-denied-title": "Title of the error page that shows permission denied",
+	"whoiswatching-permission-denied": "Message explaining what permissions are missiong",
+	"whoiswatching-lookup-title": "Label form to lookup a title",
+	"whoiswatching-title": "Prompt to enter a title",
+	"whoiswatching-select-title": "Label for button to submit form to load WhoIsWatching page for the title"
 }
