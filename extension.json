@@ -1,0 +1,53 @@
+{
+	"name": "WhoIsWatching",
+	"version": "0.12.0",
+	"license-name": "GPL-2.0",
+	"author": [
+		"Paul Grinberg",
+		"Siebrand Mazeland",
+		"Vitaliy Filippov",
+		"[http://mwstake.org Mark A. Hershberger]"
+	],
+	"require": [ "1.26" ],
+	"url": "https://www.mediawiki.org/wiki/Extension:WhoIsWatching",
+	"descriptionmsg": "whoiswatching-desc",
+	"type": "specialpage",
+	"SpecialPages": {
+		"WhoIsWatching": "WhoIsWatching"
+	},
+	"MessagesDirs": {
+		"WhoIsWatching": [
+			"i18n"
+		]
+	},
+	"ExtensionMessagesFiles": {
+		"WhoIsWatchingAlias": "WhoIsWatching.alias.php"
+	},
+	"AutoloadClasses": {
+		"WhoIsWatching": "WhoIsWatching_body.php"
+	},
+	"Hooks": {
+		"SkinTemplateOutputPageBeforeExec": [
+			"WhoIsWatching::onSkinTemplateOutputPageBeforeExec"
+		]
+	},
+	"GroupPermissions": {
+		"sysop": {
+			"addpagetoanywatchlist": true,
+			"seepagewatchers": true
+		}
+	},
+	"AvailableRights": [
+		"addpagetoanywatchlist",
+		"seepagewatchers"
+	],
+	"config": {
+		"_prefix": "whoiswatching_",
+		"nametype": "RealName",
+		"allowaddingpeople": true,
+		"showifzero": true,
+		"showwatchingusers": true,
+		"maxPicklistUsers": 10
+	},
+	"manifest_version": 1
+}
