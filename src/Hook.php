@@ -36,6 +36,10 @@ class Hook {
 		$conf = new GlobalVarConfig( "whoiswatching_" );
 		$showIfZero = $conf->get( "showifzero" );
 		$title = $template->getTitle();
+		if ( $title->isRedirect() ) {
+			$article = Article::newFromID( $title->getArticleID() );
+			$title = $article->getRedirectTarget();
+		}
 		$user = $template->getUser();
 		$showWatchingUsers = $conf->get( "showwatchingusers" )
 						   || $user->isAllowed( 'seepagewatchers' );
@@ -48,9 +52,9 @@ class Hook {
 			], __METHOD__ );
 			$watch = $dbr->fetchObject( $res );
 			if ( $watch->count > 0 || $showIfZero ) {
+				$lang = RequestContext::getMain()->getLanguage();
 				$msg = wfMessage( 'whoiswatching_users_pageview',
-					RequestContext::getMain()->getLanguage()->formatNum
-								  ( $watch->count )
+								  $lang->formatNum( $watch->count ), $title
 				)->parse();
 				$tpl->set( 'numberofwatchingusers', $msg );
 			}
