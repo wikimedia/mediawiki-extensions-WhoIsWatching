@@ -3,13 +3,25 @@
 		"authors": [
 			"ChrisiPK",
 			"Purodha",
-			"Raimond Spekking"
+			"Raimond Spekking",
+			"Metalhead64"
 		]
 	},
 	"whoiswatching": "Wer beobachtet eine Seite",
 	"whoiswatching-desc": "Zeigt eine Liste von Benutzern an, die eine Seite beobachten",
-	"specialwhoiswatchingthepage": "Wer beobachtet %s",
-	"specialwhoiswatchingusage": "Diese Spezialseite ist nicht auf sich allein gestellt einsetzbar.\nBitte definiere über die Seite [[MediaWiki:Number_of_watching_users_pageview]] eine Einstiegsseite für diese Spezialseite.",
+	"specialwhoiswatchingpage": "Beobachter von [[$1]]",
+	"specialwhoiswatchingusage": "Diese Spezialseite ist nicht auf sich allein gestellt einsetzbar.",
 	"specialwhoiswatchingaddusers": "Füge Benutzer zum Beobachten der Seite hinzu",
-	"specialwhoiswatchingaddbtn": "Füge Benutzer hinzu"
+	"specialwhoiswatchingaddbtn": "Füge Benutzer hinzu",
+	"whoiswatching_users_pageview": "[{{fullurl:Special:WhoIsWatching/{{FULLPAGENAMEE}}}} $1] {{PLURAL:$1|beobachtender|beobachtende}} Benutzer",
+	"whoiswatching-not-possible-title": "Seite kann nicht beobachtet werden",
+	"whoiswatching-usage-title": "Wie diese Seite verwendet wird",
+	"whoiswatching-user-editname": "Einen Benutzernamen eingeben:",
+	"whoiswatching-adduser": "Benutzer hinzufügen",
+	"whoiswatching-deluser": "Benutzer entfernen",
+	"whoiswatching-lookup-user": "Benutzersuche",
+	"whoiswatching-permission-denied-title": "Zugriff verweigert",
+	"whoiswatching-lookup-title": "Titelsuche",
+	"whoiswatching-title": "Einen Titel eingeben",
+	"whoiswatching-select-title": "Siehe Beobachtungsliste"
 }
