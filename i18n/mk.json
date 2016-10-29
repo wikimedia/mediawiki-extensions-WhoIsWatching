@@ -5,10 +5,27 @@
 			"Brest"
 		]
 	},
+	"right-addpagetoanywatchlist": "[[Special:WhoIsWatching|Ставање страници во туѓи набљудувања]]",
+	"action-addpagetoanywatchlist": "ставање страници во туѓи набљудувања",
+	"right-seepagewatchers": "Увид кои луѓе [[Special:WhoIsWatching|набљудуваат дадена страница]]",
+	"action-seepagewatchers": "увид кои луѓе набљудуваат дадена страница",
 	"whoiswatching": "Кој набљудува вики страница",
 	"whoiswatching-desc": "Дава список на корисници што набљудуваат некоја вики-страница",
-	"specialwhoiswatchingthepage": "Кој набљудува %s",
-	"specialwhoiswatchingusage": "Оваа службена страница не може да се користи самостојно.\nЗа да определите влезна точка кон оваа службена страница, послужете се со [[MediaWiki:Number_of_watching_users_pageview]]..",
+	"specialwhoiswatchingpage": "Набљудувачи на [[$1]]",
+	"specialwhoiswatchingusage": "Оваа службена страница не може да се користи самостојно.",
 	"specialwhoiswatchingaddusers": "Додај корисници за набљудување на страницата",
-	"specialwhoiswatchingaddbtn": "Додај избрани корисници"
+	"specialwhoiswatchingaddbtn": "Додај избрани корисници",
+	"whoiswatching_users_pageview": "[{{fullurl:Special:WhoIsWatching/{{FULLPAGENAMEE}}}} $1] {{PLURAL:$1|набљудувач|набљудувачи}}",
+	"whoiswatching-not-possible-title": "Страницата не може да се набљудува",
+	"whoiswatching-not-possible": "Набљудувањето на страницата [[$1]] е невозможно.",
+	"whoiswatching-usage-title": "Како се користи страницава",
+	"whoiswatching-user-editname": "Внесете корисничко име:",
+	"whoiswatching-adduser": "Додај корисник",
+	"whoiswatching-deluser": "Отстрани корисник",
+	"whoiswatching-lookup-user": "Пребарување на корисници",
+	"whoiswatching-permission-denied-title": "Пристапот е одбиен",
+	"whoiswatching-permission-denied": "На страницава не можете да направите ништо.\n\nВи треба барем една од следниве дозволи: $1",
+	"whoiswatching-lookup-title": "Пребарување на наслови",
+	"whoiswatching-title": "Внесете наслов",
+	"whoiswatching-select-title": "Дај набљудувачи"
 }

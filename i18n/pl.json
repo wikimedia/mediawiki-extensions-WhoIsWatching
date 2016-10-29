@@ -3,13 +3,23 @@
 		"authors": [
 			"Derbeth",
 			"Maikking",
-			"Masti"
+			"Masti",
+			"Chrumps",
+			"Woytecr"
 		]
 	},
+	"action-seepagewatchers": "zobacz, którzy użytkownicy obserwują stronę",
 	"whoiswatching": "Kto obserwuje stronę",
 	"whoiswatching-desc": "Pokazuje listę użytkowników mających daną stronę w obserwowanych",
-	"specialwhoiswatchingthepage": "Kto obserwuje %s",
-	"specialwhoiswatchingusage": "Ta strona nie może być użyta samoistnie. Skorzystaj ze strony [[MediaWiki:Number_of_watching_users_pageview]], aby zdefiniować punkt startowy dla tej strony",
+	"specialwhoiswatchingusage": "Ta strona nie może być użyta samoistnie.",
 	"specialwhoiswatchingaddusers": "Dodaj użytkowników obserwujących stronę",
-	"specialwhoiswatchingaddbtn": "Dodaj wybranych użytkowników"
+	"specialwhoiswatchingaddbtn": "Dodaj wybranych użytkowników",
+	"whoiswatching-not-possible": "Obserwowanie strony [[$1]] nie jest możliwe.",
+	"whoiswatching-usage-title": "Jak używać tej strony",
+	"whoiswatching-user-editname": "Wprowadź nazwę użytkownika:",
+	"whoiswatching-adduser": "Dodaj użytkownika",
+	"whoiswatching-deluser": "Usuń użytkownika",
+	"whoiswatching-permission-denied-title": "Brak dostępu",
+	"whoiswatching-title": "Wprowadź tytuł",
+	"whoiswatching-select-title": "Zobacz listę obserwowanych"
 }

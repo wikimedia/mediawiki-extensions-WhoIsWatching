@@ -3,13 +3,31 @@
 		"authors": [
 			"Hydra",
 			"Liangent",
-			"Xiaomingyan"
+			"Xiaomingyan",
+			"Liuxinyu970226"
 		]
 	},
+	"right-addpagetoanywatchlist": "[[Special:WhoIsWatching|添加页面至其他用户的监视列表]]",
+	"action-addpagetoanywatchlist": "添加页面至其他用户的监视列表",
+	"right-seepagewatchers": "查看哪些用户在[[Special:WhoIsWatching|监视页面]]",
+	"action-seepagewatchers": "查看哪些用户在监视页面",
 	"whoiswatching": "正在监视某wiki页面的用户",
 	"whoiswatching-desc": "提供正在监视某wiki页面的用户名列表",
-	"specialwhoiswatchingthepage": "正在监视用户%s",
-	"specialwhoiswatchingusage": "此特殊页面不能自行使用。\n请使用页面 [[MediaWiki:Number_of_watching_users_pageview]] 定义的入口点，这种特殊的页面。",
-	"specialwhoiswatchingaddusers": "添加用户以监视本页面",
-	"specialwhoiswatchingaddbtn": "添加已选择用户"
+	"specialwhoiswatchingpage": "[[$1]]上的监视者",
+	"specialwhoiswatchingusage": "此特殊页面不能自行使用。",
+	"specialwhoiswatchingaddusers": "添加用户以监视页面",
+	"specialwhoiswatchingaddbtn": "添加已选择用户",
+	"whoiswatching_users_pageview": "[{{fullurl:Special:WhoIsWatching/{{FULLPAGENAMEE}}}} $1]个正在监视的{{PLURAL:$1|用户}}",
+	"whoiswatching-not-possible-title": "页面无法监视",
+	"whoiswatching-not-possible": "无法监视[[$1]]页面。",
+	"whoiswatching-usage-title": "如何使用此页面",
+	"whoiswatching-user-editname": "输入用户名：",
+	"whoiswatching-adduser": "添加用户",
+	"whoiswatching-deluser": "移除用户",
+	"whoiswatching-lookup-user": "用户查找",
+	"whoiswatching-permission-denied-title": "权限被拒绝",
+	"whoiswatching-permission-denied": "您不能在此页面做任何事。\n\n您需要这些权限中的至少一个：$1",
+	"whoiswatching-lookup-title": "标题查找",
+	"whoiswatching-title": "输入标题",
+	"whoiswatching-select-title": "参见监视列表"
 }

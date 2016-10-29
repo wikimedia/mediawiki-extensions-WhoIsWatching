@@ -2,13 +2,24 @@
 	"@metadata": {
 		"authors": [
 			"Aleksandrit",
-			"Ferrer"
+			"Ferrer",
+			"Irus"
 		]
 	},
+	"action-addpagetoanywatchlist": "добавление страниц к спискам других пользователей",
+	"action-seepagewatchers": "посмотреть, какие пользователи смотрят страницы",
 	"whoiswatching": "Кто следит за вики-страницей",
 	"whoiswatching-desc": "Предоставляет список участников, которые следят за вики-страницей",
-	"specialwhoiswatchingthepage": "Кто следит %s",
-	"specialwhoiswatchingusage": "Эта служебная страница не может быть использована сама по себе.\nПожалуйста, используйте страницу [[MediaWiki:Number_of_watching_users_pageview]] для определния точки входа в эту служебную страницу.",
+	"specialwhoiswatchingusage": "Эта служебная страница не может быть использована сама по себе.",
 	"specialwhoiswatchingaddusers": "Добавить участников для наблюдения страницы",
-	"specialwhoiswatchingaddbtn": "Добавить выбранных участников"
+	"specialwhoiswatchingaddbtn": "Добавить выбранных участников",
+	"whoiswatching-usage-title": "Как использовать на этой странице",
+	"whoiswatching-user-editname": "Введите имя учётной записи:",
+	"whoiswatching-adduser": "Добавить пользователя",
+	"whoiswatching-deluser": "Удалить пользователя",
+	"whoiswatching-lookup-user": "Поиск пользователей",
+	"whoiswatching-permission-denied-title": "Доступ запрещён",
+	"whoiswatching-lookup-title": "Поиск название",
+	"whoiswatching-title": "Введите название",
+	"whoiswatching-select-title": "Посмотреть список наблюдения"
 }
