@@ -5,6 +5,9 @@
 			"Robby"
 		]
 	},
+	"right-addpagetoanywatchlist": "[[Special:WhoIsWatching|Säiten op d'Iwwerwaachungslëschte vun anere Benotzer derbäisetzen]]",
+	"action-addpagetoanywatchlist": "Säiten op d'Iwwerwaachungslëschte vun anere Benotzer derbäisetzen",
+	"right-seepagewatchers": "Weise watfireng Benotzer  [[Special:WhoIsWatching|eng Säit iwwerwaachen]]",
 	"action-seepagewatchers": "kucke wat fir eng Benotzer eng Säit iwwerwaachen",
 	"whoiswatching": "Wien iwwerwaacht eng Säit",
 	"whoiswatching-desc": "Liwwert eng Säit mat de Benotzer déi eng Wiki-Säit iwwerwaachen",
@@ -12,12 +15,16 @@
 	"specialwhoiswatchingusage": "Dës Spezialsäit kann net eleng benotzt ginn.",
 	"specialwhoiswatchingaddusers": "Setzt Benotzer derbäi déi d'Säit iwwerwaachen",
 	"specialwhoiswatchingaddbtn": "Setzt déi ausgewielt Benotzer derbäi",
+	"whoiswatching_users_pageview": "[{{fullurl:Special:WhoIsWatching/{{FULLPAGENAMEE}}}} $1]  {{PLURAL:$1|Benotzer}} iwwerwaachen",
+	"whoiswatching-not-possible-title": "Säit kann net iwwerwaacht ginn",
 	"whoiswatching-not-possible": "Et ass net méiglech d'Säit [[$1]] z'iwwerwaachen.",
 	"whoiswatching-usage-title": "Wéi dës Säit benotzt gëtt",
 	"whoiswatching-user-editname": "Gitt e Benotzernmm an:",
 	"whoiswatching-adduser": "Benotzer derbäisetzen",
 	"whoiswatching-deluser": "Benotzer ewechhuelen",
 	"whoiswatching-lookup-user": "No engem Benotzer sichen",
+	"whoiswatching-permission-denied-title": "Autorisatioun refuséiert",
+	"whoiswatching-lookup-title": "Titel sichen",
 	"whoiswatching-title": "En Titel aginn",
 	"whoiswatching-select-title": "Kuckt Iwwerwaachungslëscht"
 }

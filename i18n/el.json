@@ -3,13 +3,19 @@
 		"authors": [
 			"Geraki",
 			"ZaDiak",
-			"Περίεργος"
+			"Περίεργος",
+			"GR"
 		]
 	},
+	"action-seepagewatchers": "δείτε ποιοι χρήστες παρακολουθούν μια σελίδα",
 	"whoiswatching": "Ποιος βλέπει μια σελίδα wiki",
 	"whoiswatching-desc": "Παρέχει μία λίστα με τους χρήστες που παρακολουθούν μια βικισελίδα",
-	"specialwhoiswatchingthepage": "Ποιος βλέπει %s",
 	"specialwhoiswatchingusage": "Αυτή η ειδική σελίδα δεν μπορεί να χρησιμοποιηθεί μόνη της. Παρακαλούμε χρησιμοποιήστε τη σελίδα [[MediaWiki:Number_of_watching_users_pageview]] να καθορίσει ένα σημείο εισόδου για την ειδική αυτή σελίδα.",
 	"specialwhoiswatchingaddusers": "Προσθήκη χρηστών για παρακολούθηση της σελίδας",
-	"specialwhoiswatchingaddbtn": "Προσθήκη επιλεγμένων χρηστών"
+	"specialwhoiswatchingaddbtn": "Προσθήκη επιλεγμένων χρηστών",
+	"whoiswatching-user-editname": "Εισάγετε όνομα χρήστη",
+	"whoiswatching-adduser": "Προσθήκη χρήστη",
+	"whoiswatching-deluser": "Αφαίρεση χρήστη",
+	"whoiswatching-lookup-title": "Τίτλος αναζήτησης",
+	"whoiswatching-title": "Πληκτρολογήστε έναν τίτλο"
 }
