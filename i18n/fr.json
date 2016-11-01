@@ -6,13 +6,31 @@
 			"Grondin",
 			"McDutchie",
 			"PieRRoMaN",
-			"Sherbrooke"
+			"Sherbrooke",
+			"Gomoko"
 		]
 	},
+	"right-addpagetoanywatchlist": "[[Special:WhoIsWatching|Ajouter des pages aux listes de suivi d’autres utilisateurs]]",
+	"action-addpagetoanywatchlist": "ajouter des pages aux listes de suivi des autres utilisateurs",
+	"right-seepagewatchers": "Voir quels utilisateurs [[Special:WhoIsWatching|suivent une page]]",
+	"action-seepagewatchers": "voir quels utilisateurs suivent une page",
 	"whoiswatching": "Qui suit une page wiki",
 	"whoiswatching-desc": "Fournit une liste des utilisateurs qui suivent une page wiki",
-	"specialwhoiswatchingthepage": "Qui suit %s",
-	"specialwhoiswatchingusage": "Cette page spéciale ne peut être utilisée seule.\nVeuillez utiliser la page [[MediaWiki:Number_of_watching_users_pageview]] pour définir un point d’entrée vers cette page spéciale.",
+	"specialwhoiswatchingpage": "Suiveurs de [[$1]]",
+	"specialwhoiswatchingusage": "Cette page spéciale ne peut être utilisée seule.",
 	"specialwhoiswatchingaddusers": "Ajouter les utilisateurs pour suivre la page",
-	"specialwhoiswatchingaddbtn": "Ajouter les utilisateurs sélectionnés"
+	"specialwhoiswatchingaddbtn": "Ajouter les utilisateurs sélectionnés",
+	"whoiswatching_users_pageview": "[{{fullurl:Special:WhoIsWatching/{{FULLPAGENAMEE}}}} $1] {{PLURAL:$1|utilisateur suivant|utilisateurs suiveurs}}",
+	"whoiswatching-not-possible-title": "Page impossible à suivre",
+	"whoiswatching-not-possible": "Il n’est pas possible de suivre la page [[$1]].",
+	"whoiswatching-usage-title": "Comment utiliser cette page",
+	"whoiswatching-user-editname": "Saisir un nom d’utilisateur :",
+	"whoiswatching-adduser": "Ajouter un utilisateur",
+	"whoiswatching-deluser": "Supprimer l’utilisateur",
+	"whoiswatching-lookup-user": "Recherche d’utilisateur",
+	"whoiswatching-permission-denied-title": "Autorisation refusée",
+	"whoiswatching-permission-denied": "Vous ne pouvez rien faire sur cette page.\n\nUne de ces autorisations au moins est nécessaire : $1",
+	"whoiswatching-lookup-title": "Recherche de titre",
+	"whoiswatching-title": "Saisir un titre",
+	"whoiswatching-select-title": "Voir la liste de suivi"
 }

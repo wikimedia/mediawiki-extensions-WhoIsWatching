@@ -2,13 +2,21 @@
 	"@metadata": {
 		"authors": [
 			"BrokenArrow",
-			"Pietrodn"
+			"Pietrodn",
+			"Beta16"
 		]
 	},
+	"action-addpagetoanywatchlist": "aggiungere pagine agli osservati speciali di altri utenti",
+	"right-seepagewatchers": "visualizza quali utenti stanno [[Special:WhoIsWatching|osservando una pagina]]",
+	"action-seepagewatchers": "vedere quali utenti stanno osservando una pagina",
 	"whoiswatching": "Chi sta osservando una pagina wiki",
 	"whoiswatching-desc": "Elenca i nomi degli utenti che tengono sotto osservazione una pagina wiki",
-	"specialwhoiswatchingthepage": "Chi sta osservando %s",
-	"specialwhoiswatchingusage": "Questa pagina speciale non può essere usata da sola. Per favore usa la pagina [[MediaWiki:Number_of_watching_users_pageview]] per definire un punto di entrata per questa pagina speciale.",
+	"specialwhoiswatchingusage": "Questa pagina speciale non può essere usata da sola.",
 	"specialwhoiswatchingaddusers": "Aggiungi utenti ad osservare la pagina",
-	"specialwhoiswatchingaddbtn": "Aggiungi gli utenti selezionati"
+	"specialwhoiswatchingaddbtn": "Aggiungi gli utenti selezionati",
+	"whoiswatching-usage-title": "Come utilizzare questa pagina",
+	"whoiswatching-user-editname": "Inserisci un nome utente:",
+	"whoiswatching-adduser": "Aggiungi utente",
+	"whoiswatching-deluser": "Rimuovi utente",
+	"whoiswatching-title": "Scrivi un titolo"
 }

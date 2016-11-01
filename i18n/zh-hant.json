@@ -3,13 +3,18 @@
 		"authors": [
 			"Mark85296341",
 			"Wrightbus",
-			"LNDDYL"
+			"LNDDYL",
+			"Cwlin0416"
 		]
 	},
 	"whoiswatching": "正在監視某 wiki 頁面的使用者",
 	"whoiswatching-desc": "提供正在監視某 wiki 頁面的使用者名稱清單",
-	"specialwhoiswatchingthepage": "誰正在監視 %s",
 	"specialwhoiswatchingusage": "此特殊頁面不能自行使用。\n請使用頁面 [[MediaWiki:Number_of_watching_users_pageview]] 定義的入口點，這種特殊的頁面。",
 	"specialwhoiswatchingaddusers": "新增使用者以監視本頁面",
-	"specialwhoiswatchingaddbtn": "新增已選擇使用者"
+	"specialwhoiswatchingaddbtn": "新增已選擇使用者",
+	"whoiswatching-user-editname": "輸入使用者名稱：",
+	"whoiswatching-adduser": "加入使用者",
+	"whoiswatching-deluser": "移除使用者",
+	"whoiswatching-permission-denied-title": "權限不足",
+	"whoiswatching-select-title": "檢視監視清單"
 }

@@ -1,10 +1,26 @@
 {
 	"@metadata": {
 		"authors": [
-			"Matasg"
+			"Matasg",
+			"Eitvys200"
 		]
 	},
+	"right-addpagetoanywatchlist": "[[Special:WhoIsWatching|Pridėti puslapius į kitų vartotojų stebimųjų sąrašus]]",
+	"action-addpagetoanywatchlist": "pridėti puslapius į kitų vartotojų stebimųjų sąrašus",
+	"right-seepagewatchers": "Žiūrėti kurie vartotojai [[Special:WhoIsWatching|stebi puslapį]]",
+	"action-seepagewatchers": "žiūrėti kurie vartotojai stebį puslapį",
 	"whoiswatching": "Kas žiūri šį puslapį",
-	"specialwhoiswatchingthepage": "Kas žiūri %s",
-	"specialwhoiswatchingusage": "Šis specialus puslapis negali būti naudojamas paprastai. Prašome naudoti [[MediaWiki:Number_of_watching_users_pageview]] puslapį, kad apibrėžtumėte įėjimo punktą į šį specialųjį puslapį."
+	"specialwhoiswatchingusage": "Šis specialus puslapis negali būti naudojamas vienas.",
+	"whoiswatching-not-possible-title": "Negalimas puslapis stebėjimui",
+	"whoiswatching-not-possible": "Negalima stebėti [[$1]] puslapio.",
+	"whoiswatching-usage-title": "Kaip naudotis šiuo puslapiu",
+	"whoiswatching-user-editname": "Įveskite vartotojo vardą:",
+	"whoiswatching-adduser": "Pridėti vartotoją",
+	"whoiswatching-deluser": "Pašalinti vartotoją",
+	"whoiswatching-lookup-user": "Vartotojo paieška",
+	"whoiswatching-permission-denied-title": "Teisė nesuteikta",
+	"whoiswatching-permission-denied": "Jūs negalite nieko daryti šiame puslapyje.\n\nReikia bent vienos iš šių teisių: $1",
+	"whoiswatching-lookup-title": "Pavadinimo paieška",
+	"whoiswatching-title": "Įveskite pavadinimą",
+	"whoiswatching-select-title": "Žiūrėti stebimųjų sąrašą"
 }

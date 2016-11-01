@@ -2,13 +2,29 @@
 	"@metadata": {
 		"authors": [
 			"Alma",
-			"Toliño"
+			"Toliño",
+			"Banjo",
+			"Elisardojm"
 		]
 	},
+	"right-addpagetoanywatchlist": "[[Special:WhoIsWatching|Engadir páxinas á lista de vixilancia doutros usuarios]]",
+	"action-addpagetoanywatchlist": "engadir páxinas ás listas de vixilancia doutros usuarios",
+	"right-seepagewatchers": "Ver que usuarios están [[Special:WhoIsWatching|vixilando unha páxina]]",
+	"action-seepagewatchers": "ver que usuarios están vixilando unha páxina",
 	"whoiswatching": "Quen está vixiando unha páxina do wiki",
 	"whoiswatching-desc": "Proporciona unha lista de nomes de usuario que vixian unha páxina do wiki",
-	"specialwhoiswatchingthepage": "Quen está vixiando %s",
-	"specialwhoiswatchingusage": "Esta páxina especial non pode ser usada deste xeito. Use esta páxina\n[[MediaWiki:Number_of_watching_users_pageview]] para definir un punto de entrada a esta páxina especial.",
+	"specialwhoiswatchingpage": "Vixilantes de [[$1]]",
+	"specialwhoiswatchingusage": "Esta páxina especial non pode ser usada por si soa.",
 	"specialwhoiswatchingaddusers": "Engadir os usuarios para vixiar a páxina",
-	"specialwhoiswatchingaddbtn": "Engadir os usuarios seleccionados"
+	"specialwhoiswatchingaddbtn": "Engadir os usuarios seleccionados",
+	"whoiswatching_users_pageview": "[{{fullurl:Special:WhoIsWatching/{{FULLPAGENAMEE}}}} $1] {{PLURAL:$1|usuario|usuarios}} vixiando",
+	"whoiswatching-not-possible-title": "Páxina imposible de vixiar",
+	"whoiswatching-not-possible": "Non é posible vixiar a páxina [[$1]].",
+	"whoiswatching-usage-title": "Como usar esta páxina",
+	"whoiswatching-user-editname": "Insira un nome de usuario:",
+	"whoiswatching-adduser": "Engadir usuario",
+	"whoiswatching-deluser": "Eliminar usuario",
+	"whoiswatching-permission-denied-title": "Permiso rexeitado",
+	"whoiswatching-title": "Insira un título",
+	"whoiswatching-select-title": "Ver a lista de vixilancia"
 }

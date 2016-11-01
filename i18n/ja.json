@@ -2,13 +2,16 @@
 	"@metadata": {
 		"authors": [
 			"Aotake",
-			"Fryed-peach"
+			"Fryed-peach",
+			"Otokoume"
 		]
 	},
 	"whoiswatching": "ページをウォッチしている利用者",
 	"whoiswatching-desc": "ページをウォッチしている利用者の一覧を提供する",
-	"specialwhoiswatchingthepage": "%s をウォッチしている利用者",
 	"specialwhoiswatchingusage": "この特別ページは単独では利用できません。この特別ページへのエントリーポイントを定義するためには [[MediaWiki:Number_of_watching_users_pageview]] を使用してください。",
 	"specialwhoiswatchingaddusers": "利用者のウォッチリストにページを追加",
-	"specialwhoiswatchingaddbtn": "選択した利用者を追加"
+	"specialwhoiswatchingaddbtn": "選択した利用者を追加",
+	"whoiswatching_users_pageview": "[{{fullurl:Special:WhoIsWatching/{{FULLPAGENAMEE}}}} $1]人の{{PLURAL:$1|利用者}}が閲覧中",
+	"whoiswatching-adduser": "利用者を追加",
+	"whoiswatching-deluser": "利用者を削除"
 }

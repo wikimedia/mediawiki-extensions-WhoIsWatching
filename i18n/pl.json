@@ -20,6 +20,7 @@
 	"whoiswatching-adduser": "Dodaj użytkownika",
 	"whoiswatching-deluser": "Usuń użytkownika",
 	"whoiswatching-permission-denied-title": "Brak dostępu",
+	"whoiswatching-permission-denied": "Na tej stronie nie możesz nic zrobić.\n\nPotrzebujesz jednego z tych uprawnień: $1",
 	"whoiswatching-title": "Wprowadź tytuł",
 	"whoiswatching-select-title": "Zobacz listę obserwowanych"
 }
