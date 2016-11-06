@@ -5,10 +5,27 @@
 			"Xuacu"
 		]
 	},
+	"right-addpagetoanywatchlist": "[[Special:WhoIsWatching|Amestar páxines a llistes de vixilancia d'otros usuarios]]",
+	"action-addpagetoanywatchlist": "amestar páxines a llistes de vixilancia d'otros usuarios",
+	"right-seepagewatchers": "Ver qué usuarios tán [[Special:WhoIsWatching|vixilando una páxina]]",
+	"action-seepagewatchers": "ver qué usuarios tán vixilando una páxina",
 	"whoiswatching": "Quíen ta vixilando una páxina wiki",
 	"whoiswatching-desc": "Ufre la llista d'usuarios que tan viendo una páxina wiki",
-	"specialwhoiswatchingthepage": "Quién ta vixilando %s",
-	"specialwhoiswatchingusage": "Esta páxina especial nun pue ser usada por sí sola. Por favor usa la páxina [[MediaWiki:Number_of_watching_users_pageview]] pa definir un puntu d'entrada qu'empobine a esta páxina especial.",
+	"specialwhoiswatchingpage": "Vixilantes de [[$1]]",
+	"specialwhoiswatchingusage": "Esta páxina especial nun pue usase por sí sola.",
 	"specialwhoiswatchingaddusers": "Añadi los usuarios pa vixilar la páxina",
-	"specialwhoiswatchingaddbtn": "Añader los usuarios seleicionaos"
+	"specialwhoiswatchingaddbtn": "Añader los usuarios seleicionaos",
+	"whoiswatching_users_pageview": "[{{fullurl:Special:WhoIsWatching/{{FULLPAGENAMEE}}}} $1] {{PLURAL:$1|usuariu|usuarios}} vixilando",
+	"whoiswatching-not-possible-title": "Páxina imposible de vixilar",
+	"whoiswatching-not-possible": "Nun ye posible vixilar la páxina [[$1]].",
+	"whoiswatching-usage-title": "Cómo usar esta páxina",
+	"whoiswatching-user-editname": "Escribe un nome d'usuariu:",
+	"whoiswatching-adduser": "Amestar usuariu",
+	"whoiswatching-deluser": "Desaniciar usuariu",
+	"whoiswatching-lookup-user": "Buscar usuariu",
+	"whoiswatching-permission-denied-title": "Permisu refugáu",
+	"whoiswatching-permission-denied": "Nun puedes facer nada nesta páxina.\n\nNecesítense polo menos unu d'estos permisos: $1",
+	"whoiswatching-lookup-title": "Buscar títulu",
+	"whoiswatching-title": "Escribe un títulu",
+	"whoiswatching-select-title": "Ver la llista de vixilancia"
 }
