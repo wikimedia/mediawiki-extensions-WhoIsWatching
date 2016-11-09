@@ -24,7 +24,10 @@
 	"whoiswatching-user-editname": "Insira un nome de usuario:",
 	"whoiswatching-adduser": "Engadir usuario",
 	"whoiswatching-deluser": "Eliminar usuario",
+	"whoiswatching-lookup-user": "Busca de usuario",
 	"whoiswatching-permission-denied-title": "Permiso rexeitado",
+	"whoiswatching-permission-denied": "Non pode facer nada nesta páxina.\n\nPolo menos un destes permisos é necesarioː $1",
+	"whoiswatching-lookup-title": "Busca de título",
 	"whoiswatching-title": "Insira un título",
 	"whoiswatching-select-title": "Ver a lista de vixilancia"
 }
