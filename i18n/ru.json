@@ -3,7 +3,8 @@
 		"authors": [
 			"Aleksandrit",
 			"Ferrer",
-			"Irus"
+			"Irus",
+			"Kareyac"
 		]
 	},
 	"right-addpagetoanywatchlist": "[[Special:WhoIsWatching|Добавить страницы к спискам другим пользователям]]",
@@ -26,7 +27,7 @@
 	"whoiswatching-lookup-user": "Поиск пользователей",
 	"whoiswatching-permission-denied-title": "Доступ запрещён",
 	"whoiswatching-permission-denied": "Вы не можете сделать что-нибудь на этой странице.\n\nДолжен быть один или несколько из этих разрешений: $1",
-	"whoiswatching-lookup-title": "Поиск название",
+	"whoiswatching-lookup-title": "Поиск по названию",
 	"whoiswatching-title": "Введите название",
 	"whoiswatching-select-title": "Посмотреть список наблюдения"
 }
