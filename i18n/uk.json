@@ -1,13 +1,31 @@
 {
 	"@metadata": {
 		"authors": [
-			"Base"
+			"Base",
+			"Piramidion"
 		]
 	},
+	"right-addpagetoanywatchlist": "[[Special:WhoIsWatching|додавання сторінок до списків спостереження інших користувачів]]",
+	"action-addpagetoanywatchlist": "додавання сторінок до списків спостереження інших користувачів",
+	"right-seepagewatchers": "перегляд користувачів, що [[Special:WhoIsWatching|спостерігають за сторінкою]]",
+	"action-seepagewatchers": "перегляд користувачів, що спостерігають за сторінкою",
 	"whoiswatching": "Хто спостерігає за вікі-сторінкою",
 	"whoiswatching-desc": "Надає список користувачів, які слідкують за вікі-сторінкою",
-	"specialwhoiswatchingthepage": "Хто спостерігає %s",
-	"specialwhoiswatchingusage": "Ця спеціальна сторінка не може бути використана сама по собі.\nБудь ласка, використовуйте сторінку [[MediaWiki:Number_of_watching_users_pageview]] для визначення точки входу в цю спеціальну сторінку.",
+	"specialwhoiswatchingpage": "Спостерігачі на [[$1]]",
+	"specialwhoiswatchingusage": "Ця спеціальна сторінка не може бути використана сама по собі.",
 	"specialwhoiswatchingaddusers": "Додати користувачів для спостереження за сторінкою",
-	"specialwhoiswatchingaddbtn": "Додати вибраних користувачів"
+	"specialwhoiswatchingaddbtn": "Додати вибраних користувачів",
+	"whoiswatching_users_pageview": "[{{fullurl:Special:WhoIsWatching/{{FULLPAGENAMEE}}}} $1] {{PLURAL:$1|спостерігач|спостерігачі|спостерігачів}}",
+	"whoiswatching-not-possible-title": "Недійсна сторінка для спостереження",
+	"whoiswatching-not-possible": "Неможливо додати сторінку [[$1]] до списку спостереження",
+	"whoiswatching-usage-title": "Як використовувати цю сторінку",
+	"whoiswatching-user-editname": "Введіть ім'я користувача:",
+	"whoiswatching-adduser": "Додати користувача",
+	"whoiswatching-deluser": "Вилучити користувача",
+	"whoiswatching-lookup-user": "Пошук користувачів",
+	"whoiswatching-permission-denied-title": "Доступ заборонено",
+	"whoiswatching-permission-denied": "Ви не можете нічого зробити на цій сторінці.\n\nПотрібне хоча б одне з цих прав: $1",
+	"whoiswatching-lookup-title": "Пошук назви",
+	"whoiswatching-title": "Введіть назву",
+	"whoiswatching-select-title": "Переглянути список спостереження"
 }
