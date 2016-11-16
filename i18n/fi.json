@@ -7,13 +7,17 @@
 			"Silvonen",
 			"Str4nd",
 			"Vililikku",
-			"ZeiP"
+			"ZeiP",
+			"Valtlait"
 		]
 	},
 	"whoiswatching": "Kuka on tarkkailemassa wikisivua",
 	"whoiswatching-desc": "Mahdollistaa wikisivun tarkkailijoiden listauksen.",
-	"specialwhoiswatchingthepage": "Kuka tarkkailee sivua %s",
 	"specialwhoiswatchingusage": "Tätä toimintosivua ei voi käyttää sellaisenaan.\nKäytä sivua [[MediaWiki:Number_of_watching_users_pageview]] määritelläksesi liityntäkohdan tähän toimintosivuun.",
 	"specialwhoiswatchingaddusers": "Lisää käyttäjiä tarkkailemaan sivua",
-	"specialwhoiswatchingaddbtn": "Lisää valitut käyttäjät"
+	"specialwhoiswatchingaddbtn": "Lisää valitut käyttäjät",
+	"whoiswatching-user-editname": "Kirjoita käyttäjätunnus:",
+	"whoiswatching-adduser": "Lisää käyttäjä",
+	"whoiswatching-deluser": "Poista käyttäjä",
+	"whoiswatching-title": "Kirjoita otsikko"
 }
