@@ -2,7 +2,8 @@
 	"@metadata": {
 		"authors": [
 			"Sanbec",
-			"Fex25"
+			"Fex25",
+			"Dgstranz"
 		]
 	},
 	"action-addpagetoanywatchlist": "Añadir páginas a listas de otros usuarios",
@@ -12,6 +13,8 @@
 	"specialwhoiswatchingusage": "Esta página especial no puede ser usada por sí sola.",
 	"specialwhoiswatchingaddusers": "Añade usuarios para que vigilen la página",
 	"specialwhoiswatchingaddbtn": "Añade los usuarios seleccionados",
+	"whoiswatching-adduser": "Añadir usuario",
 	"whoiswatching-deluser": "Eliminar usuario",
+	"whoiswatching-permission-denied-title": "Permiso denegado",
 	"whoiswatching-title": "Escriba un título"
 }
