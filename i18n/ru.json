@@ -4,16 +4,17 @@
 			"Aleksandrit",
 			"Ferrer",
 			"Irus",
-			"Kareyac"
+			"Kareyac",
+			"Mailman"
 		]
 	},
-	"right-addpagetoanywatchlist": "[[Special:WhoIsWatching|Добавить страницы к спискам другим пользователям]]",
+	"right-addpagetoanywatchlist": "добавление страниц к списку наблюдения всех участников",
 	"action-addpagetoanywatchlist": "добавление страниц к спискам других пользователей",
-	"right-seepagewatchers": "Увидеть, какие пользователи [[Special:WhoIsWatching|просмотра страницы]]",
+	"right-seepagewatchers": "просмотр наблюдаемых участником страниц",
 	"action-seepagewatchers": "посмотреть, какие пользователи смотрят страницы",
 	"whoiswatching": "Кто следит за вики-страницей",
 	"whoiswatching-desc": "Предоставляет список участников, которые следят за вики-страницей",
-	"specialwhoiswatchingpage": "Наблюдатели на [[$1]]",
+	"specialwhoiswatchingpage": "Наблюдающие за [[$1]]",
 	"specialwhoiswatchingusage": "Эта служебная страница не может быть использована сама по себе.",
 	"specialwhoiswatchingaddusers": "Добавить участников для наблюдения страницы",
 	"specialwhoiswatchingaddbtn": "Добавить выбранных участников",
