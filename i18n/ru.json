@@ -5,12 +5,13 @@
 			"Ferrer",
 			"Irus",
 			"Kareyac",
-			"Mailman"
+			"Mailman",
+			"Okras"
 		]
 	},
-	"right-addpagetoanywatchlist": "добавление страниц к списку наблюдения всех участников",
+	"right-addpagetoanywatchlist": "[[Special:WhoIsWatching|Добавление страниц к списку наблюдения других участников]]",
 	"action-addpagetoanywatchlist": "добавление страниц к спискам других пользователей",
-	"right-seepagewatchers": "просмотр наблюдаемых участником страниц",
+	"right-seepagewatchers": "Просмотр того, кто из участников [[Special:WhoIsWatching|наблюдают за страницей]]",
 	"action-seepagewatchers": "посмотреть, какие пользователи смотрят страницы",
 	"whoiswatching": "Кто следит за вики-страницей",
 	"whoiswatching-desc": "Предоставляет список участников, которые следят за вики-страницей",
