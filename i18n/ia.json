@@ -4,9 +4,27 @@
 			"McDutchie"
 		]
 	},
+	"right-addpagetoanywatchlist": "[[Special:WhoIsWatching|Adder paginas al observatorios de altere usatores]]",
+	"action-addpagetoanywatchlist": "adder paginas al observatorios de altere usatores",
+	"right-seepagewatchers": "Vider qual usatores [[Special:WhoIsWatching|observa un pagina]]",
+	"action-seepagewatchers": "vider qual usatores observa un pagina",
 	"whoiswatching": "Qui observa un pagina wiki",
 	"whoiswatching-desc": "Forni un lista de nomines de usatores qui observa un pagina wiki",
+	"specialwhoiswatchingpage": "Observatores de [[$1]]",
 	"specialwhoiswatchingusage": "Iste pagina special non pote esser usate sol.",
 	"specialwhoiswatchingaddusers": "Adder usatores pro observar le pagina",
-	"specialwhoiswatchingaddbtn": "Adder le usatores seligite"
+	"specialwhoiswatchingaddbtn": "Adder le usatores seligite",
+	"whoiswatching_users_pageview": "[{{fullurl:Special:WhoIsWatching/{{FULLPAGENAMEE}}}} $1] {{PLURAL:$1|usator|usatores}} observante",
+	"whoiswatching-not-possible-title": "Pagina inobservabile",
+	"whoiswatching-not-possible": "Non es possibile observar le pagina [[$1]].",
+	"whoiswatching-usage-title": "Como usar iste pagina",
+	"whoiswatching-user-editname": "Scribe un nomine de usator:",
+	"whoiswatching-adduser": "Adder usator",
+	"whoiswatching-deluser": "Remover usator",
+	"whoiswatching-lookup-user": "Cercar usator",
+	"whoiswatching-permission-denied-title": "Permission refusate",
+	"whoiswatching-permission-denied": "Tu non pote facer alcun cosa sur iste pagina.\n\nAl minus un de iste permissiones es necessari: $1",
+	"whoiswatching-lookup-title": "Cercar titulo",
+	"whoiswatching-title": "Scribe un titulo",
+	"whoiswatching-select-title": "Vider observatorio"
 }
