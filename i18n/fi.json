@@ -8,7 +8,8 @@
 			"Str4nd",
 			"Vililikku",
 			"ZeiP",
-			"Valtlait"
+			"Valtlait",
+			"Pyscowicz"
 		]
 	},
 	"whoiswatching": "Kuka on tarkkailemassa wikisivua",
@@ -16,8 +17,11 @@
 	"specialwhoiswatchingusage": "Tätä toimintosivua ei voi käyttää sellaisenaan.\nKäytä sivua [[MediaWiki:Number_of_watching_users_pageview]] määritelläksesi liityntäkohdan tähän toimintosivuun.",
 	"specialwhoiswatchingaddusers": "Lisää käyttäjiä tarkkailemaan sivua",
 	"specialwhoiswatchingaddbtn": "Lisää valitut käyttäjät",
+	"whoiswatching-usage-title": "Kuinka käyttää tätä sivua",
 	"whoiswatching-user-editname": "Kirjoita käyttäjätunnus:",
 	"whoiswatching-adduser": "Lisää käyttäjä",
 	"whoiswatching-deluser": "Poista käyttäjä",
-	"whoiswatching-title": "Kirjoita otsikko"
+	"whoiswatching-permission-denied-title": "Pääsy estetty",
+	"whoiswatching-title": "Kirjoita otsikko",
+	"whoiswatching-select-title": "Katso tarkkailulistaa"
 }
