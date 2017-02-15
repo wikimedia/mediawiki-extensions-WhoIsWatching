@@ -8,7 +8,9 @@
 		"Vitaliy Filippov",
 		"[http://mwstake.org Mark A. Hershberger]"
 	],
-	"require": [ "1.26" ],
+	"requires": {
+		"MediaWiki": ">=1.26"
+	},
 	"url": "https://www.mediawiki.org/wiki/Extension:WhoIsWatching",
 	"descriptionmsg": "whoiswatching-desc",
 	"type": "specialpage",
