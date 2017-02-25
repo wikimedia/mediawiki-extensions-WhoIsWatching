@@ -3,12 +3,13 @@
 		"authors": [
 			"Жељко Тодоровић",
 			"Михајло Анђелковић",
-			"Milicevic01"
+			"Milicevic01",
+			"Сербијана"
 		]
 	},
 	"whoiswatching": "Ко прати вики страну",
 	"whoiswatching-desc": "Приказује списак корисничких имена која прате одрећену страницу",
-	"specialwhoiswatchingusage": "Ова посебна страница не може бити коришћена сама за себе, већ јој треба улазна тачка.\nМолимо Вас, користите страницу [[MediaWiki:Number_of_watching_users_pageview]] да бисте дефинисали ову улазну тачку.",
+	"specialwhoiswatchingusage": "Ова посебна страница не може бити коришћена сама за себе.",
 	"specialwhoiswatchingaddusers": "Додај кориснике који ће пратити ову страну",
 	"specialwhoiswatchingaddbtn": "Додај означене кориснике",
 	"whoiswatching-adduser": "Додај корисника"
