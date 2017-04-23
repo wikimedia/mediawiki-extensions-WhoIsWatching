@@ -10,8 +10,12 @@
 	"specialwhoiswatchingusage": "Esta página especial não pode ser usada individualmente.\nPor favor, utilize a página [[MediaWiki:Number_of_watching_users_pageview]] para definir um ponto de entrada para esta página especial.",
 	"specialwhoiswatchingaddusers": "Adicionar usuários para vigiar a página",
 	"specialwhoiswatchingaddbtn": "Adicionar os usuários selecionados",
+	"whoiswatching-usage-title": "Como usar esta página",
+	"whoiswatching-user-editname": "Digite um nome de usuário:",
 	"whoiswatching-adduser": "Adicionar usuário",
 	"whoiswatching-deluser": "Remover usuário",
 	"whoiswatching-permission-denied-title": "Permissão negada",
+	"whoiswatching-permission-denied": "Você não pode fazer nada nesta página.\n\nPelo menos uma dessas permissões é necessária: $1",
+	"whoiswatching-title": "Digite um título",
 	"whoiswatching-select-title": "Ver páginas vigiadas"
 }
