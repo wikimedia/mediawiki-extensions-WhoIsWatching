@@ -1,13 +1,13 @@
 {
 	"@metadata": {
 		"authors": [
-			"DCLXVI"
+			"DCLXVI",
+			"StanProg"
 		]
 	},
 	"whoiswatching": "Кой наблюдава страница в уикито",
 	"whoiswatching-desc": "Предоставя списък с потребителите, които наблюдават страница в уикито",
-	"specialwhoiswatchingthepage": "Кой наблюдава %s",
-	"specialwhoiswatchingusage": "Тази специална страница не може да се използва сама по себе си. Използвайте страницата [[MediaWiki:Number_of_watching_users_pageview]] за определяне на входната точка към тази специална страница.",
+	"specialwhoiswatchingusage": "Тази специална страница не може да се използва сама по себе си.",
 	"specialwhoiswatchingaddusers": "Добавяне на потребители да наблюдават страницата",
 	"specialwhoiswatchingaddbtn": "Добавяне на избраните потребители"
 }
