@@ -15,7 +15,7 @@
 	"descriptionmsg": "whoiswatching-desc",
 	"type": "specialpage",
 	"SpecialPages": {
-		"WhoIsWatching": "WhoIsWatching"
+		"WhoIsWatching": "WhoIsWatching\\WhoIsWatching"
 	},
 	"MessagesDirs": {
 		"WhoIsWatching": [
@@ -23,14 +23,14 @@
 		]
 	},
 	"ExtensionMessagesFiles": {
-		"WhoIsWatchingAlias": "WhoIsWatching.alias.php"
+		"WhoIsWatchingAlias": "src/i18n/Alias.php"
 	},
 	"AutoloadClasses": {
-		"WhoIsWatching": "WhoIsWatching_body.php"
+		"WhoIsWatching\\WhoIsWatching": "src/SpecialPage.php"
 	},
 	"Hooks": {
 		"SkinTemplateOutputPageBeforeExec": [
-			"WhoIsWatching::onSkinTemplateOutputPageBeforeExec"
+			"WhoIsWatching\\WhoIsWatching::onSkinTemplateOutputPageBeforeExec"
 		]
 	},
 	"GroupPermissions": {
@@ -46,9 +46,9 @@
 	"config": {
 		"_prefix": "whoiswatching_",
 		"nametype": "RealName",
-		"allowaddingpeople": true,
+		"allowaddingpeople": false,
 		"showifzero": true,
-		"showwatchingusers": true,
+		"showwatchingusers": false,
 		"maxPicklistUsers": 10
 	},
 	"manifest_version": 1

@@ -1,0 +1,90 @@
+The WhoIsWatching extension allows to find out who is watching a particular page, and add others to watchlist for that page
+
+== Rationale ==
+Even though this notion goes against Wikipedia and Wikimedia [[w:en:Wikipedia:Watchlist#Privacy_of_watchlists|privacy policy]], some wikis may actually like to see which of its users are watching particular pages. This extension provides just such an interface at the bottom of every page. Additionally, this extension has an option to allow any user to add any page to any other user's watch list.
+
+== Installation Instructions ==
+=== Step 1 ===
+Download the version of the extension code appropriate for your MediaWiki version from [[Special:ExtensionDistributor/WhoIsWatching|here]] and extract into the '''extensions/WhoIsWatching''' folder.
+
+=== Step 2 ===
+Add the following text to your '''[[Manual:LocalSettings.php|LocalSettings.php]]'''
+<source lang="php">wfLoadExtension( "WhoIsWatching" );
+# $whoiswatching_nametype = "RealName";
+# $whoiswatching_allowaddingpeople = false;
+# $whoiswatching_showifzero = true;
+# $whoiswatching_showwatchingusers = false;
+# $whoiswatching_maxPicklistUsers = 10;
+# $wgGroupPermissions['sysop']['addpagetoanywatchlist'] = true;
+# $wgGroupPermissions['sysop']['seepagewatchers'] = true;
+</source>
+
+=== Additional Configuration ===
+You can simply start using the extension without changing anything else. The only additional configuration that is currently possible for the extension defines how to display the names of the users watching the pages. In ''SpecialWhoIsWatching.php'', there is
+<source lang=php># Set the following to either 'UserName' or 'RealName' to display the list of watching users as such.
+$whoiswatching_nametype = 'RealName';
+</source>
+As the comment implies, depending on the value of this variable, you can display either the real names of the watching users or their wiki usernames. The reason some wiki's may want to switch over to the 'UserName' mode is if they do not require their members to have a valid real name.
+
+Another configurable option in the extension is the ability to switch on/off the option to allow any user to add any page to any other user's watch list. This is done in ''SpecialWhoIsWatching.php'', where there is
+<source lang="php"># Set true if you don't want to use permissions and users are allowed to add
+# to other user's watchlists.
+$whoiswatching_allowaddingpeople = true;
+</source>
+
+It is also possible to only display the count of watching people if the count is greater than zero. This is done in ''SpecialWhoIsWatching.php'', where there is
+<source lang="php"># Set to true if you want people with permission to see 0 if no one is watching
+# the page.
+$whoiswatching_showifzero = true;
+</source>Finally, newer versions of this extension, while we attempt to be backward compatible, allow you to use permissions instead of global variables.<source lang="php"># Set to true if you don't want to use permissions.
+$whoiswatching_showwatchingusers = true;
+</source>By default, users in the sysop group have permission to see page watchers and add pages to anyone's watchlist.   You can grant these permissions to logged in users, too, or any group you think needs it.<source lang="php"># Give all logged in users full access.
+$wgGroupPermissions['user']['addpagetoanywatchlist'] = true;
+$wgGroupPermissions['user']['seepagewatchers'] = true;
+</source>
+
+== Revisions ==
+*0.12 -- 2016-05-22:  '''Incompatibilites''':
+** Requires at least MediaWiki 1.26
+
+** If you've made changes to the message displayed at the bottom of the page in [[MediaWiki:number_of_watching_users_pageview]], you'll need to see if it matches what is in [[MediaWiki:whoiswatchingpageview]] on your wiki.
+
+** Note the use of permissions is preferred to globals to allow access to the Special Page '''Other Changes''':
+** Use extension.json
+
+** Remove .i18n.php stub.
+
+** Add rights so that we can use those instead of globals to control access:
+*** addpagetoanywatchlist: gets to use the special page to add users.
+*** seepagewatchers: gets to see the watchers.
+
+** Clean up WhoIsWatching::execute() method:
+*** Use fewer globals.  Use GlobalVarConfig where possible.
+*** Use protected methods for various parts of the execution path.
+*** Add stub (WhoIsWatching::eNotifUser()) to later notify editors when their watchlists are changed.
+*** Add stub (WhoIsWatching::uiNotifyUser()) to later provide better feedback to users of this extension.
+*** Instead of listing out every user to choose from, provide autocomplete for user selection.
+*** Instead of showing a confusing "usage" message, provide an autocomplete input box so that the user can select a page to inspect.
+*** Provide slightly better error messages.
+*** Refactor to make code more readable.
+
+** Adapted to changes in core MediaWiki since 1.25:
+*** Moved $wgPageShowWatchingUsers which was removed from core in 1.25 to $whoiswathing_showwatchingusers
+*** Since the message had to be changed anyway, moved the message from number_of_watching_users_pageview to whoiswatchingpageview
+*** Remove use of sprintf for i18n construction.
+* v0.9 - October 6, 2008
+** Fixed the extension instantiation to work across MW versions
+** Fixed the feature that displays count of users if zero
+* v0.8 - September 29, 2008 - optionally display a count of 0 watching users (contributed by [[user:Djomp]])
+* v0.7 - September 5, 2008 - added descriptionmsg, change special page alias loading method; removed obsolete code (by [[user:siebrand]])
+* v0.6 - June 6, 2008 - Optionally disable the feature to make other users watch the page.
+* v0.5 - May 12, 2008
+** Better handling of user names
+* v0.4 - December 27, 2007
+** new feature - add other users to the list of people watching the page
+** sort the list of people watching the page
+** minor bug fix on listing which page the information is pertaining to when the page is a category
+* v0.3 - November 25, 2007 - More standard way to load i18n messages (resolve bug about "Call to undefined function wfLoadExtensionMessages()")
+* v0.2 - November 23, 2007
+* v0.1 - October 12, 2007 - Initial publication.
+

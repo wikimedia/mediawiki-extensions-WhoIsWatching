@@ -1,4 +1,37 @@
 <?php
+/**
+ * Special page for WhoIsWatching
+ *
+ * Copyright (C) 2017  Mark A. Hershberger
+ *
+ * This program is free software: you can redistribute it and/or modify
+ * it under the terms of the GNU General Public License as published by
+ * the Free Software Foundation, either version 3 of the License, or
+ * (at your option) any later version.
+ *
+ * This program is distributed in the hope that it will be useful,
+ * but WITHOUT ANY WARRANTY; without even the implied warranty of
+ * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+ * GNU General Public License for more details.
+ *
+ * You should have received a copy of the GNU General Public License
+ * along with this program.  If not, see <http://www.gnu.org/licenses/>.
+ */
+
+namespace WhoIsWatching;
+
+use ErrorPageError;
+use GlobalVarConfig;
+use HTML;
+use HTMLForm;
+use MWNamespace;
+use QuickTemplate;
+use RequestContext;
+use Skin;
+use SpecialPage;
+use Title;
+use User;
+use XML;
 
 class WhoIsWatching extends SpecialPage {
 
@@ -8,20 +41,30 @@ class WhoIsWatching extends SpecialPage {
 	protected $showWatchingUsers;
 	protected $showIfZero;
 
+	/**
+	 * Ye olde constructor
+	 * @return boolean
+	 */
 	function __construct() {
-		parent::__construct( 'WhoIsWatching' );
+		parent::__construct( 'whoiswatching' );
 
 		$conf = new GlobalVarConfig( "whoiswatching_" );
 		$user = $this->getUser();
 		$this->nameType = $conf->get( "nametype" );
-		$this->allowAddingPeople = ( !$user->isAnon() && $conf->get( "allowaddingpeople" ) ) ||
-			$user->isAllowed( "addpagetoanywatchlist" );
+		$this->allowAddingPeople = ( !$user->isAnon()
+									 && $conf->get( "allowaddingpeople" ) )
+								 || $user->isAllowed( "addpagetoanywatchlist" );
 		$this->showWatchingUsers = $conf->get( "showwatchingusers" ) ||
 			$user->isAllowed( "seepagewatchers" );
 
 		return true;
 	}
 
+	/**
+	 * Page executioner
+	 * @param string $par page we're messing with
+	 * @return boolean
+	 */
 	function execute( $par ) {
 		parent::execute( $par );
 
@@ -33,16 +76,30 @@ class WhoIsWatching extends SpecialPage {
 		}
 	}
 
+	/**
+	 * Add to upstream check permissions
+	 * @return void
+	 * @throws ErrorPageError
+	 */
 	public function checkPermissions() {
 		if ( $this->showWatchingUsers || $this->allowAddingPeople ) {
-			return true;
+			return parent::checkPermissions();
 		}
 		throw new ErrorPageError(
-			"whoiswatching-permission-denied-title", "whoiswatching-permission-denied",
-			[ $this->getLanguage()->commaList( [ "seepagewatchers", "addpagetoanywatchlist" ] ) ]
+			"whoiswatching-permission-denied-title",
+			"whoiswatching-permission-denied",
+			[ $this->getLanguage()->commaList(
+				[ "seepagewatchers", "addpagetoanywatchlist" ]
+			) ]
 		);
 	}
 
+	/**
+	 * Either return the page chosen or display a page chooser and return false
+	 * @param string $par the passed in parameter
+	 * @return boolean|Title
+	 * @throws ErrorPageError
+	 */
 	protected function getTargetPage( $par ) {
 		$title = $this->getRequest()->getVal( 'page' );
 		if ( !$title && !$par ) {
@@ -51,28 +108,38 @@ class WhoIsWatching extends SpecialPage {
 
 		if ( $title ) {
 			$nsRevLookup = array_flip( MWNamespace::getCanonicalNamespaces() );
-			$ns = $this->getRequest()->getVal( 'ns', '' );
-			if ( !ctype_digit( $ns ) ) {
-				$ns = isset( $nsRevLookup[ $ns ] ) ? $nsRevLookup[ $ns ] : null;
+			$nameSpace = $this->getRequest()->getVal( 'ns', '' );
+			if ( !ctype_digit( $nameSpace ) ) {
+				$nameSpace = isset( $nsRevLookup[ $nameSpace ] )
+						   ? $nsRevLookup[ $nameSpace ]
+						   : null;
 			}
-			$this->targetPage = Title::newFromText( $title, $ns );
+			$this->targetPage = Title::newFromText( $title, $nameSpace );
 		} else {
 			$this->targetPage = Title::newFromText( $par );
 		}
 
 		if ( !$this->targetPage ) {
-			throw new ErrorPageError( "whoiswatching-usage-title", "specialwhoiswatchingusage" );
-		}
-		$ns = $this->targetPage->getNamespace();
-		if ( $ns < 0 ) {
 			throw new ErrorPageError(
-				"whoiswatching-not-possible-title", "whoiswatching-not-possible", [ $this->targetPage ]
+				"whoiswatching-usage-title", "specialwhoiswatchingusage"
+			);
+		}
+		$nameSpace = $this->targetPage->getNamespace();
+		if ( $nameSpace < 0 ) {
+			throw new ErrorPageError(
+				"whoiswatching-not-possible-title",
+				"whoiswatching-not-possible",
+				[ $this->targetPage ]
 			);
 		}
 
 		return true;
 	}
 
+	/**
+	 * The form for adding a watcher.
+	 * @return boolean
+	 */
 	protected function addWatchersForm() {
 		if ( $this->allowAddingPeople === false ) {
 			return false;
@@ -84,12 +151,17 @@ class WhoIsWatching extends SpecialPage {
 			Html::openElement(
 				'form',
 				[ 'method' => 'post',
-				  'action' => $this->getPageTitle( $this->targetPage )->getLocalUrl(),
+				  'action' => $this->getPageTitle( $this->targetPage )
+				  ->getLocalUrl(),
 				  'name' => 'uluser',
 				  'id' => 'mw-whoiswatching-form1' ]
 			) .
-			Html::hidden( 'addToken', $this->getUser()->getEditToken( __CLASS__ ) ) .
-            ( !$this->targetPage->exists() ? '<b>This page does not (yet) exist!</b>' : '' ) .
+			Html::hidden( 'addToken',
+						  $this->getUser()->getEditToken( __CLASS__ ) ) .
+			( !$this->targetPage->exists()
+			  ? '<b>This page does not (yet) exist!</b>'
+			  : ''
+			) .
 			Xml::fieldset( $this->msg( 'whoiswatching-lookup-user' )->text() ) .
 			Xml::inputLabel(
 				$this->msg( 'whoiswatching-user-editname' )->text(),
@@ -98,7 +170,8 @@ class WhoIsWatching extends SpecialPage {
 				30,
 				'',
 				[ 'autofocus' => true,
-				  'class' => 'mw-autocomplete-user' ] // used by mediawiki.userSuggest
+				   // used by mediawiki.userSuggest
+				  'class' => 'mw-autocomplete-user' ]
 			) . ' ' .
 			Xml::submitButton( $this->msg( 'whoiswatching-adduser' )->text() ) .
 			Html::closeElement( 'fieldset' ) .
@@ -111,6 +184,11 @@ class WhoIsWatching extends SpecialPage {
 		return false;
 	}
 
+	/**
+	 * Add a watcher if the request did so
+	 * @return boolean
+	 * @throws ErrorPageError
+	 */
 	protected function maybeAddWatcher() {
 		$req = $this->getRequest();
 		$token = $req->getVal( 'addToken' );
@@ -119,26 +197,43 @@ class WhoIsWatching extends SpecialPage {
 				$user = User::newFromName( $req->getVal( 'user' ) );
 				$title = $this->targetPage;
 				$user->addWatch( $title );
-				$this->getOutput()->redirect( $this->getPageTitle( $title )->getLocalUrl() );
-                $this->eNotifUser( 'add', $title, $user );
+				$this->getOutput()->redirect
+					( $this->getPageTitle( $title )->getLocalUrl() );
+				$this->eNotifUser( 'add', $title, $user );
 				return true;
 			}
 
-			throw new ErrorPageError( 'sessionfailure-title', 'sessionfailure' );
+			throw new ErrorPageError
+				( 'sessionfailure-title', 'sessionfailure' );
 		}
 		return true;
 	}
 
+	/**
+	 * FIXME needs to be fleshed out
+	 * @param string $action taked
+	 * @param Title $title page updated
+	 * @param User $user affected
+	 */
 	protected function eNotifUser( $action, Title $title, User $user ) {
 	}
 
-	protected function uiNotifyUser( ) {
+	/**
+	 * FIXME needs to be fleshed out
+	 */
+	protected function uiNotifyUser() {
 	}
 
+	/**
+	 * If the user selected a page, redirect to work on it.  If not,
+	 * show the form.
+	 * @return boolean
+	 */
 	protected function pickPage() {
 		$target = $this->getRequest()->getVal( "target" );
 		if ( $target ) {
-			$this->getOutput()->redirect( $this->getPageTitle( $target )->getLocalUrl() );
+			$this->getOutput()->redirect
+				( $this->getPageTitle( $target )->getLocalUrl() );
 			return false;
 		}
 		$this->getOutput()->addHTML(
@@ -149,18 +244,25 @@ class WhoIsWatching extends SpecialPage {
 				  'name' => 'uluser',
 				  'id' => 'mw-whoiswatching-form1' ] ) .
 			Html::hidden( 'title', $this->getPageTitle()->getPrefixedText() ) .
-			Xml::fieldset( $this->msg( 'whoiswatching-lookup-title' )->text() ) .
-			Xml::inputLabel( $this->msg( 'whoiswatching-title' )->text(), 'target',
-							 'whoiswatching-target', 40,
-							 str_replace( '_', ' ', $this->targetPage ),
-							 [ 'class' => 'mw-searchInput' ] ) . ' ' .
-			Xml::submitButton( $this->msg( 'whoiswatching-select-title' )->text() ) .
+			Xml::fieldset
+			( $this->msg( 'whoiswatching-lookup-title' )->text() ) .
+			Xml::inputLabel
+			( $this->msg( 'whoiswatching-title' )->text(), 'target',
+			  'whoiswatching-target', 40,
+			  str_replace( '_', ' ', $this->targetPage ),
+			  [ 'class' => 'mw-searchInput' ] ) . ' ' .
+			Xml::submitButton
+			( $this->msg( 'whoiswatching-select-title' )->text() ) .
 			Html::closeElement( 'fieldset' ) .
 			Html::closeElement( 'form' ) . "\n"
 		);
 		return false;
 	}
 
+	/**
+	 * Remove any posted for removal
+	 * @param array $formData posted data
+	 */
 	public function maybeRemoveWatcher( array $formData ) {
 		foreach ( $formData as $watcherID => $remove ) {
 			if ( $remove ) {
@@ -171,6 +273,10 @@ class WhoIsWatching extends SpecialPage {
 		}
 	}
 
+	/**
+	 * Show watching users if we can
+	 * @return null
+	 */
 	protected function showWatchingUsers() {
 		if ( $this->showWatchingUsers === false ) {
 			return;
@@ -178,14 +284,17 @@ class WhoIsWatching extends SpecialPage {
 
 		$out = $this->getOutput();
 		$out->addWikiText(
-			"== ". wfMessage( 'specialwhoiswatchingpage' )->params( $this->targetPage )->plain() . " =="
+			"== ". wfMessage( 'specialwhoiswatchingpage' )
+			->params( $this->targetPage )->plain() . " =="
 		);
 
 		$dbr = wfGetDB( DB_SLAVE );
 		$watchingusers = [];
 		$res = $dbr->select(
-			'watchlist', 'wl_user', [ 'wl_namespace' => $this->targetPage->getNamespace(),
-									  'wl_title' => $this->targetPage->getDBkey() ], __METHOD__ );
+			'watchlist', 'wl_user',
+			[ 'wl_namespace' => $this->targetPage->getNamespace(),
+			  'wl_title' => $this->targetPage->getDBkey() ], __METHOD__
+		);
 		foreach ( $res as $row ) {
 			$u = User::newFromID( $row->wl_user );
 			$key = $u->mId;
@@ -204,20 +313,30 @@ class WhoIsWatching extends SpecialPage {
 		}
 		if ( $this->allowAddingPeople ) {
 			$form = new HTMLForm( $users, $this->getContext() );
-			$form->setSubmitText( $this->msg( 'whoiswatching-deluser' )->text() );
+			$form->setSubmitText
+				( $this->msg( 'whoiswatching-deluser' )->text() );
 			$form->setSubmitCallback( [ $this, 'maybeRemoveWatcher' ] );
 			$form->show();
 		}
 	}
 
-	public static function onSkinTemplateOutputPageBeforeExec( Skin $template, QuickTemplate $tpl ) {
+	/**
+	 * Hook to display link to page watchers
+	 * @param Skin $template skin
+	 * @param QuickTemplate $tpl template
+	 * @return boolean
+	 */
+	public static function onSkinTemplateOutputPageBeforeExec(
+		Skin $template, QuickTemplate $tpl
+	) {
 		$conf = new GlobalVarConfig( "whoiswatching_" );
 		$showIfZero = $conf->get( "showifzero" );
 		$showWatchingUsers = $conf->get( "showwatchingusers" );
 
 		if (
-			RequestContext::getMain()->getOutput()->getTitle()->getNamespace() >= 0 &&
-			$showWatchingUsers
+			RequestContext::getMain()->getOutput()->
+			getTitle()->getNamespace() >= 0
+			&& $showWatchingUsers
 		) {
 			$dbr = wfGetDB( DB_SLAVE );
 			$title = $template->getTitle();
@@ -228,7 +347,8 @@ class WhoIsWatching extends SpecialPage {
 			$watch = $dbr->fetchObject( $res );
 			if ( $watch->count > 0 || $showIfZero ) {
 				$msg = wfMessage( 'whoiswatching_users_pageview',
-					RequestContext::getMain()->getLanguage()->formatNum( $watch->count )
+					RequestContext::getMain()->getLanguage()->formatNum
+								  ( $watch->count )
 				)->parse();
 				$tpl->set( 'numberofwatchingusers', $msg );
 			}
