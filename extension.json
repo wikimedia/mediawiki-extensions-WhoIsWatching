@@ -15,7 +15,7 @@
 	"descriptionmsg": "whoiswatching-desc",
 	"type": "specialpage",
 	"SpecialPages": {
-		"WhoIsWatching": "WhoIsWatching\\WhoIsWatching"
+		"WhoIsWatching": "WhoIsWatching\\SpecialWhoIsWatching"
 	},
 	"MessagesDirs": {
 		"WhoIsWatching": [
@@ -26,11 +26,12 @@
 		"WhoIsWatchingAlias": "src/i18n/Alias.php"
 	},
 	"AutoloadClasses": {
-		"WhoIsWatching\\WhoIsWatching": "src/SpecialPage.php"
+		"WhoIsWatching\\SpecialWhoIsWatching": "src/SpecialWhoIsWatching.php",
+		"WhoIsWatching\\Hook": "src/Hook.php"
 	},
 	"Hooks": {
 		"SkinTemplateOutputPageBeforeExec": [
-			"WhoIsWatching\\WhoIsWatching::onSkinTemplateOutputPageBeforeExec"
+			"WhoIsWatching\\Hook::onSkinTemplateOutputPageBeforeExec"
 		]
 	},
 	"GroupPermissions": {
@@ -43,6 +44,17 @@
 		"addpagetoanywatchlist",
 		"seepagewatchers"
 	],
+	"ResourceModules": {
+		"ext.whoIsWatching": {
+			"styles": [
+				"modules/ext.whoIsWatching.css"
+			]
+		}
+	},
+	"ResourceFileModulePaths": {
+		"localBasePath": "",
+		"remoteExtPath": ""
+	},
 	"config": {
 		"_prefix": "whoiswatching_",
 		"nametype": "RealName",

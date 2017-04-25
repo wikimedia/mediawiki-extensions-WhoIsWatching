@@ -43,6 +43,10 @@ $wgGroupPermissions['user']['addpagetoanywatchlist'] = true;
 $wgGroupPermissions['user']['seepagewatchers'] = true;
 </source>
 
+== Known Issues ==
+
+The first time after a you submit a request to remove a page from the users watchlist, the user is still shown on the form.  To get around this it is disabled and displayed with a red strikethrough.
+
 == Revisions ==
 *0.12 -- 2016-05-22:  '''Incompatibilites''':
 ** Requires at least MediaWiki 1.26
@@ -87,4 +91,3 @@ $wgGroupPermissions['user']['seepagewatchers'] = true;
 * v0.3 - November 25, 2007 - More standard way to load i18n messages (resolve bug about "Call to undefined function wfLoadExtensionMessages()")
 * v0.2 - November 23, 2007
 * v0.1 - October 12, 2007 - Initial publication.
-

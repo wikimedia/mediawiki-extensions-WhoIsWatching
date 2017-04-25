@@ -1,0 +1,3 @@
+input:disabled+label {
+	text-decoration: line-through red;
+}

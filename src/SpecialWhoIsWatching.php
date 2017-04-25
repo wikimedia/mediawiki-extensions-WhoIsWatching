@@ -25,15 +25,12 @@ use GlobalVarConfig;
 use HTML;
 use HTMLForm;
 use MWNamespace;
-use QuickTemplate;
-use RequestContext;
-use Skin;
 use SpecialPage;
 use Title;
 use User;
 use XML;
 
-class WhoIsWatching extends SpecialPage {
+class SpecialWhoIsWatching extends SpecialPage {
 
 	protected $targetPage = null;
 	protected $nameType;
@@ -178,9 +175,7 @@ class WhoIsWatching extends SpecialPage {
 			Html::closeElement( 'form' ) . "\n"
 		);
 
-		if ( $this->maybeAddWatcher() ) {
-			$this->uiNotifyUser();
-		}
+		$this->maybeAddWatcher();
 		return false;
 	}
 
@@ -216,12 +211,6 @@ class WhoIsWatching extends SpecialPage {
 	 * @param User $user affected
 	 */
 	protected function eNotifUser( $action, Title $title, User $user ) {
-	}
-
-	/**
-	 * FIXME needs to be fleshed out
-	 */
-	protected function uiNotifyUser() {
 	}
 
 	/**
@@ -262,12 +251,19 @@ class WhoIsWatching extends SpecialPage {
 	/**
 	 * Remove any posted for removal
 	 * @param array $formData posted data
+	 * @param HTMLForm $form the whole form
 	 */
-	public function maybeRemoveWatcher( array $formData ) {
+	protected function maybeRemoveWatcher( array $formData, HTMLForm $form ) {
 		foreach ( $formData as $watcherID => $remove ) {
 			if ( $remove ) {
 				$watcher = User::newFromId( $watcherID );
 				$watcher->removeWatch( $this->targetPage );
+				# We should somehow remove this field from the form,
+				# but it looks too late now.
+				$field = $form->getField( $watcherID );
+				$field->mParams['disabled'] = true;
+				$field->setShowEmptyLabel( false );
+				$this->getOutput()->addModules( "ext.whoIsWatching" );
 				$this->eNotifUser( 'remove', $this->targetPage, $watcher );
 			}
 		}
@@ -315,45 +311,11 @@ class WhoIsWatching extends SpecialPage {
 			$form = new HTMLForm( $users, $this->getContext() );
 			$form->setSubmitText
 				( $this->msg( 'whoiswatching-deluser' )->text() );
-			$form->setSubmitCallback( [ $this, 'maybeRemoveWatcher' ] );
+			$form->setSubmitCallback(
+				function ( $formData, $form ) {
+					return $this->maybeRemoveWatcher( $formData, $form );
+				} );
 			$form->show();
 		}
-	}
-
-	/**
-	 * Hook to display link to page watchers
-	 * @param Skin $template skin
-	 * @param QuickTemplate $tpl template
-	 * @return boolean
-	 */
-	public static function onSkinTemplateOutputPageBeforeExec(
-		Skin $template, QuickTemplate $tpl
-	) {
-		$conf = new GlobalVarConfig( "whoiswatching_" );
-		$showIfZero = $conf->get( "showifzero" );
-		$showWatchingUsers = $conf->get( "showwatchingusers" );
-
-		if (
-			RequestContext::getMain()->getOutput()->
-			getTitle()->getNamespace() >= 0
-			&& $showWatchingUsers
-		) {
-			$dbr = wfGetDB( DB_SLAVE );
-			$title = $template->getTitle();
-			$res = $dbr->select( 'watchlist', 'COUNT(*) as count', [
-								 'wl_namespace' => $title->getNamespace(),
-								 'wl_title' => $title->getDBkey(),
-			], __METHOD__ );
-			$watch = $dbr->fetchObject( $res );
-			if ( $watch->count > 0 || $showIfZero ) {
-				$msg = wfMessage( 'whoiswatching_users_pageview',
-					RequestContext::getMain()->getLanguage()->formatNum
-								  ( $watch->count )
-				)->parse();
-				$tpl->set( 'numberofwatchingusers', $msg );
-			}
-		}
-
-		return true;
 	}
 }
