@@ -14,7 +14,7 @@
 	"specialwhoiswatchingusage": "Iste pagina special non pote esser usate sol.",
 	"specialwhoiswatchingaddusers": "Adder usatores pro observar le pagina",
 	"specialwhoiswatchingaddbtn": "Adder le usatores seligite",
-	"whoiswatching_users_pageview": "[{{fullurl:Special:WhoIsWatching/{{FULLPAGENAMEE}}}} $1] {{PLURAL:$1|usator|usatores}} observante",
+	"whoiswatching_users_pageview": "[{{fullurl:Special:WhoIsWatching/$2}} $1] {{PLURAL:$1|usator|usatores}} observante",
 	"whoiswatching-not-possible-title": "Pagina inobservabile",
 	"whoiswatching-not-possible": "Non es possibile observar le pagina [[$1]].",
 	"whoiswatching-usage-title": "Como usar iste pagina",

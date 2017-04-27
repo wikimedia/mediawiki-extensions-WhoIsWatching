@@ -15,7 +15,7 @@
 	"specialwhoiswatchingusage": "Оваа службена страница не може да се користи самостојно.",
 	"specialwhoiswatchingaddusers": "Додај корисници за набљудување на страницата",
 	"specialwhoiswatchingaddbtn": "Додај избрани корисници",
-	"whoiswatching_users_pageview": "[{{fullurl:Special:WhoIsWatching/{{FULLPAGENAMEE}}}} $1] {{PLURAL:$1|набљудувач|набљудувачи}}",
+	"whoiswatching_users_pageview": "[{{fullurl:Special:WhoIsWatching/$2}} $1] {{PLURAL:$1|набљудувач|набљудувачи}}",
 	"whoiswatching-not-possible-title": "Страницата не може да се набљудува",
 	"whoiswatching-not-possible": "Набљудувањето на страницата [[$1]] е невозможно.",
 	"whoiswatching-usage-title": "Како се користи страницава",

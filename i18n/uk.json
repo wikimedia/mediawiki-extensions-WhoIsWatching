@@ -15,7 +15,7 @@
 	"specialwhoiswatchingusage": "Ця спеціальна сторінка не може бути використана сама по собі.",
 	"specialwhoiswatchingaddusers": "Додати користувачів для спостереження за сторінкою",
 	"specialwhoiswatchingaddbtn": "Додати вибраних користувачів",
-	"whoiswatching_users_pageview": "[{{fullurl:Special:WhoIsWatching/{{FULLPAGENAMEE}}}} $1] {{PLURAL:$1|спостерігач|спостерігачі|спостерігачів}}",
+	"whoiswatching_users_pageview": "[{{fullurl:Special:WhoIsWatching/$2}} $1] {{PLURAL:$1|спостерігач|спостерігачі|спостерігачів}}",
 	"whoiswatching-not-possible-title": "Недійсна сторінка для спостереження",
 	"whoiswatching-not-possible": "Неможливо додати сторінку [[$1]] до списку спостереження",
 	"whoiswatching-usage-title": "Як використовувати цю сторінку",

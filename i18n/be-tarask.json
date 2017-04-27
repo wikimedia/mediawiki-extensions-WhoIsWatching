@@ -8,8 +8,7 @@
 	},
 	"whoiswatching": "Хто назірае за старонкай",
 	"whoiswatching-desc": "Паказвае сьпіс удзельнікаў, якія назіраюць за вікі-старонкай",
-	"specialwhoiswatchingthepage": "Хто назірае за %s",
-	"specialwhoiswatchingusage": "Гэтая спэцыяльная старонка ня можа выкарыстоўвацца самастойна.\nКалі ласка, карыстайцеся старонкай [[MediaWiki:Number_of_watching_users_pageview]] для вызначэньня ўваходнага пункту на гэту спэцыяльную старонку.",
+	"specialwhoiswatchingusage": "Гэтая спэцыяльная старонка ня можа выкарыстоўвацца самастойна.",
 	"specialwhoiswatchingaddusers": "Дадаць удзельнікаў, якія будуць назіраюць за старонкай",
 	"specialwhoiswatchingaddbtn": "Дадаць выбраных удзельнікаў"
 }

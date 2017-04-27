@@ -16,7 +16,7 @@
 	"specialwhoiswatchingusage": "이 특수 문서는 문서 자체에서 사용될 수 없습니다.",
 	"specialwhoiswatchingaddusers": "문서를 주시하는 사용자 추가",
 	"specialwhoiswatchingaddbtn": "선택한 사용자 추가",
-	"whoiswatching_users_pageview": "[{{fullurl:Special:WhoIsWatching/{{FULLPAGENAMEE}}}} $1]명의 주시 중인 {{PLURAL:$1|사용자}}",
+	"whoiswatching_users_pageview": "[{{fullurl:Special:WhoIsWatching/$2}} $1]명의 주시 중인 {{PLURAL:$1|사용자}}",
 	"whoiswatching-not-possible-title": "문서를 주시할 수 없습니다",
 	"whoiswatching-not-possible": "[[$1]] 문서는 주시할 수 없습니다.",
 	"whoiswatching-usage-title": "이 페이지를 사용하는 방법",

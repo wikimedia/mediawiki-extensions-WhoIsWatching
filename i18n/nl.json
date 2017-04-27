@@ -15,7 +15,7 @@
 	"specialwhoiswatchingusage": "Deze speciale pagina kan niet op zichzelf gebruikt worden.",
 	"specialwhoiswatchingaddusers": "Deze pagina op de volglijst van gebruikers toevoegen",
 	"specialwhoiswatchingaddbtn": "Geselecteerde gebruikers toevoegen",
-	"whoiswatching_users_pageview": "[{{fullurl:Special:WhoIsWatching/{{FULLPAGENAMEE}}}} $1] {{PLURAL:$1|gebruiker|gebruikers}} die de pagina {{PLURAL:$1|volgt|volgen}}",
+	"whoiswatching_users_pageview": "[{{fullurl:Special:WhoIsWatching/$2}} $1] {{PLURAL:$1|gebruiker|gebruikers}} die de pagina {{PLURAL:$1|volgt|volgen}}",
 	"whoiswatching-not-possible-title": "Onmogelijke pagina om te volgen",
 	"whoiswatching-not-possible": "Het is niet mogelijk om de pagina [[$1]] te volgen.",
 	"whoiswatching-usage-title": "Het gebruik van deze pagina",

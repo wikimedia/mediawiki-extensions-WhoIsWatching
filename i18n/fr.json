@@ -7,7 +7,8 @@
 			"McDutchie",
 			"PieRRoMaN",
 			"Sherbrooke",
-			"Gomoko"
+			"Gomoko",
+			"Wladek92"
 		]
 	},
 	"right-addpagetoanywatchlist": "[[Special:WhoIsWatching|Ajouter des pages aux listes de suivi d’autres utilisateurs]]",
@@ -20,7 +21,7 @@
 	"specialwhoiswatchingusage": "Cette page spéciale ne peut être utilisée seule.",
 	"specialwhoiswatchingaddusers": "Ajouter les utilisateurs pour suivre la page",
 	"specialwhoiswatchingaddbtn": "Ajouter les utilisateurs sélectionnés",
-	"whoiswatching_users_pageview": "[{{fullurl:Special:WhoIsWatching/{{FULLPAGENAMEE}}}} $1] {{PLURAL:$1|utilisateur suivant|utilisateurs suiveurs}}",
+	"whoiswatching_users_pageview": "[{{fullurl:Special:WhoIsWatching/$2}} $1] utilisateur {{PLURAL:$1||s}} regarde actuellement",
 	"whoiswatching-not-possible-title": "Page impossible à suivre",
 	"whoiswatching-not-possible": "Il n’est pas possible de suivre la page [[$1]].",
 	"whoiswatching-usage-title": "Comment utiliser cette page",

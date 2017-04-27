@@ -14,6 +14,7 @@
 	"specialwhoiswatchingusage": "Questa pagina speciale non può essere usata da sola.",
 	"specialwhoiswatchingaddusers": "Aggiungi utenti ad osservare la pagina",
 	"specialwhoiswatchingaddbtn": "Aggiungi gli utenti selezionati",
+	"whoiswatching_users_pageview": "Questa pagina è negli osservati speciali di [{{fullurl:Special:WhoIsWatching/$2}} $1] {{PLURAL:$1|utente|utenti}}",
 	"whoiswatching-usage-title": "Come utilizzare questa pagina",
 	"whoiswatching-user-editname": "Inserisci un nome utente:",
 	"whoiswatching-adduser": "Aggiungi utente",
