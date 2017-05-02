@@ -1,13 +1,13 @@
 {
 	"@metadata": {
 		"authors": [
-			"CERminator"
+			"CERminator",
+			"Srdjan m"
 		]
 	},
 	"whoiswatching": "Ko pregleda wiki stranicu",
 	"whoiswatching-desc": "Omogućava spisak korisničkih imena koji pregledaju wiki stranicu",
-	"specialwhoiswatchingthepage": "Ko pregleda %s",
-	"specialwhoiswatchingusage": "Ovu posebnu stranicu nije moguće koristiti po volji.\nMolimo koristite stranicu [[MediaWiki:Number_of_watching_users_pageview]] za određivanje ulazne tačke na ovu posebnu stranicu.",
+	"specialwhoiswatchingusage": "Ova posebna stranica ne može se koristiti sama za sebe.",
 	"specialwhoiswatchingaddusers": "Dodaj korisnike da prate ovu stranicu",
 	"specialwhoiswatchingaddbtn": "Dodaj odabrane korisnike"
 }
