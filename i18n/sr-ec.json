@@ -4,7 +4,8 @@
 			"Жељко Тодоровић",
 			"Михајло Анђелковић",
 			"Milicevic01",
-			"Сербијана"
+			"Сербијана",
+			"Obsuser"
 		]
 	},
 	"whoiswatching": "Ко прати вики страну",
@@ -12,5 +13,6 @@
 	"specialwhoiswatchingusage": "Ова посебна страница не може бити коришћена сама за себе.",
 	"specialwhoiswatchingaddusers": "Додај кориснике који ће пратити ову страну",
 	"specialwhoiswatchingaddbtn": "Додај означене кориснике",
+	"whoiswatching_users_pageview": "[{{fullurl:Special:WhoIsWatching/$2}} $1] {{PLURAL:$1|корисник који надгледа|корисника која надгледају|корисника који надгледају}}",
 	"whoiswatching-adduser": "Додај корисника"
 }
