@@ -9,3 +9,4 @@ vendor/
 .\#*
 
 PHPTAGS.sqlite
+.tramp_history
