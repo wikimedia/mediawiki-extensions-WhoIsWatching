@@ -7,9 +7,27 @@
 			"Hamilton Abreu"
 		]
 	},
-	"whoiswatching": "Quem Está a Vigiar uma página wiki",
-	"whoiswatching-desc": "Apresenta uma listagem de utilizadores que vigiam uma dada página",
+	"right-addpagetoanywatchlist": "[[Special:WhoIsWatching|Acrescentar páginas às listas de páginas vigiadas de outros utilizadores]]",
+	"action-addpagetoanywatchlist": "acrescentar páginas às listas de páginas vigiadas de outros utilizadores",
+	"right-seepagewatchers": "Ver que utilizadores estão a [[Special:WhoIsWatching|vigiar uma página]]",
+	"action-seepagewatchers": "ver que utilizadores estão a vigiar uma página",
+	"whoiswatching": "Quem está a vigiar uma página da wiki",
+	"whoiswatching-desc": "Apresenta uma listagem dos utilizadores que estão a vigiar uma dada página",
+	"specialwhoiswatchingpage": "Vigilantes de [[$1]]",
 	"specialwhoiswatchingusage": "Esta página especial não pode ser usada em isolamento.",
 	"specialwhoiswatchingaddusers": "Adicionar utilizadores à vigilância da página",
-	"specialwhoiswatchingaddbtn": "Adicionar utilizadores selecionados"
+	"specialwhoiswatchingaddbtn": "Adicionar utilizadores selecionados",
+	"whoiswatching_users_pageview": "[{{fullurl:Special:WhoIsWatching/$2}} $1] {{PLURAL:$1|utilizador|utilizadores}} a vigiar",
+	"whoiswatching-not-possible-title": "Página impossível de vigiar",
+	"whoiswatching-not-possible": "Não é possível vigiar a página [[$1]].",
+	"whoiswatching-usage-title": "Como usar esta página",
+	"whoiswatching-user-editname": "Introduza um nome de utilizador:",
+	"whoiswatching-adduser": "Adicionar utilizador",
+	"whoiswatching-deluser": "Remover utilizador",
+	"whoiswatching-lookup-user": "Pesquisar utilizador",
+	"whoiswatching-permission-denied-title": "Permissão negada",
+	"whoiswatching-permission-denied": "Não pode fazer nada nesta página.\n\nÉ necessária pelo menos uma destas permissõesː $1",
+	"whoiswatching-lookup-title": "Pesquisa de título",
+	"whoiswatching-title": "Introduza um título",
+	"whoiswatching-select-title": "Ver a lista de páginas vigiadas"
 }
