@@ -23,7 +23,9 @@ class WhoIsWatching extends SpecialPage {
 	}
 
 	function execute( $par ) {
-		parent::execute( $par );
+		$this->setHeaders();
+		$this->checkPermissions();
+		$this->outputHeader();
 
 		if ( $this->getTargetPage( $par ) ) {
 			if ( $this->addWatchersForm() ) {
