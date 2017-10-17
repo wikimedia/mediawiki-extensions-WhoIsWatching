@@ -17,7 +17,7 @@
 	"specialwhoiswatchingusage": "Diese Spezialseite ist nicht auf sich allein gestellt einsetzbar.",
 	"specialwhoiswatchingaddusers": "Füge Benutzer zum Beobachten der Seite hinzu",
 	"specialwhoiswatchingaddbtn": "Füge Benutzer hinzu",
-	"whoiswatching_users_pageview": "[{{fullurl:Special:WhoIsWatching/$2}} {{PLURAL:$1|Ein beobachtender|$1 beobachtende}}] Benutzer",
+	"whoiswatching_users_pageview": "[{{fullurl:Special:WhoIsWatching/$2}} {{PLURAL:$1|Ein beobachtender|$1 beobachtende}} Benutzer]",
 	"whoiswatching-not-possible-title": "Seite kann nicht beobachtet werden",
 	"whoiswatching-not-possible": "Es ist nicht möglich, die Seite [[$1]] zu beobachten.",
 	"whoiswatching-usage-title": "Wie diese Seite verwendet wird",
