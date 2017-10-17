@@ -63,7 +63,9 @@ class SpecialWhoIsWatching extends SpecialPage {
 	 * @return boolean
 	 */
 	function execute( $par ) {
-		parent::execute( $par );
+		$this->setHeaders();
+		$this->checkPermissions();
+		$this->outputHeader();
 
 		if ( $this->getTargetPage( $par ) ) {
 			if ( $this->addWatchersForm() ) {
