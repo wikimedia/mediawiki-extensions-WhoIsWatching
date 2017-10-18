@@ -21,7 +21,7 @@
 	"specialwhoiswatchingusage": "Cette page spéciale ne peut être utilisée seule.",
 	"specialwhoiswatchingaddusers": "Ajouter les utilisateurs pour suivre la page",
 	"specialwhoiswatchingaddbtn": "Ajouter les utilisateurs sélectionnés",
-	"whoiswatching_users_pageview": "[{{fullurl:Special:WhoIsWatching/$2}} $1] utilisateur {{PLURAL:$1||s}} regarde actuellement",
+	"whoiswatching_users_pageview": "[{{fullurl:Special:WhoIsWatching/$2}} $1 {{PLURAL:$1|utilisateur regarde|utilisateurs regardent}} actuellement]",
 	"whoiswatching-not-possible-title": "Page impossible à suivre",
 	"whoiswatching-not-possible": "Il n’est pas possible de suivre la page [[$1]].",
 	"whoiswatching-usage-title": "Comment utiliser cette page",

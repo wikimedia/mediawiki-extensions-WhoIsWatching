@@ -17,7 +17,7 @@
 	"specialwhoiswatchingusage": "此特殊页面不能自行使用。",
 	"specialwhoiswatchingaddusers": "添加用户以监视页面",
 	"specialwhoiswatchingaddbtn": "添加已选择用户",
-	"whoiswatching_users_pageview": "[{{fullurl:Special:WhoIsWatching/$2}} $1]个正在监视的{{PLURAL:$1|用户}}",
+	"whoiswatching_users_pageview": "[{{fullurl:Special:WhoIsWatching/$2}} $1个正在监视的{{PLURAL:$1|用户}}]",
 	"whoiswatching-not-possible-title": "页面无法监视",
 	"whoiswatching-not-possible": "无法监视[[$1]]页面。",
 	"whoiswatching-usage-title": "如何使用此页面",
