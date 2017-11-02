@@ -11,7 +11,7 @@
 	"specialwhoiswatchingusage": "এই বিশেষ পাতাটি এককভাবে ব্যবহার করা যাবে না।",
 	"specialwhoiswatchingaddusers": "নজরতালিকায় ব্যবহারকারীদের যোগ করুন",
 	"specialwhoiswatchingaddbtn": "নির্বাচিত ব্যবহারকারীদের যোগ করুন",
-	"whoiswatching_users_pageview": "[{{fullurl:Special:WhoIsWatching/$2}} $1] জন নজর রাখা {{PLURAL:$1|ব্যবহারকারী}}",
+	"whoiswatching_users_pageview": "[{{fullurl:Special:WhoIsWatching/$2}} $1 জন নজর রাখা {{PLURAL:$1|ব্যবহারকারী}}]",
 	"whoiswatching-user-editname": "ব্যবহারকারী নাম লিখুন:",
 	"whoiswatching-adduser": "ব্যবহারকারী যোগ করুন",
 	"whoiswatching-permission-denied-title": "অনুমতি প্রত্যাখ্যাত হয়েছে",
