@@ -7,7 +7,6 @@
 	},
 	"whoiswatching": "Ko prati viki stranu",
 	"whoiswatching-desc": "Prikazuje spisak korisničkih imena koja prate odrećenu stranicu",
-	"specialwhoiswatchingthepage": "Ko prati %s",
 	"specialwhoiswatchingusage": "Ova posebna stranica ne može biti korišćena sama za sebe, već joj treba ulazna tačka.\nMolimo Vas, koristite stranicu [[MediaWiki:Number_of_watching_users_pageview]] da biste definisali ovu ulaznu tačku.",
 	"specialwhoiswatchingaddusers": "Dodaj korisnike koji će pratiti ovu stranu",
 	"specialwhoiswatchingaddbtn": "Dodaj označene korisnike"

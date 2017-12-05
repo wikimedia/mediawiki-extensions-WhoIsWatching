@@ -6,7 +6,6 @@
 	},
 	"whoiswatching": "Sino ang nagbabantay (nagmamatyag) sa isang pahina ng wiki",
 	"whoiswatching-desc": "Nagbibigay ng isang talaan ng mga pangalan ng tagagamit na nagbabantay sa isang pahina ng wiki",
-	"specialwhoiswatchingthepage": "Sino ang nagbabantay ng %s",
 	"specialwhoiswatchingusage": "Hindi magagamit ang natatanging pahinang ito na nagiisa lamang.\nPakigamit ang pahinang [[MediaWiki:Number_of_watching_users_pageview|Mediawiki:Bilang_ng_nagmamatyag_na_mga_tagagamit_tanawin_ng_pahina]] para mabigyang kahulugan ang isang pasukang daanang patungo sa natatanging pahinang ito.",
 	"specialwhoiswatchingaddusers": "Magdagdag ng mga tagagamit upang bantayan ang pahina",
 	"specialwhoiswatchingaddbtn": "Idagdag ang napiling mga tagagamit"

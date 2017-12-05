@@ -6,7 +6,6 @@
 	},
 	"whoiswatching": "Ki figyel egy adott oldalt",
 	"whoiswatching-desc": "Megmutatja az adott lapot néző szerkesztők neveit",
-	"specialwhoiswatchingthepage": "Ki figyeli a(z) %s oldalt",
 	"specialwhoiswatchingusage": "Ez a speciális lap nem használható önmagában.\nHasználd a [[MediaWiki:Number_of_watching_users_pageview]] lapot a belépési pont megadásához erre a speciális lapra.",
 	"specialwhoiswatchingaddusers": "Szerkesztők hozzáadása a lap figyeléséhez",
 	"specialwhoiswatchingaddbtn": "Összes kiválasztott felhasználó hozzáadása"
