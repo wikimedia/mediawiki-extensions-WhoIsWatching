@@ -4,7 +4,8 @@
 			"Luckas",
 			"Malafaya",
 			"Waldir",
-			"Hamilton Abreu"
+			"Hamilton Abreu",
+			"Athena in Wonderland"
 		]
 	},
 	"right-addpagetoanywatchlist": "[[Special:WhoIsWatching|Acrescentar páginas às listas de páginas vigiadas de outros utilizadores]]",
@@ -17,7 +18,7 @@
 	"specialwhoiswatchingusage": "Esta página especial não pode ser usada em isolamento.",
 	"specialwhoiswatchingaddusers": "Adicionar utilizadores à vigilância da página",
 	"specialwhoiswatchingaddbtn": "Adicionar utilizadores selecionados",
-	"whoiswatching_users_pageview": "[{{fullurl:Special:WhoIsWatching/$2}} $1] {{PLURAL:$1|utilizador|utilizadores}} a vigiar",
+	"whoiswatching_users_pageview": "[{{fullurl:Special:WhoIsWatching/$2}} $1 {{PLURAL:$1|utilizador|utilizadores}} a vigiar]",
 	"whoiswatching-not-possible-title": "Página impossível de vigiar",
 	"whoiswatching-not-possible": "Não é possível vigiar a página [[$1]].",
 	"whoiswatching-usage-title": "Como usar esta página",
