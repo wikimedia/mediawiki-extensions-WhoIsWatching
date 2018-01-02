@@ -14,7 +14,7 @@
 	"specialwhoiswatchingpage": "Iwwerwaacher op [[$1]]",
 	"specialwhoiswatchingusage": "Dës Spezialsäit kann net eleng benotzt ginn.",
 	"specialwhoiswatchingaddusers": "Setzt Benotzer dobäi déi d'Säit iwwerwaachen",
-	"specialwhoiswatchingaddbtn": "Setzt déi ausgewielt Benotzer dobäi",
+	"specialwhoiswatchingaddbtn": "Setzt déi ausgewielt Benotzer derbäi",
 	"whoiswatching_users_pageview": "[{{fullurl:Special:WhoIsWatching/$2}} $1 iwwerwwaacht {{PLURAL:$1|Benotzer}}]",
 	"whoiswatching-not-possible-title": "Säit kann net iwwerwaacht ginn",
 	"whoiswatching-not-possible": "Et ass net méiglech d'Säit [[$1]] z'iwwerwaachen.",
