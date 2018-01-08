@@ -2,12 +2,13 @@
 	"@metadata": {
 		"authors": [
 			"Carla404",
-			"Felipe L. Ewald"
+			"Felipe L. Ewald",
+			"Eduardo Addad de Oliveira"
 		]
 	},
 	"whoiswatching": "Quem está vigiando uma página wiki",
 	"whoiswatching-desc": "Fornece uma lista dos usuários que estão vigiando uma página wiki",
-	"specialwhoiswatchingusage": "Esta página especial não pode ser usada individualmente.\nPor favor, utilize a página [[MediaWiki:Number_of_watching_users_pageview]] para definir um ponto de entrada para esta página especial.",
+	"specialwhoiswatchingusage": "Esta página especial não pode ser usada em isolamento.",
 	"specialwhoiswatchingaddusers": "Adicionar usuários para vigiar a página",
 	"specialwhoiswatchingaddbtn": "Adicionar os usuários selecionados",
 	"whoiswatching-usage-title": "Como usar esta página",
