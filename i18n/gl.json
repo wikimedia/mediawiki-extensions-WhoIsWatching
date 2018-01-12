@@ -4,7 +4,8 @@
 			"Alma",
 			"Toliño",
 			"Banjo",
-			"Elisardojm"
+			"Elisardojm",
+			"Athena in Wonderland"
 		]
 	},
 	"right-addpagetoanywatchlist": "[[Special:WhoIsWatching|Engadir páxinas á lista de vixilancia doutros usuarios]]",
@@ -17,7 +18,7 @@
 	"specialwhoiswatchingusage": "Esta páxina especial non pode ser usada por si soa.",
 	"specialwhoiswatchingaddusers": "Engadir os usuarios para vixiar a páxina",
 	"specialwhoiswatchingaddbtn": "Engadir os usuarios seleccionados",
-	"whoiswatching_users_pageview": "[{{fullurl:Special:WhoIsWatching/$2}} $1] {{PLURAL:$1|usuario|usuarios}} vixiando",
+	"whoiswatching_users_pageview": "[{{fullurl:Special:WhoIsWatching/$2}} $1 {{PLURAL:$1|usuario|usuarios}} vixiando]",
 	"whoiswatching-not-possible-title": "Páxina imposible de vixiar",
 	"whoiswatching-not-possible": "Non é posible vixiar a páxina [[$1]].",
 	"whoiswatching-usage-title": "Como usar esta páxina",
