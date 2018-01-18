@@ -6,17 +6,27 @@
 			"Eduardo Addad de Oliveira"
 		]
 	},
+	"right-addpagetoanywatchlist": "[[Special:WhoIsWatching|Acrescentar páginas às listas de páginas vigiadas de outros utilizadores]]",
+	"action-addpagetoanywatchlist": "acrescentar páginas às listas de páginas vigiadas de outros usuários",
+	"right-seepagewatchers": "Ver que usuários estão a [[Special:WhoIsWatching|vigiar uma página]]",
+	"action-seepagewatchers": "ver que usuários estão vigiando uma página",
 	"whoiswatching": "Quem está vigiando uma página wiki",
 	"whoiswatching-desc": "Fornece uma lista dos usuários que estão vigiando uma página wiki",
+	"specialwhoiswatchingpage": "Vigilantes de [[$1]]",
 	"specialwhoiswatchingusage": "Esta página especial não pode ser usada em isolamento.",
 	"specialwhoiswatchingaddusers": "Adicionar usuários para vigiar a página",
 	"specialwhoiswatchingaddbtn": "Adicionar os usuários selecionados",
+	"whoiswatching_users_pageview": "[{{fullurl:Special:WhoIsWatching/$2}} $1 {{PLURAL:$1|usuário|usuários}} a vigiar]",
+	"whoiswatching-not-possible-title": "Página impossível de vigiar",
+	"whoiswatching-not-possible": "Não é possível vigiar a página [[$1]].",
 	"whoiswatching-usage-title": "Como usar esta página",
 	"whoiswatching-user-editname": "Digite um nome de usuário:",
 	"whoiswatching-adduser": "Adicionar usuário",
 	"whoiswatching-deluser": "Remover usuário",
+	"whoiswatching-lookup-user": "Pesquisar usuário",
 	"whoiswatching-permission-denied-title": "Permissão negada",
 	"whoiswatching-permission-denied": "Você não pode fazer nada nesta página.\n\nPelo menos uma dessas permissões é necessária: $1",
+	"whoiswatching-lookup-title": "Pesquisa de título",
 	"whoiswatching-title": "Digite um título",
 	"whoiswatching-select-title": "Ver páginas vigiadas"
 }
