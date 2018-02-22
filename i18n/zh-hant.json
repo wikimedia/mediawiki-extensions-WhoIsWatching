@@ -4,17 +4,31 @@
 			"Mark85296341",
 			"Wrightbus",
 			"LNDDYL",
-			"Cwlin0416"
+			"Cwlin0416",
+			"Kly"
 		]
 	},
+	"right-addpagetoanywatchlist": "[[Special:WhoIsWatching|添加頁面至其他使用者的監視清單]]",
+	"action-addpagetoanywatchlist": "添加頁面至其他使用者的監視清單",
+	"right-seepagewatchers": "查看哪些使用者在[[Special:WhoIsWatching|監視頁面]]",
+	"action-seepagewatchers": "查看哪些使用者在監視頁面",
 	"whoiswatching": "正在監視某 wiki 頁面的使用者",
 	"whoiswatching-desc": "提供正在監視某 wiki 頁面的使用者名稱清單",
-	"specialwhoiswatchingusage": "此特殊頁面不能自行使用。\n請使用頁面 [[MediaWiki:Number_of_watching_users_pageview]] 定義的入口點，這種特殊的頁面。",
+	"specialwhoiswatchingpage": "[[$1]]上的監視者",
+	"specialwhoiswatchingusage": "此特殊頁面不能自行使用。",
 	"specialwhoiswatchingaddusers": "新增使用者以監視本頁面",
 	"specialwhoiswatchingaddbtn": "新增已選擇使用者",
+	"whoiswatching_users_pageview": "[{{fullurl:Special:WhoIsWatching/$2}} $1 個監視中的{{PLURAL:$1|使用者|使用者}}]",
+	"whoiswatching-not-possible-title": "頁面無法監視",
+	"whoiswatching-not-possible": "無法監視[[$1]]頁面。",
+	"whoiswatching-usage-title": "如何使用此頁面",
 	"whoiswatching-user-editname": "輸入使用者名稱：",
 	"whoiswatching-adduser": "加入使用者",
 	"whoiswatching-deluser": "移除使用者",
+	"whoiswatching-lookup-user": "使用者查找",
 	"whoiswatching-permission-denied-title": "權限不足",
+	"whoiswatching-permission-denied": "您無法在該頁面做出任何操作。\n\n您至少需要具備以下權限之一：$1",
+	"whoiswatching-lookup-title": "標題查找",
+	"whoiswatching-title": "輸入標題",
 	"whoiswatching-select-title": "檢視監視清單"
 }
