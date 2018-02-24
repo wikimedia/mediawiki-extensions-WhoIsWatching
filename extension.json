@@ -6,10 +6,10 @@
 		"Paul Grinberg",
 		"Siebrand Mazeland",
 		"Vitaliy Filippov",
-		"[http://mwstake.org Mark A. Hershberger]"
+		"[http://web.nichework.com Mark A. Hershberger]"
 	],
 	"requires": {
-		"MediaWiki": ">=1.26"
+		"MediaWiki": ">=1.27"
 	},
 	"url": "https://www.mediawiki.org/wiki/Extension:WhoIsWatching",
 	"descriptionmsg": "whoiswatching-desc",
@@ -49,23 +49,25 @@
 	"GroupPermissions": {
 		"sysop": {
 			"addpagetoanywatchlist": true,
+			"removepagefromanywatchlist": true,
 			"seepagewatchers": true
 		}
 	},
 	"AvailableRights": [
 		"addpagetoanywatchlist",
+		"removepagefromanywatchlist",
 		"seepagewatchers"
 	],
 	"ResourceModules": {
 		"ext.whoIsWatching": {
 			"styles": [
-				"modules/ext.whoIsWatching.css"
+				"ext.whoIsWatching.css"
 			]
 		}
 	},
 	"ResourceFileModulePaths": {
-		"localBasePath": "",
-		"remoteExtPath": ""
+		"localBasePath": "modules",
+		"remoteExtPath": "WhoIsWatching/modules"
 	},
 	"DefaultUserOptions": {
 		"echo-subscriptions-email-whoiswatching": true,

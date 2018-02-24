@@ -40,7 +40,6 @@ class SpecialPage extends \SpecialPage {
 	private $wiw;
 
 	/**
-	 * Ye olde constructor
 	 * @return boolean
 	 */
 	public function __construct() {
@@ -57,7 +56,7 @@ class SpecialPage extends \SpecialPage {
 			= ( !$user->isAnon() && $conf->get( "allowaddingpeople" ) )
 			|| $user->isAllowed( "removepagefromanywatchlist" );
 		$this->showWatchingUsers
-			= $conf->get( "showwatchingusers" )
+			= ( !$user->isAnon() && $conf->get( "showwatchingusers" ) )
 			|| $user->isAllowed( "seepagewatchers" );
 		$this->wiw = new Manager( $this->getUser(), $conf );
 
@@ -66,6 +65,7 @@ class SpecialPage extends \SpecialPage {
 
 	/**
 	 * Page executioner
+	 *
 	 * @param string $par page we're messing with
 	 * @return bool
 	 */
@@ -84,24 +84,34 @@ class SpecialPage extends \SpecialPage {
 
 	/**
 	 * Add to upstream check permissions
+	 *
 	 * @return void
 	 * @throws ErrorPageError
 	 */
 	public function checkPermissions() {
-		if ( $this->showWatchingUsers || $this->allowAddingPeople ) {
+		if (
+			$this->showWatchingUsers
+			|| $this->allowRemovingPeople
+			|| $this->allowAddingPeople
+		) {
 			return parent::checkPermissions();
 		}
 		throw new ErrorPageError(
 			"whoiswatching-permission-denied-title",
 			"whoiswatching-permission-denied",
 			[ $this->getLanguage()->commaList(
-				[ "seepagewatchers", "addpagetoanywatchlist" ]
+				[
+					"addpagetoanywatchlist",
+					"removepagefromanywatchlist",
+					"seepagewatchers"
+				]
 			) ]
 		);
 	}
 
 	/**
 	 * Either return the page chosen or display a page chooser and return false
+	 *
 	 * @param string $par the passed in parameter
 	 * @return bool|Title
 	 * @throws ErrorPageError
@@ -146,6 +156,7 @@ class SpecialPage extends \SpecialPage {
 
 	/**
 	 * The form for adding a watcher.
+	 *
 	 * @return bool
 	 */
 	private function addWatchersForm() {
@@ -188,6 +199,7 @@ class SpecialPage extends \SpecialPage {
 
 	/**
 	 * Add a watcher if the request did so
+	 *
 	 * @return bool
 	 * @throws ErrorPageError
 	 */
@@ -215,6 +227,7 @@ class SpecialPage extends \SpecialPage {
 	/**
 	 * If the user selected a page, redirect to work on it.  If not,
 	 * show the form.
+	 *
 	 * @return bool
 	 */
 	private function pickPage() {
@@ -255,6 +268,7 @@ class SpecialPage extends \SpecialPage {
 
 	/**
 	 * Remove any posted for removal
+	 *
 	 * @param array $formData posted data
 	 * @param HTMLForm $form the whole form
 	 */
@@ -283,10 +297,9 @@ class SpecialPage extends \SpecialPage {
 	 * @return null
 	 */
 	private function showWatchingUsers() {
-		if ( $this->showWatchingUsers === false ) {
+		if ( !$this->allowRemovingPeople && !$this->showWatchingUsers ) {
 			return;
 		}
-
 		$out = $this->getOutput();
 		$out->addWikiText(
 			"== ". wfMessage( 'specialwhoiswatchingpage' )
@@ -316,7 +329,7 @@ class SpecialPage extends \SpecialPage {
 		foreach ( $watchingusers as $id => $link ) {
 			$users[ $id ] = [ 'type' => 'check', 'label' => $link ];
 		}
-		if ( $this->allowAddingPeople ) {
+		if ( $this->allowRemovingPeople ) {
 			$form = HTMLForm::factory( 'ooui', $users, $this->getContext() );
 			$form->setSubmitText
 				( $this->msg( 'whoiswatching-deluser' )->text() );
@@ -326,7 +339,7 @@ class SpecialPage extends \SpecialPage {
 				} );
 			$form->setSubmitDestructive();
 			$form->show();
-		} else {
+		} elseif ( $this->showWatchingUsers ) {
 			foreach ( $watchingusers as $link ) {
 				$out->addWikiText(
 					$this->msg( 'whoiswatching-list-user' )->params( $link )

@@ -96,12 +96,13 @@ class Hook {
 
 		if ( $title->getNamespace() >= 0 && $showWatchingUsers ) {
 			$dbr = wfGetDB( DB_SLAVE );
-			$res = $dbr->select( 'watchlist', 'COUNT(*) as count', [
-				'wl_namespace' => $title->getNamespace(),
-				'wl_title'     => $title->getDBkey(),
-			], __METHOD__ );
+			$res = $dbr->select(
+				'watchlist', 'COUNT(*) as count', [
+					'wl_namespace' => $title->getNamespace(),
+					'wl_title' => $title->getDBkey(),
+				], __METHOD__
+			);
 			$watch = $dbr->fetchObject( $res );
-
 			return $watch->count;
 		}
 		return null;
@@ -116,13 +117,12 @@ class Hook {
 	public static function renderWhoIsWatchingLink( Title $title ) {
 		$conf = new GlobalVarConfig( "whoiswatching_" );
 		$showIfZero = $conf->get( "showifzero" );
-
 		$count = self::getNumbersOfWhoIsWatching( $title, $conf );
 
-		if ( $count > 0 || $showIfZero ) {
+		if ( $count > 0 || ( $showIfZero && $count == 0 ) ) {
 			$lang = RequestContext::getMain()->getLanguage();
 			return Html::rawElement( "span", [ 'class' => 'plainlinks' ], wfMessage(
-				'whoiswatching_users_pageview', $lang->formatNum( $count ), $title
+				'whoiswatching_users_pageview', $lang->formatNum( (int)$count ), $title
 			)->parse() );
 		}
 
@@ -200,5 +200,15 @@ class Hook {
 		$extra = $event->getExtra();
 		$user = User::newFromID( $extra['userID'] );
 		return [ $user ];
+	}
+
+	/**
+	 * Static function to help us determine if WiW is available.
+	 *
+	 * @return string
+	 */
+	public static function getVersion() {
+		$extension = json_decode( file_get_contents( __DIR__ . "/../extension.json" ) );
+		return $extension->version;
 	}
 }

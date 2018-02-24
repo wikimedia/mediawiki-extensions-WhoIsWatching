@@ -30,6 +30,10 @@ class Manager {
 	private $agent;
 	private $config;
 
+	/**
+	 * @param User $agent user
+	 * @param Config $config object
+	 */
 	public function __construct( User $agent, Config $config ) {
 		wfDebugLog( 'WhoIsWatching', __METHOD__ );
 		$this->agent = $agent;
