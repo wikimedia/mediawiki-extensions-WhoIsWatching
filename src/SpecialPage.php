@@ -2,7 +2,7 @@
 /**
  * Special page for WhoIsWatching
  *
- * Copyright (C) 2017  Mark A. Hershberger
+ * Copyright (C) 2017  NicheWork, LLC
  *
  * This program is free software: you can redistribute it and/or modify
  * it under the terms of the GNU General Public License as published by
@@ -16,25 +16,28 @@
  *
  * You should have received a copy of the GNU General Public License
  * along with this program.  If not, see <http://www.gnu.org/licenses/>.
+ *
+ * @author Mark A. Hershberger <mah@nichework.com>
  */
 
-namespace WhoIsWatching;
+namespace MediaWiki\Extension\WhoIsWatching;
 
 use ErrorPageError;
 use GlobalVarConfig;
 use HTMLForm;
 use MWNamespace;
-use SpecialPage;
+use MediaWiki\Extension\WhoIsWatching\Manager as Manager;
 use Title;
 use User;
 
-class SpecialWhoIsWatching extends SpecialPage {
+class SpecialPage extends \SpecialPage {
 
 	private $targetPage = null;
 	private $targetUser = null;
 	private $nameType;
 	private $allowAddingPeople;
 	private $showWatchingUsers;
+	private $wiw;
 
 	/**
 	 * Ye olde constructor
@@ -46,11 +49,17 @@ class SpecialWhoIsWatching extends SpecialPage {
 		$conf = new GlobalVarConfig( "whoiswatching_" );
 		$user = $this->getUser();
 		$this->nameType = $conf->get( "nametype" );
-		$this->allowAddingPeople = ( !$user->isAnon()
-									 && $conf->get( "allowaddingpeople" ) )
-								 || $user->isAllowed( "addpagetoanywatchlist" );
-		$this->showWatchingUsers = $conf->get( "showwatchingusers" ) ||
-			$user->isAllowed( "seepagewatchers" );
+
+		$this->allowAddingPeople
+			= ( !$user->isAnon() && $conf->get( "allowaddingpeople" ) )
+			|| $user->isAllowed( "addpagetoanywatchlist" );
+		$this->allowRemovingPeople
+			= ( !$user->isAnon() && $conf->get( "allowaddingpeople" ) )
+			|| $user->isAllowed( "removepagefromanywatchlist" );
+		$this->showWatchingUsers
+			= $conf->get( "showwatchingusers" )
+			|| $user->isAllowed( "seepagewatchers" );
+		$this->wiw = new Manager( $this->getUser(), $conf );
 
 		return true;
 	}
@@ -188,28 +197,19 @@ class SpecialWhoIsWatching extends SpecialPage {
 		if ( $req->wasPosted() && $token ) {
 			if ( $this->getUser()->matchEditToken( $token, __CLASS__ ) ) {
 				$title = $this->targetPage;
-				$this->targetUser->addWatch( $title );
-				$this->getOutput()->redirect
-					( $this->getPageTitle( $title )->getLocalUrl() );
-				$this->eNotifUser( 'add', $title, $this->targetUser );
-				return true;
+				$this->getOutput()->redirect(
+					$this->getPageTitle( $title )->getLocalUrl()
+				);
+				return $this->wiw->addWatch(
+					$title, $this->targetUser
+				);
 			}
 
-			throw new ErrorPageError
-				( 'sessionfailure-title', 'sessionfailure' );
+			throw new ErrorPageError(
+				'sessionfailure-title', 'sessionfailure'
+			);
 		}
 		return true;
-	}
-
-	/**
-	 * FIXME needs to be fleshed out
-	 * @param string $action taked
-	 * @param Title $title page updated
-	 * @param User $user affected
-	 *
-	 * @SuppressWarnings(PHPMD.UnusedFormalParameter)
-	 */
-	private function eNotifUser( $action, Title $title, User $user ) {
 	}
 
 	/**
@@ -220,8 +220,9 @@ class SpecialWhoIsWatching extends SpecialPage {
 	private function pickPage() {
 		$target = Title::newFromText( $this->getRequest()->getVal( "target" ) );
 		if ( $target ) {
-			$this->getOutput()->redirect
-				( $this->getPageTitle( $target )->getLocalUrl() );
+			$this->getOutput()->redirect(
+				$this->getPageTitle( $target )->getLocalUrl()
+			);
 			return false;
 		}
 		$formDescriptor = [
@@ -261,9 +262,10 @@ class SpecialWhoIsWatching extends SpecialPage {
 		$redir = false;
 		foreach ( $formData as $watcherID => $remove ) {
 			if ( $remove ) {
-				$watcher = User::newFromId( $watcherID );
-				$watcher->removeWatch( $this->targetPage );
-				$this->eNotifUser( 'remove', $this->targetPage, $watcher );
+				$this->wiw->removeWatch(
+					$this->targetPage,
+					User::newFromId( $watcherID )
+				);
 				$redir = true;
 			}
 		}
@@ -324,6 +326,12 @@ class SpecialWhoIsWatching extends SpecialPage {
 				} );
 			$form->setSubmitDestructive();
 			$form->show();
+		} else {
+			foreach ( $watchingusers as $link ) {
+				$out->addWikiText(
+					$this->msg( 'whoiswatching-list-user' )->params( $link )
+				);
+			}
 		}
 	}
 }

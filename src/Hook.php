@@ -1,6 +1,6 @@
 <?php
 /**
- * Copyright (C) 2017  Mark A. Hershberger
+ * Copyright (C) 2017, 2018  NicheWork, LLC
  *
  * This program is free software: you can redistribute it and/or modify
  * it under the terms of the GNU General Public License as published by
@@ -14,11 +14,14 @@
  *
  * You should have received a copy of the GNU General Public License
  * along with this program.  If not, see <http://www.gnu.org/licenses/>.
+ *
+ * @author Mark A. Hershberger <mah@nichework.com>
  */
 
-namespace WhoIsWatching;
+namespace MediaWiki\Extension\WhoIsWatching;
 
 use Article;
+use EchoEvent;
 use GlobalVarConfig;
 use Html;
 use Parser;
@@ -26,6 +29,7 @@ use QuickTemplate;
 use RequestContext;
 use Skin;
 use Title;
+use User;
 
 class Hook {
 	/**
@@ -59,7 +63,9 @@ class Hook {
 	 * @param Parser $parser current parser
 	 */
 	public static function onParserSetup( Parser $parser ) {
-		$parser->setFunctionHook( 'whoiswatching', 'WhoIsWatching\\Hook::whoIsWatching' );
+		$parser->setFunctionHook(
+			'whoiswatching', 'MediaWiki\\Extension\\WhoIsWatching\\Hook::whoIsWatching'
+		);
 	}
 
 	/**
@@ -121,5 +127,78 @@ class Hook {
 		}
 
 		return false;
+	}
+
+	/**
+	 * Define the WhoIsWatching notifications
+	 *
+	 * @param array &$notifications assoc array of notification types
+	 * @param array &$notificationCategories assoc array describing
+	 *        categories
+	 * @param array &$icons assoc array of icons we define
+	 */
+	public static function onBeforeCreateEchoEvent(
+		array &$notifications, array &$notificationCategories, array &$icons
+	) {
+		wfDebugLog( 'WhoIsWatching', __METHOD__ );
+		$icons['whoiswatching']['path'] = 'WhoIsWatching/assets/WhoIsWatching.svg';
+
+		$notifications['whoiswatching-add'] = [
+			'bundle' => [
+				'web' => true,
+				'email' => true,
+				'expandable' => true,
+			],
+			'title-message' => 'whoiswatching-add-title',
+			'category' => 'whoiswatching',
+			'group' => 'neutral',
+			'user-locators' => [ 'MediaWiki\\Extension\\WhoIsWatching\\Hook::userLocater' ],
+			'presentation-model' => 'MediaWiki\\Extension\\WhoIsWatching\\EchoEventPresentationModel',
+		];
+
+		$notifications['whoiswatching-remove'] = [
+			'bundle' => [
+				'web' => true,
+				'email' => true,
+				'expandable' => true,
+			],
+			'title-message' => 'whoiswatching-remove-title',
+			'category' => 'whoiswatching',
+			'group' => 'neutral',
+			'user-locators' => [ 'MediaWiki\\Extension\\WhoIsWatching\\Hook::userLocater' ],
+			'presentation-model' => 'MediaWiki\\Extension\\WhoIsWatching\\EchoEventPresentationModel',
+		];
+
+		$notificationCategories['whoiswatching'] = [
+			'priority' => 2,
+			'tooltip' => 'echo-pref-tooltip-whoiswatching'
+		];
+	}
+
+	/**
+	 * @param Event $event to bundle
+	 * @param string &$bundleString to use
+	 */
+	public static function onEchoGetBundleRules( EchoEvent $event, &$bundleString ) {
+		wfDebugLog( 'WhoIsWatching', __METHOD__ );
+		switch ( $event->getType() ) {
+		case 'whoiswatching-add':
+		case 'whoiswatching-remove':
+			$bundleString = 'whoiswatching';
+			break;
+		}
+	}
+
+	/**
+	 * Get users that should be notified for this event.
+	 *
+	 * @param EchoEvent $event to be looked at
+	 * @return array
+	 */
+	public static function userLocater( EchoEvent $event ) {
+		wfDebugLog( 'WhoIsWatching', __METHOD__ );
+		$extra = $event->getExtra();
+		$user = User::newFromID( $extra['userID'] );
+		return [ $user ];
 	}
 }

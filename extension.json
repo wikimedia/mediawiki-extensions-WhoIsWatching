@@ -15,7 +15,7 @@
 	"descriptionmsg": "whoiswatching-desc",
 	"type": "specialpage",
 	"SpecialPages": {
-		"WhoIsWatching": "WhoIsWatching\\SpecialWhoIsWatching"
+		"WhoIsWatching": "MediaWiki\\Extension\\WhoIsWatching\\SpecialPage"
 	},
 	"MessagesDirs": {
 		"WhoIsWatching": [
@@ -27,15 +27,23 @@
 		"WhoIsWatchingMagic": "src/i18n/Magic.php"
 	},
 	"AutoloadClasses": {
-		"WhoIsWatching\\SpecialWhoIsWatching": "src/SpecialWhoIsWatching.php",
-		"WhoIsWatching\\Hook": "src/Hook.php"
+		"MediaWiki\\Extension\\WhoIsWatching\\Manager": "src/Manager.php",
+		"MediaWiki\\Extension\\WhoIsWatching\\EchoEventPresentationModel": "src/EchoEventPresentationModel.php",
+		"MediaWiki\\Extension\\WhoIsWatching\\SpecialPage": "src/SpecialPage.php",
+		"MediaWiki\\Extension\\WhoIsWatching\\Hook": "src/Hook.php"
 	},
 	"Hooks": {
+		"BeforeCreateEchoEvent": [
+			"MediaWiki\\Extension\\WhoIsWatching\\Hook::onBeforeCreateEchoEvent"
+		],
+		"EchoGetBundleRules": [
+			"MediaWiki\\Extension\\WhoIsWatching\\Hook::onEchoGetBundleRules"
+		],
 		"SkinTemplateOutputPageBeforeExec": [
-			"WhoIsWatching\\Hook::onSkinTemplateOutputPageBeforeExec"
+			"MediaWiki\\Extension\\WhoIsWatching\\Hook::onSkinTemplateOutputPageBeforeExec"
 		],
 		"ParserFirstCallInit": [
-			"WhoIsWatching\\Hook::onParserSetup"
+			"MediaWiki\\Extension\\WhoIsWatching\\Hook::onParserSetup"
 		]
 	},
 	"GroupPermissions": {
@@ -59,13 +67,21 @@
 		"localBasePath": "",
 		"remoteExtPath": ""
 	},
+	"DefaultUserOptions": {
+		"echo-subscriptions-email-whoiswatching": true,
+		"echo-subscriptions-web-whoiswatching": true
+	},
 	"config": {
 		"_prefix": "whoiswatching_",
 		"nametype": "RealName",
 		"allowaddingpeople": false,
 		"showifzero": true,
 		"showwatchingusers": false,
-		"maxPicklistUsers": 10
+		"maxPicklistUsers": 10,
+		"notificationTypes": {
+			"add": true,
+			"remove": true
+		}
 	},
 	"manifest_version": 1
 }

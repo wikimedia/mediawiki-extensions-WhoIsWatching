@@ -14,6 +14,8 @@
 	"action-addpagetoanywatchlist": "{{doc-action|addpagetoanywatchlist}}",
 	"right-seepagewatchers": "{{doc-right|seepagewatchers}}",
 	"action-seepagewatchers": "{{doc-action|seepagewatchers}}",
+	"echo-category-title-whoiswatching": "{{doc-echo-category-title}}",
+	"echo-pref-tooltip-whoiswatching": "{{doc-echo-pref-tooltip}}",
 	"whoiswatching": "{{doc-special|WhoIsWatching|unlisted=1}}",
 	"whoiswatching-desc": "{{desc|name=Who Is Watching|url=https://www.mediawiki.org/wiki/Extension:WhoIsWatching}}",
 	"specialwhoiswatchingpage": "Title of watching users list",
@@ -32,5 +34,10 @@
 	"whoiswatching-permission-denied": "Message explaining what permissions are missiong",
 	"whoiswatching-lookup-title": "Label form to lookup a title",
 	"whoiswatching-title": "Prompt to enter a title",
-	"whoiswatching-select-title": "Label for button to submit form to load WhoIsWatching page for the title"
+	"whoiswatching-select-title": "Label for button to submit form to load WhoIsWatching page for the title",
+	"whoiswatching-notification-whoiswatching-remove-header": "Header for message when a page is removed from the category being watched",
+	"whoiswatching-notification-whoiswatching-remove-body": "Body for message when a page is removed from the category being watched",
+	"whoiswatching-notification-whoiswatching-add-header": "Header for message when a page is added to the category being watched",
+	"whoiswatching-notification-whoiswatching-add-body": "Body for message when a page is added to the category being watched",
+	"whoiswatching-notification-bundle": "Header text for a bundled notification when a user's watchlist has been changed"
 }

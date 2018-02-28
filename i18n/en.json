@@ -6,6 +6,8 @@
 	"action-addpagetoanywatchlist": "add pages to watchlists of other users",
 	"right-seepagewatchers": "See which users are [[Special:WhoIsWatching|watching a page]]",
 	"action-seepagewatchers": "see which users are watching a page",
+	"echo-category-title-whoiswatching": "Changes to my watchlist",
+	"echo-pref-tooltip-whoiswatching": "Notify me when someone else adds a page to my watchlist.",
 	"whoiswatching": "Who is watching a wiki page",
 	"whoiswatching-desc": "Provides a listing of usernames watching a wiki page",
 	"specialwhoiswatchingpage": "Watchers on [[$1]]",
@@ -24,5 +26,10 @@
 	"whoiswatching-permission-denied": "You can't do anything on this page.\n\nAt lease one of these permissions are needed: $1",
 	"whoiswatching-lookup-title": "Title lookup",
 	"whoiswatching-title": "Type a title",
-	"whoiswatching-select-title": "See watchlist"
+	"whoiswatching-select-title": "See watchlist",
+	"whoiswatching-notification-whoiswatching-remove-header": "Page removed from watchlist",
+	"whoiswatching-notification-whoiswatching-remove-body": "$1 removed $4 from your watchlist.",
+	"whoiswatching-notification-whoiswatching-add-header": "Page added to watchlist",
+	"whoiswatching-notification-whoiswatching-add-body": "$1 added $4 to your watchlist.",
+	"whoiswatching-notification-bundle": "$1 watchlist changes"
 }
