@@ -1,7 +1,7 @@
 {
 	"name": "WhoIsWatching",
 	"version": "0.12.1",
-	"license-name": "GPL-2.0",
+	"license-name": "GPL-2.0-only",
 	"author": [
 		"Paul Grinberg",
 		"Siebrand Mazeland",
