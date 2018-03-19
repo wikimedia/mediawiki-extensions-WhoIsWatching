@@ -2,12 +2,13 @@
 	"@metadata": {
 		"authors": [
 			"Dalibor Bosits",
-			"Ex13"
+			"Ex13",
+			"MaGa"
 		]
 	},
 	"whoiswatching": "Tko prati wiki stranicu",
 	"whoiswatching-desc": "Pruža popis suradničkih imena koji prate wiki stranicu",
-	"specialwhoiswatchingusage": "Ova posebna stranica ne može biti korištena samostalno. Koristite [[MediaWiki:Number_of_watching_users_pageview]] za definiranje unosa za ovu posebnu stranicu.",
+	"specialwhoiswatchingusage": "Ova posebna stranica ne može biti korištena samostalno.",
 	"specialwhoiswatchingaddusers": "Dodaj suradnike za praćenje stranice",
 	"specialwhoiswatchingaddbtn": "Dodaj odabrane suradnike"
 }

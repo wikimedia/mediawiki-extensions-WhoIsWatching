@@ -6,7 +6,8 @@
 			"Irus",
 			"Kareyac",
 			"Mailman",
-			"Okras"
+			"Okras",
+			"Patrick Star"
 		]
 	},
 	"right-addpagetoanywatchlist": "[[Special:WhoIsWatching|Добавление страниц к списку наблюдения других участников]]",
@@ -19,7 +20,7 @@
 	"specialwhoiswatchingusage": "Эта служебная страница не может быть использована сама по себе.",
 	"specialwhoiswatchingaddusers": "Добавить участников для наблюдения страницы",
 	"specialwhoiswatchingaddbtn": "Добавить выбранных участников",
-	"whoiswatching_users_pageview": "[{{fullurl:Special:WhoIsWatching/$2}} $1] смотреть {{PLURAL:$1|пользователь|пользователи}}",
+	"whoiswatching_users_pageview": "[{{fullurl:Special:WhoIsWatching/$2}} $1 смотреть {{PLURAL:$1|пользователь|пользователи}}]",
 	"whoiswatching-not-possible-title": "Страница может не наблюдаться",
 	"whoiswatching-not-possible": "Это не возможно, чтобы посмотреть на [[$1]] странице.",
 	"whoiswatching-usage-title": "Как использовать на этой странице",
