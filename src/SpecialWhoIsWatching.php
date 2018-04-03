@@ -220,26 +220,30 @@ class SpecialWhoIsWatching extends SpecialPage {
 				( $this->getPageTitle( $target )->getLocalUrl() );
 			return false;
 		}
-		$this->getOutput()->addHTML(
-			Html::openElement(
-				'form',
-				[ 'method' => 'get',
-				  'action' => $this->getPageTitle( $target )->getLocalUrl(),
-				  'name' => 'uluser',
-				  'id' => 'mw-whoiswatching-form1' ] ) .
-			Html::hidden( 'title', $this->getPageTitle()->getPrefixedText() ) .
-			Xml::fieldset
-			( $this->msg( 'whoiswatching-lookup-title' )->text() ) .
-			Xml::inputLabel
-			( $this->msg( 'whoiswatching-title' )->text(), 'target',
-			  'whoiswatching-target', 40,
-			  str_replace( '_', ' ', $this->targetPage ),
-			  [ 'class' => 'mw-searchInput' ] ) . ' ' .
-			Xml::submitButton
-			( $this->msg( 'whoiswatching-select-title' )->text() ) .
-			Html::closeElement( 'fieldset' ) .
-			Html::closeElement( 'form' ) . "\n"
-		);
+		$formDescriptor = [
+			'page' => [
+				'type' => 'text',
+				'name' => 'target',
+				'label-message' => 'whoiswatching-title',
+				'size' => 40,
+				'id' => 'whoiswatching-target',
+				'value' => str_replace( '_', ' ', $this->targetPage ) ,
+				'cssclass' => 'mw-searchInput'
+			]
+		];
+
+		$htmlForm = HTMLForm::factory( 'ooui', $formDescriptor, $this->getContext() );
+		$htmlForm
+			->addHiddenField( 'title', $this->getPageTitle()->getPrefixedText() )
+			->setAction( $this->getPageTitle( $target )->getLocalUrl() )
+			->setMethod( 'get' )
+			->setName( 'uluser' )
+			->setSubmitID( 'mw-whoiswatching-form1' )
+			->setSubmitTextMsg( 'whoiswatching-select-title' )
+			->setWrapperLegendMsg( 'whoiswatching-lookup-title' )
+			->prepareForm()
+			->displayForm( false );
+
 		return false;
 	}
 
