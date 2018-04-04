@@ -143,39 +143,32 @@ class SpecialWhoIsWatching extends SpecialPage {
 		if ( $this->allowAddingPeople === false ) {
 			return false;
 		}
+		if ( !$this->targetPage->exists() ) {
+			$this->getOutput()->addHTML( '<b>This page does not (yet) exist!</b>' );
+		}
+		$formDescriptor = [
+			'user' => [
+				'type' => 'user',
+				'name' => 'user',
+				'label-message' => 'whoiswatching-user-editname',
+				'size' => 30,
+				'id' => 'username',
+				'autofocus' => true,
+				'value' => '',
+			]
+		];
 
-		$this->getOutput()->addModules( 'mediawiki.userSuggest' );
-
-		$this->getOutput()->addHTML(
-			Html::openElement(
-				'form',
-				[ 'method' => 'post',
-				  'action' => $this->getPageTitle( $this->targetPage )
-				  ->getLocalUrl(),
-				  'name' => 'uluser',
-				  'id' => 'mw-whoiswatching-form1' ]
-			) .
-			Html::hidden( 'addToken',
-						  $this->getUser()->getEditToken( __CLASS__ ) ) .
-			( !$this->targetPage->exists()
-			  ? '<b>This page does not (yet) exist!</b>'
-			  : ''
-			) .
-			Xml::fieldset( $this->msg( 'whoiswatching-lookup-user' )->text() ) .
-			Xml::inputLabel(
-				$this->msg( 'whoiswatching-user-editname' )->text(),
-				'user',
-				'username',
-				30,
-				'',
-				[ 'autofocus' => true,
-				   // used by mediawiki.userSuggest
-				  'class' => 'mw-autocomplete-user' ]
-			) . ' ' .
-			Xml::submitButton( $this->msg( 'whoiswatching-adduser' )->text() ) .
-			Html::closeElement( 'fieldset' ) .
-			Html::closeElement( 'form' ) . "\n"
-		);
+		$htmlForm = HTMLForm::factory( 'ooui', $formDescriptor, $this->getContext() );
+		$htmlForm
+			->addHiddenField( 'addToken', $this->getUser()->getEditToken( __CLASS__ ) )
+			->setAction( $this->getPageTitle( $this->targetPage )->getLocalUrl() )
+			->setId('mw-whoiswatching-form1')
+			->setMethod( 'post' )
+			->setName( 'uluser' )
+			->setSubmitTextMsg( 'whoiswatching-adduser' )
+			->setWrapperLegendMsg( 'whoiswatching-lookup-user' )
+			->prepareForm()
+			->displayForm( false );
 
 		$this->maybeAddWatcher();
 		return false;
@@ -310,13 +303,14 @@ class SpecialWhoIsWatching extends SpecialPage {
 			$users[ $id ] = [ 'type' => 'check', 'label' => $link ];
 		}
 		if ( $this->allowAddingPeople ) {
-			$form = new HTMLForm( $users, $this->getContext() );
+			$form = HTMLForm::factory( 'ooui', $users, $this->getContext() );
 			$form->setSubmitText
 				( $this->msg( 'whoiswatching-deluser' )->text() );
 			$form->setSubmitCallback(
 				function ( $formData, $form ) {
 					return $this->maybeRemoveWatcher( $formData, $form );
 				} );
+			$form->setSubmitDestructive();
 			$form->show();
 		}
 	}
