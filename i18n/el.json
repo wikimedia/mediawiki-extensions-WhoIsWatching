@@ -4,18 +4,23 @@
 			"Geraki",
 			"ZaDiak",
 			"Περίεργος",
-			"GR"
+			"GR",
+			"Nikosgranturismogt"
 		]
 	},
 	"action-seepagewatchers": "δείτε ποιοι χρήστες παρακολουθούν μια σελίδα",
 	"whoiswatching": "Ποιος βλέπει μια σελίδα wiki",
 	"whoiswatching-desc": "Παρέχει μία λίστα με τους χρήστες που παρακολουθούν μια βικισελίδα",
-	"specialwhoiswatchingusage": "Αυτή η ειδική σελίδα δεν μπορεί να χρησιμοποιηθεί μόνη της. Παρακαλούμε χρησιμοποιήστε τη σελίδα [[MediaWiki:Number_of_watching_users_pageview]] να καθορίσει ένα σημείο εισόδου για την ειδική αυτή σελίδα.",
+	"specialwhoiswatchingusage": "Αυτή η ειδική σελίδα δεν μπορεί να χρησιμοποιηθεί μόνη της.",
 	"specialwhoiswatchingaddusers": "Προσθήκη χρηστών για παρακολούθηση της σελίδας",
 	"specialwhoiswatchingaddbtn": "Προσθήκη επιλεγμένων χρηστών",
+	"whoiswatching-usage-title": "Πως να χρησιμοποιήσετε αυτή τη σελίδα",
 	"whoiswatching-user-editname": "Εισάγετε όνομα χρήστη",
 	"whoiswatching-adduser": "Προσθήκη χρήστη",
 	"whoiswatching-deluser": "Αφαίρεση χρήστη",
+	"whoiswatching-permission-denied-title": "Δεν έχετε δικαίωμα πρόσβασης.",
+	"whoiswatching-permission-denied": "Δεν μπορείτε να κάνετε κάτι σε αυτή τη σελίδα.\n\nΑπαιτούνται τουλάχιστον αυτές οι άδειες: $1",
 	"whoiswatching-lookup-title": "Τίτλος αναζήτησης",
-	"whoiswatching-title": "Πληκτρολογήστε έναν τίτλο"
+	"whoiswatching-title": "Πληκτρολογήστε έναν τίτλο",
+	"whoiswatching-select-title": "Προβολή λίστας παρακολούθησης"
 }
