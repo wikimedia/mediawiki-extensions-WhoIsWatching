@@ -18,6 +18,7 @@
 
 namespace WhoIsWatching;
 
+use Article;
 use GlobalVarConfig;
 use QuickTemplate;
 use RequestContext;
