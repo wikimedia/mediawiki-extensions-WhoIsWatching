@@ -32,6 +32,9 @@
 	"Hooks": {
 		"SkinTemplateOutputPageBeforeExec": [
 			"WhoIsWatching\\Hook::onSkinTemplateOutputPageBeforeExec"
+		],
+		"ParserFirstCallInit": [
+			"WhoIsWatching\\Hook::onParserSetup"
 		]
 	},
 	"GroupPermissions": {

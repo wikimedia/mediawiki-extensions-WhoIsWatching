@@ -1,6 +1,6 @@
 <?php
 /**
- * Aliases for special pages
+ * Aliases for special pages and magic words
  *
  */
 // @codingStandardsIgnoreFile
@@ -271,3 +271,9 @@ $specialPageAliases['zh-hans'] = array(
 $specialPageAliases['zh-hant'] = array(
 	'WhoIsWatching' => array( '誰在監視' ),
 );
+
+// MAGIC WORDS
+
+$magicWords = [];
+
+$magicWords['en'] = [ 'whoiswatching' => [ 0, 'whoiswatching' ], ];

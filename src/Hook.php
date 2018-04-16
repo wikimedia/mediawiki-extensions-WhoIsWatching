@@ -23,6 +23,7 @@ use GlobalVarConfig;
 use QuickTemplate;
 use RequestContext;
 use Skin;
+use Title;
 
 class Hook {
 	/**
@@ -41,26 +42,80 @@ class Hook {
 			$article = Article::newFromID( $title->getArticleID() );
 			$title = $article->getRedirectTarget();
 		}
-		$user = $template->getUser();
-		$showWatchingUsers = $conf->get( "showwatchingusers" )
-						   || $user->isAllowed( 'seepagewatchers' );
 
-		if ( $title->getNamespace() >= 0 && $showWatchingUsers ) {
-			$dbr = wfGetDB( DB_SLAVE );
-			$res = $dbr->select( 'watchlist', 'COUNT(*) as count', [
-								 'wl_namespace' => $title->getNamespace(),
-								 'wl_title' => $title->getDBkey(),
-			], __METHOD__ );
-			$watch = $dbr->fetchObject( $res );
-			if ( $watch->count > 0 || $showIfZero ) {
-				$lang = RequestContext::getMain()->getLanguage();
-				$msg = wfMessage( 'whoiswatching_users_pageview',
-								  $lang->formatNum( $watch->count ), $title
-				)->parse();
-				$tpl->set( 'numberofwatchingusers', $msg );
-			}
+		$ret = self::renderWhoIsWatchingLink( $title );
+
+		if( $ret != false ){
+			$tpl->set( 'numberofwatchingusers', $ret );
 		}
 
 		return true;
 	}
+
+	/**
+	 * Hook for whoiswatching parser function
+	 * @param $parser
+	 */
+	public static function onParserSetup( &$parser ) {
+		$parser->setFunctionHook( 'whoiswatching', 'WhoIsWatching\\Hook::whoIsWatching' );
+	}
+
+	/**
+	 * @param $parser
+	 * @param $pageTitle The title of the page, whoiswatching refers to
+	 * @return array
+	 */
+	public static function whoIsWatching( $parser, $pageTitle ) {
+		$title = Title::newFromDBKey( $pageTitle );
+		$output = self::renderWhoIsWatchingLink( $title );
+
+		return array( $output, 'noparse' => false,'isHTML' => true );
+	}
+
+	/**
+	 * Get the number of watching users for a page
+	 * @param Title $title
+	 * @param GlobalVarConfig $conf
+	 * @return null/number of watching users
+	 */
+	public static function getNumbersOfWhoIsWatching( Title $title, GlobalVarConfig $conf ) {
+		$user = RequestContext::getMain()->getUser();
+		$showWatchingUsers = $conf->get( "showwatchingusers" ) || $user->isAllowed( 'seepagewatchers' );
+
+		if ( $title->getNamespace() >= 0 && $showWatchingUsers ) {
+			$dbr = wfGetDB( DB_SLAVE );
+			$res = $dbr->select( 'watchlist', 'COUNT(*) as count', [
+				'wl_namespace' => $title->getNamespace(),
+				'wl_title'     => $title->getDBkey(),
+			], __METHOD__ );
+			$watch = $dbr->fetchObject( $res );
+
+			return $watch->count;
+		}
+		return null;
+	}
+
+
+	/**
+	 * Render the link to Special:WhoIsWatching showing the number of watching users
+	 * @param Title $title
+	 * @return bool
+	 */
+	public static function renderWhoIsWatchingLink( Title $title ){
+		$conf = new GlobalVarConfig( "whoiswatching_" );
+		$showIfZero = $conf->get( "showifzero" );
+
+		$count = self::getNumbersOfWhoIsWatching( $title, $conf );
+
+		if ( $count > 0 || $showIfZero ) {
+			$lang = RequestContext::getMain()->getLanguage();
+			return wfMessage( 'whoiswatching_users_pageview', $lang->formatNum( $count ), $title )->parse();
+		}
+
+		return false;
+
+	}
+
+
+
 }
