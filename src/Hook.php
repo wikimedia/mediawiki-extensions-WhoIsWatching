@@ -20,6 +20,7 @@ namespace WhoIsWatching;
 
 use Article;
 use GlobalVarConfig;
+use Html;
 use Parser;
 use QuickTemplate;
 use RequestContext;
@@ -114,9 +115,9 @@ class Hook {
 
 		if ( $count > 0 || $showIfZero ) {
 			$lang = RequestContext::getMain()->getLanguage();
-			return wfMessage(
+			return Html::rawElement( "span", [ 'class' => 'plainlinks' ], wfMessage(
 				'whoiswatching_users_pageview', $lang->formatNum( $count ), $title
-			)->parse();
+			)->parse() );
 		}
 
 		return false;
