@@ -218,7 +218,7 @@ class SpecialWhoIsWatching extends SpecialPage {
 	 * @return bool
 	 */
 	private function pickPage() {
-		$target = $this->getRequest()->getVal( "target" );
+		$target = Title::newFromText( $this->getRequest()->getVal( "target" ) );
 		if ( $target ) {
 			$this->getOutput()->redirect
 				( $this->getPageTitle( $target )->getLocalUrl() );
