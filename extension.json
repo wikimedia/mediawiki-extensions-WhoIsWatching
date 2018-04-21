@@ -23,7 +23,8 @@
 		]
 	},
 	"ExtensionMessagesFiles": {
-		"WhoIsWatchingAlias": "src/i18n/Alias.php"
+		"WhoIsWatchingAlias": "src/i18n/Alias.php",
+		"WhoIsWatchingMagic": "src/i18n/Magic.php"
 	},
 	"AutoloadClasses": {
 		"WhoIsWatching\\SpecialWhoIsWatching": "src/SpecialWhoIsWatching.php",
