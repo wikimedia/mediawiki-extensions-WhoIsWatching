@@ -222,7 +222,7 @@ class SpecialWhoIsWatching extends SpecialPage {
 		}
 		$formDescriptor = [
 			'page' => [
-				'type' => 'text',
+				'type' => 'title',
 				'name' => 'target',
 				'label-message' => 'whoiswatching-title',
 				'size' => 40,
