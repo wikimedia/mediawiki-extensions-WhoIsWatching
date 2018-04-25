@@ -5,9 +5,27 @@
 			"ديفيد"
 		]
 	},
+	"right-addpagetoanywatchlist": "[[Special:WhoIsWatching|إضافة صفحات لقوائم مراقبة المستخدمين الآخرين]]",
+	"action-addpagetoanywatchlist": "إضافة صفحات لقوائم مراقبة المستخدمين الآخرين",
+	"right-seepagewatchers": "معرفة أي المستخدمين [[Special:WhoIsWatching|يراقبون صفحة]]",
+	"action-seepagewatchers": "معرفة أي المستخدمين يراقبون صفحة",
 	"whoiswatching": "من يراقب صفحة ويكي",
 	"whoiswatching-desc": "يوفر قائمة بأسماء المستخدمين الذين يراقبون صفحة ويكي",
+	"specialwhoiswatchingpage": "المراقبون في [[$1]]",
 	"specialwhoiswatchingusage": "هذه الصفحة الخاصة لا يمكن استخدامها من تلقاء نفسها.",
 	"specialwhoiswatchingaddusers": "أضف مستخدمين لمراقبة الصفحة",
-	"specialwhoiswatchingaddbtn": "أضف مستخدمين مختارين"
+	"specialwhoiswatchingaddbtn": "أضف مستخدمين مختارين",
+	"whoiswatching_users_pageview": "[{{fullurl:Special:WhoIsWatching/$2}} $1 يراقبها {{PLURAL:$1|مستخدم|مستخدمون}}]",
+	"whoiswatching-not-possible-title": "صفحة مستحيلة على المراقبة",
+	"whoiswatching-not-possible": "لا يمكن مراقبة صفحة [[$1]].",
+	"whoiswatching-usage-title": "كيفية استخدام هذه الصفحة",
+	"whoiswatching-user-editname": "اكتب اسم مستخدم:",
+	"whoiswatching-adduser": "إضافة المستخدم",
+	"whoiswatching-deluser": "إزالة المستخدم",
+	"whoiswatching-lookup-user": "بحث المستخدم",
+	"whoiswatching-permission-denied-title": "الصلاحية مرفوضة",
+	"whoiswatching-permission-denied": "لا يمكنك فعل أي شيء على هذه الصفحة;\n\nهناك حاجة إلى إحدى هذه الصلاحيات: $1",
+	"whoiswatching-lookup-title": "بحث العنوان",
+	"whoiswatching-title": "اكتب عنوانا",
+	"whoiswatching-select-title": "انظر قائمة المراقبة"
 }
