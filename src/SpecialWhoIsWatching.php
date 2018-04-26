@@ -257,19 +257,21 @@ class SpecialWhoIsWatching extends SpecialPage {
 	 * @param array $formData posted data
 	 * @param HTMLForm $form the whole form
 	 */
-	private function maybeRemoveWatcher( array $formData, HTMLForm $form ) {
+	private function maybeRemoveWatcher( array $formData ) {
+		$redir = false;
 		foreach ( $formData as $watcherID => $remove ) {
 			if ( $remove ) {
 				$watcher = User::newFromId( $watcherID );
 				$watcher->removeWatch( $this->targetPage );
-				# We should somehow remove this field from the form,
-				# but it looks too late now.
-				$field = $form->getField( $watcherID );
-				$field->mParams['disabled'] = true;
-				$field->setShowEmptyLabel( false );
-				$this->getOutput()->addModules( "ext.whoIsWatching" );
 				$this->eNotifUser( 'remove', $this->targetPage, $watcher );
+				$redir = true;
 			}
+		}
+		if ( $redir ) {
+			// reload page
+			$this->getOutput()->redirect(
+				$this->getPageTitle( $this->targetPage )->getLocalUrl()
+			);
 		}
 	}
 
@@ -318,7 +320,7 @@ class SpecialWhoIsWatching extends SpecialPage {
 				( $this->msg( 'whoiswatching-deluser' )->text() );
 			$form->setSubmitCallback(
 				function ( $formData, $form ) {
-					return $this->maybeRemoveWatcher( $formData, $form );
+					return $this->maybeRemoveWatcher( $formData );
 				} );
 			$form->setSubmitDestructive();
 			$form->show();
