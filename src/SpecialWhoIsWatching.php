@@ -22,27 +22,25 @@ namespace WhoIsWatching;
 
 use ErrorPageError;
 use GlobalVarConfig;
-use HTML;
 use HTMLForm;
 use MWNamespace;
 use SpecialPage;
 use Title;
 use User;
-use XML;
 
 class SpecialWhoIsWatching extends SpecialPage {
 
-	protected $targetPage = null;
-	protected $nameType;
-	protected $allowAddingPeople;
-	protected $showWatchingUsers;
-	protected $showIfZero;
+	private $targetPage = null;
+	private $targetUser = null;
+	private $nameType;
+	private $allowAddingPeople;
+	private $showWatchingUsers;
 
 	/**
 	 * Ye olde constructor
 	 * @return boolean
 	 */
-	function __construct() {
+	public function __construct() {
 		parent::__construct( 'whoiswatching' );
 
 		$conf = new GlobalVarConfig( "whoiswatching_" );
@@ -60,9 +58,9 @@ class SpecialWhoIsWatching extends SpecialPage {
 	/**
 	 * Page executioner
 	 * @param string $par page we're messing with
-	 * @return boolean
+	 * @return bool
 	 */
-	function execute( $par ) {
+	public function execute( $par ) {
 		$this->setHeaders();
 		$this->checkPermissions();
 		$this->outputHeader();
@@ -96,18 +94,19 @@ class SpecialWhoIsWatching extends SpecialPage {
 	/**
 	 * Either return the page chosen or display a page chooser and return false
 	 * @param string $par the passed in parameter
-	 * @return boolean|Title
+	 * @return bool|Title
 	 * @throws ErrorPageError
 	 */
-	protected function getTargetPage( $par ) {
-		$title = $this->getRequest()->getVal( 'page' );
+	private function getTargetPage( $par ) {
+		$req = $this->getRequest();
+		$title = $req->getVal( 'page' );
 		if ( !$title && !$par ) {
 			return $this->pickPage();
 		}
 
 		if ( $title ) {
 			$nsRevLookup = array_flip( MWNamespace::getCanonicalNamespaces() );
-			$nameSpace = $this->getRequest()->getVal( 'ns', '' );
+			$nameSpace = $req->getVal( 'ns', '' );
 			if ( !ctype_digit( $nameSpace ) ) {
 				$nameSpace = isset( $nsRevLookup[ $nameSpace ] )
 						   ? $nsRevLookup[ $nameSpace ]
@@ -117,6 +116,7 @@ class SpecialWhoIsWatching extends SpecialPage {
 		} else {
 			$this->targetPage = Title::newFromText( $par );
 		}
+		$this->targetUser = User::newFromName( $req->getVal( 'user' ) );
 
 		if ( !$this->targetPage ) {
 			throw new ErrorPageError(
@@ -137,9 +137,9 @@ class SpecialWhoIsWatching extends SpecialPage {
 
 	/**
 	 * The form for adding a watcher.
-	 * @return boolean
+	 * @return bool
 	 */
-	protected function addWatchersForm() {
+	private function addWatchersForm() {
 		if ( $this->allowAddingPeople === false ) {
 			return false;
 		}
@@ -155,6 +155,7 @@ class SpecialWhoIsWatching extends SpecialPage {
 				'id' => 'username',
 				'autofocus' => true,
 				'value' => '',
+				'required' => true
 			]
 		];
 
@@ -162,7 +163,7 @@ class SpecialWhoIsWatching extends SpecialPage {
 		$htmlForm
 			->addHiddenField( 'addToken', $this->getUser()->getEditToken( __CLASS__ ) )
 			->setAction( $this->getPageTitle( $this->targetPage )->getLocalUrl() )
-			->setId('mw-whoiswatching-form1')
+			->setId( 'mw-whoiswatching-form1' )
 			->setMethod( 'post' )
 			->setName( 'uluser' )
 			->setSubmitTextMsg( 'whoiswatching-adduser' )
@@ -170,26 +171,27 @@ class SpecialWhoIsWatching extends SpecialPage {
 			->prepareForm()
 			->displayForm( false );
 
-		$this->maybeAddWatcher();
+		if ( $this->targetUser ) {
+			$this->maybeAddWatcher();
+		}
 		return false;
 	}
 
 	/**
 	 * Add a watcher if the request did so
-	 * @return boolean
+	 * @return bool
 	 * @throws ErrorPageError
 	 */
-	protected function maybeAddWatcher() {
+	private function maybeAddWatcher() {
 		$req = $this->getRequest();
 		$token = $req->getVal( 'addToken' );
 		if ( $req->wasPosted() && $token ) {
 			if ( $this->getUser()->matchEditToken( $token, __CLASS__ ) ) {
-				$user = User::newFromName( $req->getVal( 'user' ) );
 				$title = $this->targetPage;
-				$user->addWatch( $title );
+				$this->targetUser->addWatch( $title );
 				$this->getOutput()->redirect
 					( $this->getPageTitle( $title )->getLocalUrl() );
-				$this->eNotifUser( 'add', $title, $user );
+				$this->eNotifUser( 'add', $title, $this->targetUser );
 				return true;
 			}
 
@@ -204,16 +206,18 @@ class SpecialWhoIsWatching extends SpecialPage {
 	 * @param string $action taked
 	 * @param Title $title page updated
 	 * @param User $user affected
+	 *
+	 * @SuppressWarnings(PHPMD.UnusedFormalParameter)
 	 */
-	protected function eNotifUser( $action, Title $title, User $user ) {
+	private function eNotifUser( $action, Title $title, User $user ) {
 	}
 
 	/**
 	 * If the user selected a page, redirect to work on it.  If not,
 	 * show the form.
-	 * @return boolean
+	 * @return bool
 	 */
-	protected function pickPage() {
+	private function pickPage() {
 		$target = $this->getRequest()->getVal( "target" );
 		if ( $target ) {
 			$this->getOutput()->redirect
@@ -228,7 +232,8 @@ class SpecialWhoIsWatching extends SpecialPage {
 				'size' => 40,
 				'id' => 'whoiswatching-target',
 				'value' => str_replace( '_', ' ', $this->targetPage ) ,
-				'cssclass' => 'mw-searchInput'
+				'cssclass' => 'mw-searchInput',
+				'required' => true
 			]
 		];
 
@@ -252,7 +257,7 @@ class SpecialWhoIsWatching extends SpecialPage {
 	 * @param array $formData posted data
 	 * @param HTMLForm $form the whole form
 	 */
-	protected function maybeRemoveWatcher( array $formData, HTMLForm $form ) {
+	private function maybeRemoveWatcher( array $formData, HTMLForm $form ) {
 		foreach ( $formData as $watcherID => $remove ) {
 			if ( $remove ) {
 				$watcher = User::newFromId( $watcherID );
@@ -270,9 +275,10 @@ class SpecialWhoIsWatching extends SpecialPage {
 
 	/**
 	 * Show watching users if we can
+	 *
 	 * @return null
 	 */
-	protected function showWatchingUsers() {
+	private function showWatchingUsers() {
 		if ( $this->showWatchingUsers === false ) {
 			return;
 		}
