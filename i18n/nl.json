@@ -11,7 +11,7 @@
 	"action-seepagewatchers": "bekijk welke gebruikers een pagina volgen",
 	"whoiswatching": "Wie volgen een pagina",
 	"whoiswatching-desc": "Levert een lijst met gebruikers die een wikipagina op hun volglijst hebben",
-	"specialwhoiswatchingpage": "Volgers op [[$1]]",
+	"specialwhoiswatchingpage": "Volgers op [[:$1]]",
 	"specialwhoiswatchingusage": "Deze speciale pagina kan niet op zichzelf gebruikt worden.",
 	"specialwhoiswatchingaddusers": "Deze pagina op de volglijst van gebruikers toevoegen",
 	"specialwhoiswatchingaddbtn": "Geselecteerde gebruikers toevoegen",

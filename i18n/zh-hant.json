@@ -14,7 +14,7 @@
 	"action-seepagewatchers": "查看哪些使用者在監視頁面",
 	"whoiswatching": "正在監視某 wiki 頁面的使用者",
 	"whoiswatching-desc": "提供正在監視某 wiki 頁面的使用者名稱清單",
-	"specialwhoiswatchingpage": "[[$1]]上的監視者",
+	"specialwhoiswatchingpage": "[[:$1]]上的監視者",
 	"specialwhoiswatchingusage": "此特殊頁面不能自行使用。",
 	"specialwhoiswatchingaddusers": "新增使用者以監視本頁面",
 	"specialwhoiswatchingaddbtn": "新增已選擇使用者",

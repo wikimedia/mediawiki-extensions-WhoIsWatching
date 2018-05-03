@@ -11,7 +11,7 @@
 	"action-seepagewatchers": "kucke wat fir eng Benotzer eng Säit iwwerwaachen",
 	"whoiswatching": "Wien iwwerwaacht eng Säit",
 	"whoiswatching-desc": "Liwwert eng Säit mat de Benotzer déi eng Wiki-Säit iwwerwaachen",
-	"specialwhoiswatchingpage": "Iwwerwaacher op [[$1]]",
+	"specialwhoiswatchingpage": "Iwwerwaacher op [[:$1]]",
 	"specialwhoiswatchingusage": "Dës Spezialsäit kann net eleng benotzt ginn.",
 	"specialwhoiswatchingaddusers": "Setzt Benotzer derbäi déi d'Säit iwwerwaachen",
 	"specialwhoiswatchingaddbtn": "Setzt déi ausgewielt Benotzer derbäi",

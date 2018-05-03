@@ -14,7 +14,7 @@
 	"action-seepagewatchers": "se vilka användare som bevakar en sida",
 	"whoiswatching": "Användare som bevakar en sida",
 	"whoiswatching-desc": "Visar en lista över användare som bevakar en viss sida",
-	"specialwhoiswatchingpage": "Bevakare på [[$1]]",
+	"specialwhoiswatchingpage": "Bevakare på [[:$1]]",
 	"specialwhoiswatchingusage": "Denna specialsida kan inte användas på egen hand.",
 	"specialwhoiswatchingaddusers": "Lägg till användare som bevakare av sidan",
 	"specialwhoiswatchingaddbtn": "Lägg till valda",

@@ -17,7 +17,7 @@
 	"action-seepagewatchers": "voir quels utilisateurs suivent une page",
 	"whoiswatching": "Qui suit une page wiki",
 	"whoiswatching-desc": "Fournit une liste des utilisateurs qui suivent une page wiki",
-	"specialwhoiswatchingpage": "Suiveurs de [[$1]]",
+	"specialwhoiswatchingpage": "Suiveurs de [[:$1]]",
 	"specialwhoiswatchingusage": "Cette page spéciale ne peut être utilisée seule.",
 	"specialwhoiswatchingaddusers": "Ajouter les utilisateurs pour suivre la page",
 	"specialwhoiswatchingaddbtn": "Ajouter les utilisateurs sélectionnés",

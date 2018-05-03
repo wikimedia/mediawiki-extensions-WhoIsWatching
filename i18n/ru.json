@@ -16,7 +16,7 @@
 	"action-seepagewatchers": "посмотреть, какие пользователи смотрят страницы",
 	"whoiswatching": "Кто следит за вики-страницей",
 	"whoiswatching-desc": "Предоставляет список участников, которые следят за вики-страницей",
-	"specialwhoiswatchingpage": "Наблюдающие за [[$1]]",
+	"specialwhoiswatchingpage": "Наблюдающие за [[:$1]]",
 	"specialwhoiswatchingusage": "Эта служебная страница не может быть использована сама по себе.",
 	"specialwhoiswatchingaddusers": "Добавить участников для наблюдения страницы",
 	"specialwhoiswatchingaddbtn": "Добавить выбранных участников",

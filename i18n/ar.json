@@ -11,7 +11,7 @@
 	"action-seepagewatchers": "معرفة أي المستخدمين يراقبون صفحة",
 	"whoiswatching": "من يراقب صفحة ويكي",
 	"whoiswatching-desc": "يوفر قائمة بأسماء المستخدمين الذين يراقبون صفحة ويكي",
-	"specialwhoiswatchingpage": "المراقبون في [[$1]]",
+	"specialwhoiswatchingpage": "المراقبون في [[:$1]]",
 	"specialwhoiswatchingusage": "هذه الصفحة الخاصة لا يمكن استخدامها من تلقاء نفسها.",
 	"specialwhoiswatchingaddusers": "أضف مستخدمين لمراقبة الصفحة",
 	"specialwhoiswatchingaddbtn": "أضف مستخدمين مختارين",

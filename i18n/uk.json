@@ -11,7 +11,7 @@
 	"action-seepagewatchers": "перегляд користувачів, що спостерігають за сторінкою",
 	"whoiswatching": "Хто спостерігає за вікі-сторінкою",
 	"whoiswatching-desc": "Надає список користувачів, які слідкують за вікі-сторінкою",
-	"specialwhoiswatchingpage": "Спостерігачі на [[$1]]",
+	"specialwhoiswatchingpage": "Спостерігачі на [[:$1]]",
 	"specialwhoiswatchingusage": "Ця спеціальна сторінка не може бути використана сама по собі.",
 	"specialwhoiswatchingaddusers": "Додати користувачів для спостереження за сторінкою",
 	"specialwhoiswatchingaddbtn": "Додати вибраних користувачів",

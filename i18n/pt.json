@@ -14,7 +14,7 @@
 	"action-seepagewatchers": "ver que utilizadores estão a vigiar uma página",
 	"whoiswatching": "Quem está a vigiar uma página da wiki",
 	"whoiswatching-desc": "Apresenta uma listagem dos utilizadores que estão a vigiar uma dada página",
-	"specialwhoiswatchingpage": "Vigilantes de [[$1]]",
+	"specialwhoiswatchingpage": "Vigilantes de [[:$1]]",
 	"specialwhoiswatchingusage": "Esta página especial não pode ser usada em isolamento.",
 	"specialwhoiswatchingaddusers": "Adicionar utilizadores à vigilância da página",
 	"specialwhoiswatchingaddbtn": "Adicionar utilizadores selecionados",

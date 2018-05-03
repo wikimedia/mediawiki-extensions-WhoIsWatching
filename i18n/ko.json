@@ -12,7 +12,7 @@
 	"action-seepagewatchers": "어느 사용자가 문서를 주시하는지 보기",
 	"whoiswatching": "위키 문서를 주시하는 사용자",
 	"whoiswatching-desc": "위키 문서를 주시하는 사용자의 목록을 제공합니다",
-	"specialwhoiswatchingpage": "[[$1]]의 주시자",
+	"specialwhoiswatchingpage": "[[:$1]]의 주시자",
 	"specialwhoiswatchingusage": "이 특수 문서는 문서 자체에서 사용될 수 없습니다.",
 	"specialwhoiswatchingaddusers": "문서를 주시하는 사용자 추가",
 	"specialwhoiswatchingaddbtn": "선택한 사용자 추가",

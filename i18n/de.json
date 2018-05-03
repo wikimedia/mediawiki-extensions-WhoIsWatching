@@ -9,11 +9,13 @@
 	},
 	"right-addpagetoanywatchlist": "[[Special:WhoIsWatching|Seiten zu Beobachtungslisten anderer Benutzer hinzufügen]]",
 	"action-addpagetoanywatchlist": "Seiten zu Beobachtungslisten anderer Benutzer hinzuzufügen",
-	"right-seepagewatchers": "Ansehen, welche Benutzer [[Special:WhoIsWatching|eine Seite beobachten]]",
+	"right-removepagefromanywatchlist": "[[Special:WhoIsWatching|Seiten von Beobachtungslisten anderer Benutzer entfernen]]",
+	"right-seepagewatchers": "Ansehen, [[Special:WhoIsWatching|welche Benutzer eine Seite beobachten]]",
 	"action-seepagewatchers": "anzusehen, welche Benutzer eine Seite beobachten",
+	"echo-category-title-whoiswatching": "Änderungen an meiner Beobachtungsliste",
 	"whoiswatching": "Wer beobachtet eine Seite",
 	"whoiswatching-desc": "Zeigt eine Liste von Benutzern an, die eine Seite beobachten",
-	"specialwhoiswatchingpage": "Beobachter von [[$1]]",
+	"specialwhoiswatchingpage": "Beobachter von [[:$1]]",
 	"specialwhoiswatchingusage": "Diese Spezialseite ist nicht auf sich allein gestellt einsetzbar.",
 	"specialwhoiswatchingaddusers": "Füge Benutzer zum Beobachten der Seite hinzu",
 	"specialwhoiswatchingaddbtn": "Füge Benutzer hinzu",
@@ -29,5 +31,8 @@
 	"whoiswatching-permission-denied": "Du kannst nichts auf dieser Seite machen.\n\nMindestens eine dieser Berechtigungen sind erforderlich: $1",
 	"whoiswatching-lookup-title": "Titelsuche",
 	"whoiswatching-title": "Einen Titel eingeben",
-	"whoiswatching-select-title": "Siehe Beobachtungsliste"
+	"whoiswatching-select-title": "Siehe Beobachtungsliste",
+	"whoiswatching-notification-whoiswatching-remove-header": "Seite von der Beobachtungsliste entfernt",
+	"whoiswatching-notification-whoiswatching-add-header": "Seite zur Beobachtungsliste hinzugefügt",
+	"whoiswatching-notification-bundle": "$1 Änderungen an der Beobachtungsliste"
 }

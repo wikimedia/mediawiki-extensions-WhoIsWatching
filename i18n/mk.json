@@ -11,7 +11,7 @@
 	"action-seepagewatchers": "увид кои луѓе набљудуваат дадена страница",
 	"whoiswatching": "Кој набљудува вики страница",
 	"whoiswatching-desc": "Дава список на корисници што набљудуваат некоја вики-страница",
-	"specialwhoiswatchingpage": "Набљудувачи на [[$1]]",
+	"specialwhoiswatchingpage": "Набљудувачи на [[:$1]]",
 	"specialwhoiswatchingusage": "Оваа службена страница не може да се користи самостојно.",
 	"specialwhoiswatchingaddusers": "Додај корисници за набљудување на страницата",
 	"specialwhoiswatchingaddbtn": "Додај избрани корисници",

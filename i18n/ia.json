@@ -10,7 +10,7 @@
 	"action-seepagewatchers": "vider qual usatores observa un pagina",
 	"whoiswatching": "Qui observa un pagina wiki",
 	"whoiswatching-desc": "Forni un lista de nomines de usatores qui observa un pagina wiki",
-	"specialwhoiswatchingpage": "Observatores de [[$1]]",
+	"specialwhoiswatchingpage": "Observatores de [[:$1]]",
 	"specialwhoiswatchingusage": "Iste pagina special non pote esser usate sol.",
 	"specialwhoiswatchingaddusers": "Adder usatores pro observar le pagina",
 	"specialwhoiswatchingaddbtn": "Adder le usatores seligite",

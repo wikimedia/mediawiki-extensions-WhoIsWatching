@@ -14,7 +14,7 @@
 	"action-seepagewatchers": "ver que usuarios están vixilando unha páxina",
 	"whoiswatching": "Quen está vixiando unha páxina do wiki",
 	"whoiswatching-desc": "Proporciona unha lista de nomes de usuario que vixian unha páxina do wiki",
-	"specialwhoiswatchingpage": "Vixilantes de [[$1]]",
+	"specialwhoiswatchingpage": "Vixilantes de [[:$1]]",
 	"specialwhoiswatchingusage": "Esta páxina especial non pode ser usada por si soa.",
 	"specialwhoiswatchingaddusers": "Engadir os usuarios para vixiar a páxina",
 	"specialwhoiswatchingaddbtn": "Engadir os usuarios seleccionados",
