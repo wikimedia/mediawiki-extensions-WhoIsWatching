@@ -8,8 +8,11 @@
 	},
 	"right-addpagetoanywatchlist": "[[Special:WhoIsWatching|문서를 다른 사용자의 주시문서 목록에 추가]]",
 	"action-addpagetoanywatchlist": "다른 사용자의 주시문서 목록에 문서 추가",
+	"action-removepagefromanywatchlist": "달든 사용자의 주시문서 목록에서 문서 제거",
 	"right-seepagewatchers": "어느 사용자가 [[Special:WhoIsWatching|문서를 주시하는지]] 보기",
 	"action-seepagewatchers": "어느 사용자가 문서를 주시하는지 보기",
+	"echo-category-title-whoiswatching": "내 주시문서 목록의 변경사항",
+	"echo-pref-tooltip-whoiswatching": "다른 누군가가 내 주시문서 목록에 문서를 추가할 때 내게 알립니다.",
 	"whoiswatching": "위키 문서를 주시하는 사용자",
 	"whoiswatching-desc": "위키 문서를 주시하는 사용자의 목록을 제공합니다",
 	"specialwhoiswatchingpage": "[[:$1]]의 주시자",
@@ -28,5 +31,10 @@
 	"whoiswatching-permission-denied": "이 페이지에 아무 것도 할 수 없습니다.\n\n적어도 다음의 권한 중 하나가 필요합니다: $1",
 	"whoiswatching-lookup-title": "제목 검색",
 	"whoiswatching-title": "제목 입력",
-	"whoiswatching-select-title": "주시문서 목록 보기"
+	"whoiswatching-select-title": "주시문서 목록 보기",
+	"whoiswatching-notification-whoiswatching-remove-header": "문서가 주시문서 목록에서 제거되었습니다",
+	"whoiswatching-notification-whoiswatching-remove-body": "$1님이 내 주시문서 목록에서 $4 문서를 제거했습니다.",
+	"whoiswatching-notification-whoiswatching-add-header": "문서가 주시문서 목록에 추가되었습니다",
+	"whoiswatching-notification-whoiswatching-add-body": "$1님이 내 주시문서 목록에 $4 문서를 추가했습니다.",
+	"whoiswatching-notification-bundle": "주시문서 목록 변경사항 $1개"
 }

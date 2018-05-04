@@ -9,8 +9,12 @@
 	},
 	"right-addpagetoanywatchlist": "[[Special:WhoIsWatching|添加页面至其他用户的监视列表]]",
 	"action-addpagetoanywatchlist": "添加页面至其他用户的监视列表",
-	"right-seepagewatchers": "查看哪些用户在[[Special:WhoIsWatching|监视页面]]",
+	"right-removepagefromanywatchlist": "[[Special:WhoIsWatching|从其他用户的监视列表中移除页面]]",
+	"action-removepagefromanywatchlist": "从其他用户的监视列表中移除页面",
+	"right-seepagewatchers": "查看[[Special:WhoIsWatching|哪些用户在监视页面]]",
 	"action-seepagewatchers": "查看哪些用户在监视页面",
+	"echo-category-title-whoiswatching": "对我的监视列表的更改",
+	"echo-pref-tooltip-whoiswatching": "当有其他人添加页面至我的监视列表时通知我。",
 	"whoiswatching": "正在监视某wiki页面的用户",
 	"whoiswatching-desc": "提供正在监视某wiki页面的用户名列表",
 	"specialwhoiswatchingpage": "[[:$1]]上的监视者",
@@ -29,5 +33,10 @@
 	"whoiswatching-permission-denied": "您不能在此页面做任何事。\n\n您需要这些权限中的至少一个：$1",
 	"whoiswatching-lookup-title": "标题查找",
 	"whoiswatching-title": "输入标题",
-	"whoiswatching-select-title": "参见监视列表"
+	"whoiswatching-select-title": "参见监视列表",
+	"whoiswatching-notification-whoiswatching-remove-header": "页面已从监视列表移除",
+	"whoiswatching-notification-whoiswatching-remove-body": "$1将$4从您的监视列表中移除。",
+	"whoiswatching-notification-whoiswatching-add-header": "页面已添加至监视列表",
+	"whoiswatching-notification-whoiswatching-add-body": "$1将$4添加至您的监视列表。",
+	"whoiswatching-notification-bundle": "$1监视列表更改"
 }

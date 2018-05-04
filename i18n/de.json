@@ -10,9 +10,11 @@
 	"right-addpagetoanywatchlist": "[[Special:WhoIsWatching|Seiten zu Beobachtungslisten anderer Benutzer hinzufügen]]",
 	"action-addpagetoanywatchlist": "Seiten zu Beobachtungslisten anderer Benutzer hinzuzufügen",
 	"right-removepagefromanywatchlist": "[[Special:WhoIsWatching|Seiten von Beobachtungslisten anderer Benutzer entfernen]]",
+	"action-removepagefromanywatchlist": "Seiten von Beobachtungslisten anderer Benutzer zu entfernen",
 	"right-seepagewatchers": "Ansehen, [[Special:WhoIsWatching|welche Benutzer eine Seite beobachten]]",
 	"action-seepagewatchers": "anzusehen, welche Benutzer eine Seite beobachten",
 	"echo-category-title-whoiswatching": "Änderungen an meiner Beobachtungsliste",
+	"echo-pref-tooltip-whoiswatching": "Benachrichtige mich, wenn jemand eine Seite zu meiner Beobachtungsliste hinzufügt.",
 	"whoiswatching": "Wer beobachtet eine Seite",
 	"whoiswatching-desc": "Zeigt eine Liste von Benutzern an, die eine Seite beobachten",
 	"specialwhoiswatchingpage": "Beobachter von [[:$1]]",
@@ -33,6 +35,8 @@
 	"whoiswatching-title": "Einen Titel eingeben",
 	"whoiswatching-select-title": "Siehe Beobachtungsliste",
 	"whoiswatching-notification-whoiswatching-remove-header": "Seite von der Beobachtungsliste entfernt",
+	"whoiswatching-notification-whoiswatching-remove-body": "$1 entfernte $4 von deiner Beobachtungsliste.",
 	"whoiswatching-notification-whoiswatching-add-header": "Seite zur Beobachtungsliste hinzugefügt",
+	"whoiswatching-notification-whoiswatching-add-body": "$1 fügte $4 zu deiner Beobachtungsliste hinzu.",
 	"whoiswatching-notification-bundle": "$1 Änderungen an der Beobachtungsliste"
 }

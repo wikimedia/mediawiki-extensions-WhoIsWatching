@@ -8,8 +8,12 @@
 	},
 	"right-addpagetoanywatchlist": "[[Special:WhoIsWatching|Acrescentar páginas às listas de páginas vigiadas de outros utilizadores]]",
 	"action-addpagetoanywatchlist": "acrescentar páginas às listas de páginas vigiadas de outros usuários",
+	"right-removepagefromanywatchlist": "[[Special:WhoIsWatching|Remover páginas da lista de páginas vigiadas de outros usuários]]",
+	"action-removepagefromanywatchlist": "remover páginas da lista de páginas vigiadas de outros usuários",
 	"right-seepagewatchers": "Ver que usuários estão a [[Special:WhoIsWatching|vigiar uma página]]",
 	"action-seepagewatchers": "ver que usuários estão vigiando uma página",
+	"echo-category-title-whoiswatching": "Mudanças da minha lista de páginas vigiadas",
+	"echo-pref-tooltip-whoiswatching": "Notifique-me quando alguém adicionar uma página à lista de páginas vigiadas.",
 	"whoiswatching": "Quem está vigiando uma página wiki",
 	"whoiswatching-desc": "Fornece uma lista dos usuários que estão vigiando uma página wiki",
 	"specialwhoiswatchingpage": "Vigilantes de [[:$1]]",
@@ -28,5 +32,10 @@
 	"whoiswatching-permission-denied": "Você não pode fazer nada nesta página.\n\nPelo menos uma dessas permissões é necessária: $1",
 	"whoiswatching-lookup-title": "Pesquisa de título",
 	"whoiswatching-title": "Digite um título",
-	"whoiswatching-select-title": "Ver páginas vigiadas"
+	"whoiswatching-select-title": "Ver páginas vigiadas",
+	"whoiswatching-notification-whoiswatching-remove-header": "Página removida da lista de páginas vigiadas",
+	"whoiswatching-notification-whoiswatching-remove-body": "$1 remover $4 da lista de páginas vigiadas",
+	"whoiswatching-notification-whoiswatching-add-header": "Página adicionada à lista de páginas vigiadas",
+	"whoiswatching-notification-whoiswatching-add-body": "$1 adicionado $4 à sua lista de páginas vigiadas.",
+	"whoiswatching-notification-bundle": "Modificações $1 da lista de páginas vigiadas"
 }

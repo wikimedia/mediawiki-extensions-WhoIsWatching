@@ -13,8 +13,12 @@
 	},
 	"right-addpagetoanywatchlist": "[[Special:WhoIsWatching|Ajouter des pages aux listes de suivi d’autres utilisateurs]]",
 	"action-addpagetoanywatchlist": "ajouter des pages aux listes de suivi des autres utilisateurs",
-	"right-seepagewatchers": "Voir quels utilisateurs [[Special:WhoIsWatching|suivent une page]]",
+	"right-removepagefromanywatchlist": "[[Special:WhoIsWatching|Supprimer les pages des listes de suivi des autres utilisateurs]]",
+	"action-removepagefromanywatchlist": "supprimer les pages des listes de suivi des autres utilisateurs",
+	"right-seepagewatchers": "Voir [[Special:WhoIsWatching|quels utilisateurs suivent une page]]",
 	"action-seepagewatchers": "voir quels utilisateurs suivent une page",
+	"echo-category-title-whoiswatching": "Modifications de ma liste de suivi",
+	"echo-pref-tooltip-whoiswatching": "Me notifier quand quelqu’un d’autre ajoute une page à ma liste de suivi.",
 	"whoiswatching": "Qui suit une page wiki",
 	"whoiswatching-desc": "Fournit une liste des utilisateurs qui suivent une page wiki",
 	"specialwhoiswatchingpage": "Suiveurs de [[:$1]]",
@@ -33,5 +37,10 @@
 	"whoiswatching-permission-denied": "Vous ne pouvez rien faire sur cette page.\n\nUne de ces autorisations au moins est nécessaire : $1",
 	"whoiswatching-lookup-title": "Recherche de titre",
 	"whoiswatching-title": "Saisir un titre",
-	"whoiswatching-select-title": "Voir la liste de suivi"
+	"whoiswatching-select-title": "Voir la liste de suivi",
+	"whoiswatching-notification-whoiswatching-remove-header": "Pages supprimée de la liste de suivi",
+	"whoiswatching-notification-whoiswatching-remove-body": "$1 a supprimé $4 de votre liste de suivi.",
+	"whoiswatching-notification-whoiswatching-add-header": "Page ajoutée à la liste de suivi",
+	"whoiswatching-notification-whoiswatching-add-body": "$1 a ajouté $4 à votre liste de suivi.",
+	"whoiswatching-notification-bundle": "$1 modifications de la liste de suivi"
 }
