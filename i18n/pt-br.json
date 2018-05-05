@@ -10,7 +10,7 @@
 	"action-addpagetoanywatchlist": "acrescentar páginas às listas de páginas vigiadas de outros usuários",
 	"right-removepagefromanywatchlist": "[[Special:WhoIsWatching|Remover páginas da lista de páginas vigiadas de outros usuários]]",
 	"action-removepagefromanywatchlist": "remover páginas da lista de páginas vigiadas de outros usuários",
-	"right-seepagewatchers": "Ver que usuários estão a [[Special:WhoIsWatching|vigiar uma página]]",
+	"right-seepagewatchers": "Ver [[Special:WhoIsWatching|que usuários estão vigiando uma página]]",
 	"action-seepagewatchers": "ver que usuários estão vigiando uma página",
 	"echo-category-title-whoiswatching": "Mudanças da minha lista de páginas vigiadas",
 	"echo-pref-tooltip-whoiswatching": "Notifique-me quando alguém adicionar uma página à lista de páginas vigiadas.",
