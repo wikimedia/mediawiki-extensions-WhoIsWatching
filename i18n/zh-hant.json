@@ -10,8 +10,12 @@
 	},
 	"right-addpagetoanywatchlist": "[[Special:WhoIsWatching|添加頁面至其他使用者的監視清單]]",
 	"action-addpagetoanywatchlist": "添加頁面至其他使用者的監視清單",
-	"right-seepagewatchers": "查看哪些使用者在[[Special:WhoIsWatching|監視頁面]]",
+	"right-removepagefromanywatchlist": "[[Special:WhoIsWatching|從其他使用者的監視清單移除頁面]]",
+	"action-removepagefromanywatchlist": "從其他使用者的監視清單移除頁面",
+	"right-seepagewatchers": "查看[[Special:WhoIsWatching|哪些使用者在監視頁面]]",
 	"action-seepagewatchers": "查看哪些使用者在監視頁面",
+	"echo-category-title-whoiswatching": "在我的監視清單中的變更",
+	"echo-pref-tooltip-whoiswatching": "當有其他人添加頁面至我的監視清單時通知我。",
 	"whoiswatching": "正在監視某 wiki 頁面的使用者",
 	"whoiswatching-desc": "提供正在監視某 wiki 頁面的使用者名稱清單",
 	"specialwhoiswatchingpage": "[[:$1]]上的監視者",
@@ -30,5 +34,10 @@
 	"whoiswatching-permission-denied": "您無法在該頁面做出任何操作。\n\n您至少需要具備以下權限之一：$1",
 	"whoiswatching-lookup-title": "標題查找",
 	"whoiswatching-title": "輸入標題",
-	"whoiswatching-select-title": "檢視監視清單"
+	"whoiswatching-select-title": "檢視監視清單",
+	"whoiswatching-notification-whoiswatching-remove-header": "頁面已從監視清單移除",
+	"whoiswatching-notification-whoiswatching-remove-body": "$1 已從您的監視清單移除 $4。",
+	"whoiswatching-notification-whoiswatching-add-header": "頁面已添加至監視清單",
+	"whoiswatching-notification-whoiswatching-add-body": "$1 已新增 $4 至您的監視清單。",
+	"whoiswatching-notification-bundle": "$1監視清單的變更"
 }

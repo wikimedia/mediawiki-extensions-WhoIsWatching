@@ -10,8 +10,12 @@
 	},
 	"right-addpagetoanywatchlist": "[[Special:WhoIsWatching|Lägg till sidor i andra användares bevakninglistor]]",
 	"action-addpagetoanywatchlist": "lägg till sidor i andra användares bevakningslistor",
-	"right-seepagewatchers": "Se vilka användare som [[Special:WhoIsWatching|bevakar en sida]]",
+	"right-removepagefromanywatchlist": "[[Special:WhoIsWatching|Ta bort sidor från andra användares bevakningslistor]]",
+	"action-removepagefromanywatchlist": "ta bort sidor från andra användares bevakningslistor",
+	"right-seepagewatchers": "Se [[Special:WhoIsWatching|vilka användare som bevakar en sida]]",
 	"action-seepagewatchers": "se vilka användare som bevakar en sida",
+	"echo-category-title-whoiswatching": "Ändringar i min bevakningslista",
+	"echo-pref-tooltip-whoiswatching": "Meddela mig när någon annan lägger till en sida i min bevakningslista",
 	"whoiswatching": "Användare som bevakar en sida",
 	"whoiswatching-desc": "Visar en lista över användare som bevakar en viss sida",
 	"specialwhoiswatchingpage": "Bevakare på [[:$1]]",
@@ -30,5 +34,10 @@
 	"whoiswatching-permission-denied": "Du kan inte göra någonting på denna sida.\n\nMinst ett av dessa tillstånd krävs: $1",
 	"whoiswatching-lookup-title": "Sök titel",
 	"whoiswatching-title": "Skriv en titel",
-	"whoiswatching-select-title": "Se bevakningslista"
+	"whoiswatching-select-title": "Se bevakningslista",
+	"whoiswatching-notification-whoiswatching-remove-header": "Sida togs bort från bevakningslista",
+	"whoiswatching-notification-whoiswatching-remove-body": "$1 tog bort $4 från din bevakningslista.",
+	"whoiswatching-notification-whoiswatching-add-header": "Sida lades till i bevakningslistan",
+	"whoiswatching-notification-whoiswatching-add-body": "$1 lade till $4 i din bevakningslista",
+	"whoiswatching-notification-bundle": "$1 ändringar i bevakningslistan"
 }
