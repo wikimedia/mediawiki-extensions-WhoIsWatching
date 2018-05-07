@@ -44,8 +44,7 @@
 		"jakub-onderka/php-parallel-lint": "1.0.0",
 		"jakub-onderka/php-console-highlighter": "0.3.2",
 		"mediawiki/minus-x": "0.3.1",
-		"mediawiki/mediawiki-codesniffer": "14.1.0",
-		"phpunit/phpunit": "4.8.36",
+		"mediawiki/mediawiki-codesniffer": "18.0.0",
 		"phpmd/phpmd": "~2.1"
 	},
 	"scripts": {
@@ -54,12 +53,12 @@
 		"test": [
 			"parallel-lint . --exclude vendor --exclude node_modules",
 			"phpmd src text .phpmd.xml || :",
-			"phpcs -p -s . || :",
-			"php $MW_INSTALL_PATH/tests/phpunit/phpunit.php -c .phpunit.xml.dist || :"
+			"phpcs -p -s || :",
+			"minus-x check . || :"
 		],
 		"fix": [
 			"minus-x fix .",
-			"phpcbf ."
+			"phpcbf"
 		]
 	}
 }
