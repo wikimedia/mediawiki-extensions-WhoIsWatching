@@ -9,6 +9,7 @@
 	"action-addpagetoanywatchlist": "Säiten op d'Iwwerwaachungslëschte vun anere Benotzer dobäisetzen",
 	"right-seepagewatchers": "Weise watfireng Benotzer  [[Special:WhoIsWatching|eng Säit iwwerwaachen]]",
 	"action-seepagewatchers": "kucke wat fir eng Benotzer eng Säit iwwerwaachen",
+	"echo-category-title-whoiswatching": "Ännerungen op menger Iwwerwaachungalëscht",
 	"whoiswatching": "Wien iwwerwaacht eng Säit",
 	"whoiswatching-desc": "Liwwert eng Säit mat de Benotzer déi eng Wiki-Säit iwwerwaachen",
 	"specialwhoiswatchingpage": "Iwwerwaacher op [[:$1]]",
@@ -26,5 +27,7 @@
 	"whoiswatching-permission-denied-title": "Autorisatioun refuséiert",
 	"whoiswatching-lookup-title": "Titel sichen",
 	"whoiswatching-title": "En Titel aginn",
-	"whoiswatching-select-title": "Kuckt Iwwerwaachungslëscht"
+	"whoiswatching-select-title": "Kuckt Iwwerwaachungslëscht",
+	"whoiswatching-notification-whoiswatching-remove-header": "Säit erofgeholl vun der Iwwerwaachungslëscht",
+	"whoiswatching-notification-whoiswatching-add-header": "Säit op d'Iwwerwaachungslëscht derbäigesat"
 }

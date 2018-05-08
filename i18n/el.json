@@ -22,5 +22,6 @@
 	"whoiswatching-permission-denied": "Δεν μπορείτε να κάνετε κάτι σε αυτή τη σελίδα.\n\nΑπαιτούνται τουλάχιστον αυτές οι άδειες: $1",
 	"whoiswatching-lookup-title": "Τίτλος αναζήτησης",
 	"whoiswatching-title": "Πληκτρολογήστε έναν τίτλο",
-	"whoiswatching-select-title": "Προβολή λίστας παρακολούθησης"
+	"whoiswatching-select-title": "Προβολή λίστας παρακολούθησης",
+	"whoiswatching-notification-bundle": "Αλλαγές λίστας παρακολούθησης $1"
 }

@@ -8,6 +8,8 @@
 			"Woytecr"
 		]
 	},
+	"action-addpagetoanywatchlist": "dodawania stron do list obserwowanych innych użytkowników",
+	"right-removepagefromanywatchlist": "[[Special:WhoIsWatching|Usuwanie stron z list obserwowanych innych użytkowników]]",
 	"action-seepagewatchers": "zobacz, którzy użytkownicy obserwują stronę",
 	"whoiswatching": "Kto obserwuje stronę",
 	"whoiswatching-desc": "Pokazuje listę użytkowników mających daną stronę w obserwowanych",
@@ -22,5 +24,7 @@
 	"whoiswatching-permission-denied-title": "Brak dostępu",
 	"whoiswatching-permission-denied": "Na tej stronie nie możesz nic zrobić.\n\nPotrzebujesz jednego z tych uprawnień: $1",
 	"whoiswatching-title": "Wprowadź tytuł",
-	"whoiswatching-select-title": "Zobacz listę obserwowanych"
+	"whoiswatching-select-title": "Zobacz listę obserwowanych",
+	"whoiswatching-notification-whoiswatching-remove-header": "Strona usunięta z listy obserwowanych",
+	"whoiswatching-notification-whoiswatching-add-header": "Strona dodana do listy obserwowanych"
 }
