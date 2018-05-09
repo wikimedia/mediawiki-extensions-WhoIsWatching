@@ -8,10 +8,10 @@
 		]
 	},
 	"action-addpagetoanywatchlist": "aggiungere pagine agli osservati speciali di altri utenti",
-	"action-removepagefromanywatchlist": "rimuovi pagine dalla lista di controllo di altri utenti",
+	"action-removepagefromanywatchlist": "rimuovere pagine dagli osservati speciali di altri utenti",
 	"right-seepagewatchers": "visualizza [[Special:WhoIsWatching|quali utenti stanno osservando una pagina]]",
 	"action-seepagewatchers": "vedere quali utenti stanno osservando una pagina",
-	"echo-pref-tooltip-whoiswatching": "Avvisami quando qualcuno aggiunge una pagina alla mia lista di controllo.",
+	"echo-pref-tooltip-whoiswatching": "Avvisami quando qualcuno aggiunge una pagina ai miei osservati speciali.",
 	"whoiswatching": "Chi sta osservando una pagina wiki",
 	"whoiswatching-desc": "Elenca i nomi degli utenti che tengono sotto osservazione una pagina wiki",
 	"specialwhoiswatchingusage": "Questa pagina speciale non può essere usata da sola.",
@@ -23,7 +23,7 @@
 	"whoiswatching-adduser": "Aggiungi utente",
 	"whoiswatching-deluser": "Rimuovi utente",
 	"whoiswatching-title": "Scrivi un titolo",
-	"whoiswatching-notification-whoiswatching-remove-header": "La pagina è stata rimossa dalla lista di controllo",
+	"whoiswatching-notification-whoiswatching-remove-header": "La pagina è stata rimossa dagli osservati speciali",
 	"whoiswatching-notification-whoiswatching-remove-body": "$1 ha rimosso $4 dai tuoi osservati speciali",
 	"whoiswatching-notification-whoiswatching-add-body": "$1 ha aggiunto $4 ai tuoi osservati speciali"
 }
