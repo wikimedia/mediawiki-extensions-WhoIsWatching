@@ -29,5 +29,7 @@
 	"whoiswatching-title": "En Titel aginn",
 	"whoiswatching-select-title": "Kuckt Iwwerwaachungslëscht",
 	"whoiswatching-notification-whoiswatching-remove-header": "Säit erofgeholl vun der Iwwerwaachungslëscht",
-	"whoiswatching-notification-whoiswatching-add-header": "Säit op d'Iwwerwaachungslëscht derbäigesat"
+	"whoiswatching-notification-whoiswatching-remove-body": "$1 huet $4 vun Ärer Iwwerwaachungslëscht erofgeholl",
+	"whoiswatching-notification-whoiswatching-add-header": "Säit op d'Iwwerwaachungslëscht derbäigesat",
+	"whoiswatching-notification-bundle": "$1 Ännerunge vun der Iwwerwaachungslëscht"
 }
