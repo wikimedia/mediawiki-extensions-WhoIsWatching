@@ -1,0 +1,19 @@
+{
+	"@metadata": {
+		"authors": [
+			"Simartampua"
+		]
+	},
+	"action-addpagetoanywatchlist": "Tambaon alaman tu pantauan ni pamake nalain",
+	"right-removepagefromanywatchlist": "[[Special:WhoIsWatching|Apus alaman ngon pamantau nalain]]",
+	"action-removepagefromanywatchlist": "apus alaman tingon pantauan pamake nalain",
+	"right-seepagewatchers": "Ligin [[Special:WhoIsWatching|sanga ise namamantau sada alaman]]",
+	"echo-category-title-whoiswatching": "Uba tu pantauanku",
+	"echo-pref-tooltip-whoiswatching": "Paboa diau atia alak nalain manambaon alaman tu daftar pantauan ku.",
+	"specialwhoiswatchingpage": "Pangamat aktif [[:$1]]",
+	"whoiswatching-notification-whoiswatching-remove-header": "Alaman iaupus ngon pantauan",
+	"whoiswatching-notification-whoiswatching-remove-body": "$1 apus $4 tingon daftar pantauanmu.",
+	"whoiswatching-notification-whoiswatching-add-header": "Alaman tambaon tu pantauan",
+	"whoiswatching-notification-whoiswatching-add-body": "$1 baen tu $4 daftar pantauanmu.",
+	"whoiswatching-notification-bundle": "$1 manguba pantauan"
+}

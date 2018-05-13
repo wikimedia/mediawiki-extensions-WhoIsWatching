@@ -7,8 +7,12 @@
 	},
 	"right-addpagetoanywatchlist": "[[Special:WhoIsWatching|إضافة صفحات لقوائم مراقبة المستخدمين الآخرين]]",
 	"action-addpagetoanywatchlist": "إضافة صفحات لقوائم مراقبة المستخدمين الآخرين",
-	"right-seepagewatchers": "معرفة أي المستخدمين [[Special:WhoIsWatching|يراقبون صفحة]]",
+	"right-removepagefromanywatchlist": "[[Special:WhoIsWatching|إزالة صفحات من قوائم مراقبة المستخدمين الآخرين]]",
+	"action-removepagefromanywatchlist": "إزالة الصفحات من قوائم مراقبة المستخدمين الآخرين",
+	"right-seepagewatchers": "رؤية [[Special:WhoIsWatching|أي المستخدمين يراقبون صفحة]]",
 	"action-seepagewatchers": "معرفة أي المستخدمين يراقبون صفحة",
+	"echo-category-title-whoiswatching": "التغييرات في قائمة مراقبتي",
+	"echo-pref-tooltip-whoiswatching": "إبلاغي عندما يضيف شخص آخر صفحة إلى قائمة مراقبتي.",
 	"whoiswatching": "من يراقب صفحة ويكي",
 	"whoiswatching-desc": "يوفر قائمة بأسماء المستخدمين الذين يراقبون صفحة ويكي",
 	"specialwhoiswatchingpage": "المراقبون في [[:$1]]",
@@ -27,5 +31,10 @@
 	"whoiswatching-permission-denied": "لا يمكنك فعل أي شيء على هذه الصفحة;\n\nهناك حاجة إلى إحدى هذه الصلاحيات: $1",
 	"whoiswatching-lookup-title": "بحث العنوان",
 	"whoiswatching-title": "اكتب عنوانا",
-	"whoiswatching-select-title": "انظر قائمة المراقبة"
+	"whoiswatching-select-title": "انظر قائمة المراقبة",
+	"whoiswatching-notification-whoiswatching-remove-header": "تمت إزالة الصفحة من قائمة المراقبة",
+	"whoiswatching-notification-whoiswatching-remove-body": "$1 أزال $4 من قائمة مراقبتك.",
+	"whoiswatching-notification-whoiswatching-add-header": "تمت إضافة الصفحة إلى قائمة المراقبة",
+	"whoiswatching-notification-whoiswatching-add-body": "أضاف $1 $4 إلى قائمة مراقبتك.",
+	"whoiswatching-notification-bundle": "$1 تغييرات في قائمة المراقبة"
 }
