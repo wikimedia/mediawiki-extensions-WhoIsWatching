@@ -7,12 +7,13 @@
 			"Kareyac",
 			"Mailman",
 			"Okras",
-			"Patrick Star"
+			"Patrick Star",
+			"AttemptToCallNil"
 		]
 	},
 	"right-addpagetoanywatchlist": "[[Special:WhoIsWatching|Добавление страниц к списку наблюдения других участников]]",
 	"action-addpagetoanywatchlist": "добавление страниц к спискам других пользователей",
-	"right-seepagewatchers": "Просмотр того, кто из участников [[Special:WhoIsWatching|наблюдают за страницей]]",
+	"right-seepagewatchers": "Просмотр того, [[Special:WhoIsWatching|какие участники наблюдают за страницей]]",
 	"action-seepagewatchers": "посмотреть, какие пользователи смотрят страницы",
 	"whoiswatching": "Кто следит за вики-страницей",
 	"whoiswatching-desc": "Предоставляет список участников, которые следят за вики-страницей",
