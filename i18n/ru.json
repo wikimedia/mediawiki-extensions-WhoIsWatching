@@ -21,7 +21,7 @@
 	"specialwhoiswatchingusage": "Эта служебная страница не может быть использована сама по себе.",
 	"specialwhoiswatchingaddusers": "Добавить участников для наблюдения страницы",
 	"specialwhoiswatchingaddbtn": "Добавить выбранных участников",
-	"whoiswatching_users_pageview": "[{{fullurl:Special:WhoIsWatching/$2}} $1 смотреть {{PLURAL:$1|пользователь|пользователи}}]",
+	"whoiswatching_users_pageview": "За страницей [{{fullurl:Special:WhoIsWatching/$2}} следят $1 {{PLURAL:$1|участник|участника|участников}}]",
 	"whoiswatching-not-possible-title": "Страница может не наблюдаться",
 	"whoiswatching-not-possible": "Это не возможно, чтобы посмотреть на [[$1]] странице.",
 	"whoiswatching-usage-title": "Как использовать на этой странице",
