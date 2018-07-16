@@ -15,7 +15,7 @@
 	"whoiswatching": "Quíen ta vixilando una páxina wiki",
 	"whoiswatching-desc": "Ufre la llista d'usuarios que tan viendo una páxina wiki",
 	"specialwhoiswatchingpage": "Vixilantes de [[:$1]]",
-	"specialwhoiswatchingusage": "Esta páxina especial nun pue usase por sí sola.",
+	"specialwhoiswatchingusage": "Esta páxina especial nun puede usase por sí sola.",
 	"specialwhoiswatchingaddusers": "Añadi los usuarios pa vixilar la páxina",
 	"specialwhoiswatchingaddbtn": "Añader los usuarios seleicionaos",
 	"whoiswatching_users_pageview": "[{{fullurl:Special:WhoIsWatching/$2}} $1 {{PLURAL:$1|usuariu|usuarios}} vixilando]",
