@@ -9,7 +9,10 @@
 		"[http://web.nichework.com Mark A. Hershberger]"
 	],
 	"requires": {
-		"MediaWiki": ">=1.27"
+		"MediaWiki": ">=1.27",
+		"extensions": {
+			"Echo": "*"
+		}
 	},
 	"url": "https://www.mediawiki.org/wiki/Extension:WhoIsWatching",
 	"descriptionmsg": "whoiswatching-desc",
