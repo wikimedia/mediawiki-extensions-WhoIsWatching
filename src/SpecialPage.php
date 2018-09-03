@@ -302,7 +302,7 @@ class SpecialPage extends \SpecialPage {
 		}
 		$out = $this->getOutput();
 		$out->addWikiText(
-			"== ". wfMessage( 'specialwhoiswatchingpage' )
+			"== " . wfMessage( 'specialwhoiswatchingpage' )
 			->params( $this->targetPage )->plain() . " =="
 		);
 
