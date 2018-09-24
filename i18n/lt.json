@@ -8,7 +8,7 @@
 	},
 	"right-addpagetoanywatchlist": "[[Special:WhoIsWatching|Pridėti puslapius į kitų vartotojų stebimųjų sąrašus]]",
 	"action-addpagetoanywatchlist": "pridėti puslapius į kitų vartotojų stebimųjų sąrašus",
-	"right-seepagewatchers": "Žiūrėti kurie vartotojai [[Special:WhoIsWatching|stebi puslapį]]",
+	"right-seepagewatchers": "Žiūrėti [[Special:WhoIsWatching|kurie vartotojai stebi puslapį]]",
 	"action-seepagewatchers": "žiūrėti kurie vartotojai stebį puslapį",
 	"whoiswatching": "Kas stebi šį puslapį",
 	"specialwhoiswatchingusage": "Šis specialus puslapis negali būti naudojamas vienas.",
