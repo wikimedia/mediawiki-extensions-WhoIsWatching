@@ -253,7 +253,6 @@ class SpecialPage extends \SpecialPage {
 
 		$htmlForm = HTMLForm::factory( 'ooui', $formDescriptor, $this->getContext() );
 		$htmlForm
-			->addHiddenField( 'title', $this->getPageTitle()->getPrefixedText() )
 			->setAction( $this->getPageTitle( $target )->getLocalUrl() )
 			->setMethod( 'get' )
 			->setName( 'uluser' )
