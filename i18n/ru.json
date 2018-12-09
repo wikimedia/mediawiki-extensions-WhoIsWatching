@@ -8,13 +8,18 @@
 			"Mailman",
 			"Okras",
 			"Patrick Star",
-			"AttemptToCallNil"
+			"AttemptToCallNil",
+			"Vlad5250"
 		]
 	},
 	"right-addpagetoanywatchlist": "[[Special:WhoIsWatching|Добавление страниц к списку наблюдения других участников]]",
 	"action-addpagetoanywatchlist": "добавление страниц к спискам других пользователей",
-	"right-seepagewatchers": "Просмотр того, [[Special:WhoIsWatching|какие участники наблюдают за страницей]]",
-	"action-seepagewatchers": "посмотреть, какие пользователи смотрят страницы",
+	"right-removepagefromanywatchlist": "[[Special:WhoIsWatching|Удаление страниц из списков наблюдения других участников]]",
+	"action-removepagefromanywatchlist": "удаление страниц из списков наблюдения других участников",
+	"right-seepagewatchers": "Просмотр того, какие люди [[Special:WhoIsWatching|наблюдают за страницей]]",
+	"action-seepagewatchers": "посмотреть, какие люди смотрят страницы",
+	"echo-category-title-whoiswatching": "Изменения моего списка наблюдения",
+	"echo-pref-tooltip-whoiswatching": "Сообщать мне, когда кто-то добавляет страницу в мой список наблюдения.",
 	"whoiswatching": "Кто следит за вики-страницей",
 	"whoiswatching-desc": "Предоставляет список участников, которые следят за вики-страницей",
 	"specialwhoiswatchingpage": "Наблюдающие за [[:$1]]",
@@ -22,8 +27,8 @@
 	"specialwhoiswatchingaddusers": "Добавить участников для наблюдения страницы",
 	"specialwhoiswatchingaddbtn": "Добавить выбранных участников",
 	"whoiswatching_users_pageview": "За страницей [{{fullurl:Special:WhoIsWatching/$2}} следят $1 {{PLURAL:$1|участник|участника|участников}}]",
-	"whoiswatching-not-possible-title": "Страница может не наблюдаться",
-	"whoiswatching-not-possible": "Это не возможно, чтобы посмотреть на [[$1]] странице.",
+	"whoiswatching-not-possible-title": "Страница не может наблюдаться",
+	"whoiswatching-not-possible": "Наблюдение за страницей [[$1]] невозможно.",
 	"whoiswatching-usage-title": "Как использовать на этой странице",
 	"whoiswatching-user-editname": "Введите имя учётной записи:",
 	"whoiswatching-adduser": "Добавить пользователя",
@@ -33,5 +38,10 @@
 	"whoiswatching-permission-denied": "Вы не можете сделать что-нибудь на этой странице.\n\nДолжен быть один или несколько из этих разрешений: $1",
 	"whoiswatching-lookup-title": "Поиск по названию",
 	"whoiswatching-title": "Введите название",
-	"whoiswatching-select-title": "Посмотреть список наблюдения"
+	"whoiswatching-select-title": "Посмотреть список наблюдения",
+	"whoiswatching-notification-whoiswatching-remove-header": "Страница удалена из списка наблюдения",
+	"whoiswatching-notification-whoiswatching-remove-body": "$1 удалил «$4» из вашего списка наблюдения.",
+	"whoiswatching-notification-whoiswatching-add-header": "Страница добавлена в список наблюдения",
+	"whoiswatching-notification-whoiswatching-add-body": "$1 добавил «$4» в ваш список наблюдения.",
+	"whoiswatching-notification-bundle": "$1 изменения в списке наблюдения"
 }
