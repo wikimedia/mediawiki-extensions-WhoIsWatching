@@ -43,7 +43,7 @@ class SpecialPage extends \SpecialPage {
 	 * @return boolean
 	 */
 	public function __construct() {
-		parent::__construct( 'whoiswatching' );
+		parent::__construct( 'WhoIsWatching' );
 
 		$conf = new GlobalVarConfig( "whoiswatching_" );
 		$user = $this->getUser();
