@@ -14,7 +14,7 @@
 	},
 	"whoiswatching": "Kuka on tarkkailemassa wikisivua",
 	"whoiswatching-desc": "Mahdollistaa wikisivun tarkkailijoiden listauksen.",
-	"specialwhoiswatchingusage": "Tätä toimintosivua ei voi käyttää sellaisenaan.\nKäytä sivua [[MediaWiki:Number_of_watching_users_pageview]] määritelläksesi liityntäkohdan tähän toimintosivuun.",
+	"specialwhoiswatchingusage": "Tätä toimintosivua ei voi käyttää sellaisenaan.",
 	"specialwhoiswatchingaddusers": "Lisää käyttäjiä tarkkailemaan sivua",
 	"specialwhoiswatchingaddbtn": "Lisää valitut käyttäjät",
 	"whoiswatching-usage-title": "Kuinka käyttää tätä sivua",
