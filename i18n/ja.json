@@ -4,9 +4,12 @@
 			"Aotake",
 			"Fryed-peach",
 			"Otokoume",
-			"ネイ"
+			"ネイ",
+			"Shirayuki"
 		]
 	},
+	"right-addpagetoanywatchlist": "[[Special:WhoIsWatching|他の利用者のウォッチリストにページを追加]]",
+	"action-addpagetoanywatchlist": "他の利用者のウォッチリストへのページの追加",
 	"whoiswatching": "ページをウォッチしている利用者",
 	"whoiswatching-desc": "ページをウォッチしている利用者の一覧を提供する",
 	"specialwhoiswatchingusage": "この特別ページは単独では利用できません。",
