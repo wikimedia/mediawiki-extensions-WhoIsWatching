@@ -7,7 +7,7 @@
 	},
 	"whoiswatching": "من يراقب صفحة ويكي",
 	"whoiswatching-desc": "يوفر لستة بأسماء اليوزرز اللى بيراقبو صفحة ويكى",
-	"specialwhoiswatchingusage": "هذه الصفحة الخاصة لا يمكن استخدامها بمفردها.\nمن فضلك استخدم الصفحة [[MediaWiki:Number_of_watching_users_pageview]] لتعريف نقطة مدخل إلى هذه الصفحة الخاصة.",
+	"specialwhoiswatchingusage": "هذه الصفحة الخاصة لا يمكن استخدامها بمفردها.",
 	"specialwhoiswatchingaddusers": "ضيف يوزرز لمراقبة الصفحة",
 	"specialwhoiswatchingaddbtn": "ضيف يوزرز مختارين"
 }
