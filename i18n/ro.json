@@ -1,12 +1,13 @@
 {
 	"@metadata": {
 		"authors": [
-			"KlaudiuMihaila"
+			"KlaudiuMihaila",
+			"Andrei Stroe"
 		]
 	},
 	"whoiswatching": "Cine urmărește o pagină wiki",
 	"whoiswatching-desc": "Oferă o listă de nume de utilizatori care urmăresc o pagină wiki",
-	"specialwhoiswatchingusage": "Această pagină specială nu poate fi folosită de sine stătătoare.\nTe rugăm să folosești pagina [[MediaWiki:Number_of_watching_users_pageview]] pentru a defini un punct de intrare în această pagină specială.",
+	"specialwhoiswatchingusage": "Această pagină specială nu poate fi folosită de sine stătătoare.",
 	"specialwhoiswatchingaddusers": "Adaugă utilizatori care să urmărească pagina",
 	"specialwhoiswatchingaddbtn": "Adaugă utilizatorii selectați"
 }
