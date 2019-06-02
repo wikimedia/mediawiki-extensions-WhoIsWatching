@@ -1,9 +1,11 @@
 {
 	"@metadata": {
 		"authors": [
-			"Joseph"
+			"Joseph",
+			"Sayginer"
 		]
 	},
+	"echo-pref-tooltip-whoiswatching": "Bir başka kullanıcı bir sayfayı izleme listeme eklerse bana bildirim gönder.",
 	"whoiswatching": "Bir wiki sayfasını kim izliyor",
 	"whoiswatching-desc": "Bir viki sayfasını izleyen kullanıcı adlarının bir listesini sağlar",
 	"specialwhoiswatchingusage": "Bu özel sayfa kendi başına kullanılamaz.\nLütfen, bu özel sayfaya bir giriş noktası tanımlamak için [[MediaWiki:Number_of_watching_users_pageview]] sayfasını kullanın.",
