@@ -95,7 +95,7 @@ class Hook {
 						   || $user->isAllowed( 'seepagewatchers' );
 
 		if ( $title->getNamespace() >= 0 && $showWatchingUsers ) {
-			$dbr = wfGetDB( DB_SLAVE );
+			$dbr = wfGetDB( DB_REPLICA );
 			$res = $dbr->select(
 				'watchlist', 'COUNT(*) as count', [
 					'wl_namespace' => $title->getNamespace(),

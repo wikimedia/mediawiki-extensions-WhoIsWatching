@@ -305,7 +305,7 @@ class SpecialPage extends \SpecialPage {
 			->params( $this->targetPage )->plain() . " =="
 		);
 
-		$dbr = wfGetDB( DB_SLAVE );
+		$dbr = wfGetDB( DB_REPLICA );
 		$watchingusers = [];
 		$res = $dbr->select(
 			'watchlist', 'wl_user',

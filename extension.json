@@ -1,6 +1,6 @@
 {
 	"name": "WhoIsWatching",
-	"version": "0.12.1",
+	"version": "0.13.0",
 	"license-name": "GPL-2.0-only",
 	"author": [
 		"Paul Grinberg",
@@ -9,7 +9,7 @@
 		"[http://web.nichework.com Mark A. Hershberger]"
 	],
 	"requires": {
-		"MediaWiki": ">=1.27",
+		"MediaWiki": ">=1.28",
 		"extensions": {
 			"Echo": "*"
 		}
