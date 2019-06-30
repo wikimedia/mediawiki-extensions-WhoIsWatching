@@ -2,12 +2,40 @@
 	"@metadata": {
 		"authors": [
 			"Armin1392",
-			"Ebraminio"
+			"Ebraminio",
+			"FarsiNevis"
 		]
 	},
+	"right-addpagetoanywatchlist": "[[Special:WhoIsWatching|افزودن صفحه‌هایی به فهرست پی‌گیری‌های کاربران دیگر]]",
+	"action-addpagetoanywatchlist": "افزودن صفحه‌هایی به فهرست پی‌گیری‌های کاربران دیگر",
+	"right-removepagefromanywatchlist": "[[Special:WhoIsWatching|حذف صفحه‌هایی از فهرست پی‌گیری‌های کاربران دیگر]]",
+	"action-removepagefromanywatchlist": "حذف صفحه‌هایی از فهرست پی‌گیری‌های کاربران دیگر",
+	"right-seepagewatchers": "ببینید [[Special:WhoIsWatching|کدام کاربران در حال پی‌گیری یک صفحه‌اند]]",
+	"action-seepagewatchers": "ببینید کدام کاربران در حال پی‌گیری یک صفحه‌اند",
+	"echo-category-title-whoiswatching": "تغییرات فهرست پی‌گیری‌های من",
+	"echo-pref-tooltip-whoiswatching": "وقتی شخص دیگری صفحه‌ای را به فهرست پی‌گیری‌های من می‌افزاید، مرا آگاه کن.",
 	"whoiswatching": "چه کسی صفحهٔ ویکی را مشاهده می‌کند",
 	"whoiswatching-desc": "ارائه کردن فهرست مشاهدهٔ نام‌های کاربری صفحهٔ ویکی",
-	"specialwhoiswatchingusage": "این صفحه ویژه نمی‌تواند به خودی خود مورد استفاده قرار گیرد.\nلطفاً از صفحه [[MediaWiki:Number_of_watching_users_pageview]] برای تعریف یک نقطه ورود به این صفحه ویژه استفاده کنید.",
+	"specialwhoiswatchingpage": "پی‌گیری‌کنندگان [[:$1]]",
+	"specialwhoiswatchingusage": "این صفحهٔ ویژه به خودیِ خود نمی‌تواند مورد استفاده قرار گیرد.",
 	"specialwhoiswatchingaddusers": "افزودن کاربران به مشاهدهٔ صفحه",
-	"specialwhoiswatchingaddbtn": "افزودن کاربران انتخاب‌شده"
+	"specialwhoiswatchingaddbtn": "افزودن کاربران انتخاب‌شده",
+	"whoiswatching_users_pageview": "{{fullurl:Special:WhoIsWatching/$2}} $1 کاربر پی‌گیری‌کننده",
+	"whoiswatching-not-possible-title": "پی‌گیری صفحه ممکن نیست",
+	"whoiswatching-not-possible": "پی‌گیری صفحهٔ [[$1]] امکان‌پذیر نیست.",
+	"whoiswatching-usage-title": "نحوهٔ استفاده از این صفحه",
+	"whoiswatching-user-editname": "یک نام کاربری وارد کنید:",
+	"whoiswatching-adduser": "افزودن کاربر",
+	"whoiswatching-deluser": "حذف کاربر",
+	"whoiswatching-lookup-user": "جستجوی کاربر",
+	"whoiswatching-permission-denied-title": "اجازه داده نشد",
+	"whoiswatching-permission-denied": "شما نمی‌توانید کاری در این صفحه انجام دهید.\n\nدست‌کم یکی از این مجوزها لازم است: $1",
+	"whoiswatching-lookup-title": "جستجوی عنوان",
+	"whoiswatching-title": "یک عنوان درج کنید",
+	"whoiswatching-select-title": "مشاهدهٔ فهرست پی‌گیری‌ها",
+	"whoiswatching-notification-whoiswatching-remove-header": "صفحهٔ مورد نظر از فهرست پی‌گیری‌ها حذف شد",
+	"whoiswatching-notification-whoiswatching-remove-body": "$1 $4 را از فهرست پی‌گیری‌هایتان حذف کرد.",
+	"whoiswatching-notification-whoiswatching-add-header": "صفحهٔ مورد نظر به فهرست پی‌گیری‌ها افزوده شد",
+	"whoiswatching-notification-whoiswatching-add-body": "$1 $4 را به فهرست پی‌گیری‌هایتان افزود.",
+	"whoiswatching-notification-bundle": "$1 تغییرات فهرست پی‌گیری‌ها"
 }
