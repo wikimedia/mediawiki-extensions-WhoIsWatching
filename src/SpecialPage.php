@@ -300,7 +300,7 @@ class SpecialPage extends \SpecialPage {
 			return;
 		}
 		$out = $this->getOutput();
-		$out->addWikiText(
+		$out->addWikiTextAsInterface(
 			"== " . wfMessage( 'specialwhoiswatchingpage' )
 			->params( $this->targetPage )->plain() . " =="
 		);
@@ -340,7 +340,7 @@ class SpecialPage extends \SpecialPage {
 			$form->show();
 		} elseif ( $this->showWatchingUsers ) {
 			foreach ( $watchingusers as $link ) {
-				$out->addWikiText(
+				$out->addWikiTextAsInterface(
 					$this->msg( 'whoiswatching-list-user' )->params( $link )
 				);
 			}
