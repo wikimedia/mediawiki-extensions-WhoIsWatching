@@ -5,17 +5,25 @@
 			"Maikking",
 			"Masti",
 			"Chrumps",
-			"Woytecr"
+			"Woytecr",
+			"Railfail536"
 		]
 	},
+	"right-addpagetoanywatchlist": "[[Special:WhoIsWatching|Dodawanie stron do list obserwowanych innych użytkowników]]",
 	"action-addpagetoanywatchlist": "dodawania stron do list obserwowanych innych użytkowników",
 	"right-removepagefromanywatchlist": "[[Special:WhoIsWatching|Usuwanie stron z list obserwowanych innych użytkowników]]",
+	"action-removepagefromanywatchlist": "usuwania stron z list obserwowanych innych użytkowników",
+	"right-seepagewatchers": "Podgląd [[Special:WhoIsWatching|którzy użytkownicy obserwują stronę]]",
 	"action-seepagewatchers": "zobacz, którzy użytkownicy obserwują stronę",
+	"echo-category-title-whoiswatching": "Zmiany w mojej liście obserwowanych",
+	"echo-pref-tooltip-whoiswatching": "Powiadom mnie, gdy ktoś inny dodaje stronę do mojej listy obserwowanych.",
 	"whoiswatching": "Kto obserwuje stronę",
 	"whoiswatching-desc": "Pokazuje listę użytkowników mających daną stronę w obserwowanych",
+	"specialwhoiswatchingpage": "Obserwujący [[:$1]]",
 	"specialwhoiswatchingusage": "Ta strona nie może być użyta samoistnie.",
 	"specialwhoiswatchingaddusers": "Dodaj użytkowników obserwujących stronę",
 	"specialwhoiswatchingaddbtn": "Dodaj wybranych użytkowników",
+	"whoiswatching_users_pageview": "[{{fullurl:Special:WhoIsWatching/$2}} $1 {{PLURAL:$1|obserwujący użytkownik|obserwujących użytkowników}}]",
 	"whoiswatching-not-possible": "Obserwowanie strony [[$1]] nie jest możliwe.",
 	"whoiswatching-usage-title": "Jak używać tej strony",
 	"whoiswatching-user-editname": "Wprowadź nazwę użytkownika:",
@@ -26,5 +34,8 @@
 	"whoiswatching-title": "Wprowadź tytuł",
 	"whoiswatching-select-title": "Zobacz listę obserwowanych",
 	"whoiswatching-notification-whoiswatching-remove-header": "Strona usunięta z listy obserwowanych",
-	"whoiswatching-notification-whoiswatching-add-header": "Strona dodana do listy obserwowanych"
+	"whoiswatching-notification-whoiswatching-remove-body": "$1 usunął $4 z twojej listy obserwowanych.",
+	"whoiswatching-notification-whoiswatching-add-header": "Strona dodana do listy obserwowanych",
+	"whoiswatching-notification-whoiswatching-add-body": "$1 dodał(a) $4 do twojej listy obserwowanych.",
+	"whoiswatching-notification-bundle": "$1 zmian w liście obserwowanych"
 }
