@@ -3,11 +3,12 @@
 		"authors": [
 			"SPQRobin",
 			"Siebrand",
-			"Hex"
+			"Hex",
+			"Sjoerddebruin"
 		]
 	},
 	"right-addpagetoanywatchlist": "[[Special:WhoIsWatching|Voeg pagina's toe aan volglijsten van andere gebruikers]]",
-	"right-seepagewatchers": "Bekijk welke gebruikers [[Special:WhoIsWatching|een pagina volgen]]",
+	"right-seepagewatchers": "Bekijk [[Special:WhoIsWatching|welke gebruikers een pagina volgen]]",
 	"action-seepagewatchers": "bekijk welke gebruikers een pagina volgen",
 	"whoiswatching": "Wie volgen een pagina",
 	"whoiswatching-desc": "Levert een lijst met gebruikers die een wikipagina op hun volglijst hebben",
@@ -15,7 +16,7 @@
 	"specialwhoiswatchingusage": "Deze speciale pagina kan niet op zichzelf gebruikt worden.",
 	"specialwhoiswatchingaddusers": "Deze pagina op de volglijst van gebruikers toevoegen",
 	"specialwhoiswatchingaddbtn": "Geselecteerde gebruikers toevoegen",
-	"whoiswatching_users_pageview": "[{{fullurl:Special:WhoIsWatching/$2}} $1] {{PLURAL:$1|gebruiker|gebruikers}} die de pagina {{PLURAL:$1|volgt|volgen}}",
+	"whoiswatching_users_pageview": "[{{fullurl:Special:WhoIsWatching/$2}} $1 {{PLURAL:$1|gebruiker|gebruikers}} die de pagina {{PLURAL:$1|volgt|volgen}}]",
 	"whoiswatching-not-possible-title": "Onmogelijke pagina om te volgen",
 	"whoiswatching-not-possible": "Het is niet mogelijk om de pagina [[$1]] te volgen.",
 	"whoiswatching-usage-title": "Het gebruik van deze pagina",
