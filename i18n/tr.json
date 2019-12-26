@@ -2,13 +2,40 @@
 	"@metadata": {
 		"authors": [
 			"Joseph",
-			"Sayginer"
+			"Sayginer",
+			"BaRaN6161 TURK"
 		]
 	},
+	"right-addpagetoanywatchlist": "[[Special:WhoIsWatching|Diğer kullanıcıların izleme listelerine sayfa ekleyin]]",
+	"action-addpagetoanywatchlist": "diğer kullanıcıların izleme listelerine sayfa ekle",
+	"right-removepagefromanywatchlist": "[[Special:WhoIsWatching|Diğer kullanıcıların izleme listelerinden sayfaları kaldırın]]",
+	"action-removepagefromanywatchlist": "sayfaları diğer kullanıcıların izleme listelerinden kaldır",
+	"right-seepagewatchers": "[[Special:WhoIsWatching|Hangi kullanıcıların bir sayfayı izlediğini]] bakınız",
+	"action-seepagewatchers": "hangi kullanıcıların bir sayfayı izlediğini görün",
+	"echo-category-title-whoiswatching": "İzleme listemdeki değişiklikler",
 	"echo-pref-tooltip-whoiswatching": "Bir başka kullanıcı bir sayfayı izleme listeme eklerse bana bildirim gönder.",
 	"whoiswatching": "Bir wiki sayfasını kim izliyor",
 	"whoiswatching-desc": "Bir viki sayfasını izleyen kullanıcı adlarının bir listesini sağlar",
-	"specialwhoiswatchingusage": "Bu özel sayfa kendi başına kullanılamaz.\nLütfen, bu özel sayfaya bir giriş noktası tanımlamak için [[MediaWiki:Number_of_watching_users_pageview]] sayfasını kullanın.",
+	"specialwhoiswatchingpage": "[[:$1]] üzerindeki izleyiciler",
+	"specialwhoiswatchingusage": "Bu özel sayfa tek başına kullanılamaz.",
 	"specialwhoiswatchingaddusers": "Sayfayı izlemek için kullanıcıları ekleyin",
-	"specialwhoiswatchingaddbtn": "Seçili kullanıcıları ekleyin"
+	"specialwhoiswatchingaddbtn": "Seçili kullanıcıları ekleyin",
+	"whoiswatching_users_pageview": "[{{fullurl:Special:WhoIsWatching/$2}} $1 {{PLURAL:$1|kullanıcı|kullanıcı}} izleniyor]",
+	"whoiswatching-not-possible-title": "İzlenmesi imkansız sayfa",
+	"whoiswatching-not-possible": "[[$1]] sayfasını izlemek mümkün değil.",
+	"whoiswatching-usage-title": "Bu sayfa nasıl kullanılır",
+	"whoiswatching-user-editname": "Bir kullanıcı adı yaz:",
+	"whoiswatching-adduser": "Kullanıcı ekle",
+	"whoiswatching-deluser": "Kullanıcıyı kaldır",
+	"whoiswatching-lookup-user": "Kullanıcı araması",
+	"whoiswatching-permission-denied-title": "İzin verilmedi",
+	"whoiswatching-permission-denied": "Bu sayfada hiçbir şey yapamazsınız.\n\nBu izinlerden en az biri gerekli: $1",
+	"whoiswatching-lookup-title": "Başlık araması",
+	"whoiswatching-title": "Bir başlık yazın",
+	"whoiswatching-select-title": "İzleme listesine bakın",
+	"whoiswatching-notification-whoiswatching-remove-header": "Sayfa izleme listesinden kaldırıldı",
+	"whoiswatching-notification-whoiswatching-remove-body": "$1, $4 izleme listenizden kaldırdı.",
+	"whoiswatching-notification-whoiswatching-add-header": "İzleme listesine sayfa eklendi",
+	"whoiswatching-notification-whoiswatching-add-body": "$1, izleme listenize $4 ekledi.",
+	"whoiswatching-notification-bundle": "$1 izleme listesi değişiklikleri"
 }
