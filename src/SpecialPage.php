@@ -25,8 +25,8 @@ namespace MediaWiki\Extension\WhoIsWatching;
 use ErrorPageError;
 use GlobalVarConfig;
 use HTMLForm;
-use MWNamespace;
 use MediaWiki\Extension\WhoIsWatching\Manager as Manager;
+use MWNamespace;
 use Title;
 use User;
 
