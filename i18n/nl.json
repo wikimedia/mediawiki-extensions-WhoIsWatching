@@ -4,12 +4,18 @@
 			"SPQRobin",
 			"Siebrand",
 			"Hex",
-			"Sjoerddebruin"
+			"Sjoerddebruin",
+			"Mainframe98"
 		]
 	},
 	"right-addpagetoanywatchlist": "[[Special:WhoIsWatching|Voeg pagina's toe aan volglijsten van andere gebruikers]]",
+	"action-addpagetoanywatchlist": "pagina's aan de volglijsten van andere gebruiker toe te voegen",
+	"right-removepagefromanywatchlist": "[[Special:WhoIsWatching|Pagina's verwijderen van volglijsten van andere gebruikers]]",
+	"action-removepagefromanywatchlist": "pagina's van de volglijsten van andere gebruikers te verwijderen",
 	"right-seepagewatchers": "Bekijk [[Special:WhoIsWatching|welke gebruikers een pagina volgen]]",
 	"action-seepagewatchers": "bekijk welke gebruikers een pagina volgen",
+	"echo-category-title-whoiswatching": "Wijzigingen aan mijn volglijst",
+	"echo-pref-tooltip-whoiswatching": "Laat het me weten wanneer iemand anders een pagina aan mijn volglijst toevoegt.",
 	"whoiswatching": "Wie volgen een pagina",
 	"whoiswatching-desc": "Levert een lijst met gebruikers die een wikipagina op hun volglijst hebben",
 	"specialwhoiswatchingpage": "Volgers op [[:$1]]",
@@ -26,5 +32,10 @@
 	"whoiswatching-permission-denied-title": "Toegang geweigerd",
 	"whoiswatching-permission-denied": "U kunt niets doen op deze pagina.\n\nTen minste één van de volgende machtigingen zijn nodig: $1",
 	"whoiswatching-title": "Voer een titel in",
-	"whoiswatching-select-title": "Bekijk volglijst"
+	"whoiswatching-select-title": "Bekijk volglijst",
+	"whoiswatching-notification-whoiswatching-remove-header": "Pagina van de volglijst verwijderd",
+	"whoiswatching-notification-whoiswatching-remove-body": "$1 heeft $4 van uw volglijst verwijderd.",
+	"whoiswatching-notification-whoiswatching-add-header": "Pagina aan de volglijst toegevoegd",
+	"whoiswatching-notification-whoiswatching-add-body": "$1 heeft $4 aan uw volglijst toegevoegd.",
+	"whoiswatching-notification-bundle": "$1 volglijstwijzigingen"
 }
