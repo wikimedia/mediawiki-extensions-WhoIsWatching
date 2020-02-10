@@ -5,7 +5,8 @@
 			"Siebrand",
 			"Hex",
 			"Sjoerddebruin",
-			"Mainframe98"
+			"Mainframe98",
+			"PiefPafPier"
 		]
 	},
 	"right-addpagetoanywatchlist": "[[Special:WhoIsWatching|Voeg pagina's toe aan volglijsten van andere gebruikers]]",
@@ -15,7 +16,7 @@
 	"right-seepagewatchers": "Bekijk [[Special:WhoIsWatching|welke gebruikers een pagina volgen]]",
 	"action-seepagewatchers": "bekijk welke gebruikers een pagina volgen",
 	"echo-category-title-whoiswatching": "Wijzigingen aan mijn volglijst",
-	"echo-pref-tooltip-whoiswatching": "Laat het me weten wanneer iemand anders een pagina aan mijn volglijst toevoegt.",
+	"echo-pref-tooltip-whoiswatching": "Meld mij wanneer iemand anders een pagina aan mijn volglijst toevoegt.",
 	"whoiswatching": "Wie volgen een pagina",
 	"whoiswatching-desc": "Levert een lijst met gebruikers die een wikipagina op hun volglijst hebben",
 	"specialwhoiswatchingpage": "Volgers op [[:$1]]",
