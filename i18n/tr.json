@@ -14,7 +14,7 @@
 	"action-seepagewatchers": "hangi kullanıcıların bir sayfayı izlediğini görün",
 	"echo-category-title-whoiswatching": "İzleme listemdeki değişiklikler",
 	"echo-pref-tooltip-whoiswatching": "Bir başka kullanıcı bir sayfayı izleme listeme eklerse bana bildirim gönder.",
-	"whoiswatching": "Bir wiki sayfasını kim izliyor",
+	"whoiswatching": "Bir viki sayfasını kim izliyor",
 	"whoiswatching-desc": "Bir viki sayfasını izleyen kullanıcı adlarının bir listesini sağlar",
 	"specialwhoiswatchingpage": "[[:$1]] üzerindeki izleyiciler",
 	"specialwhoiswatchingusage": "Bu özel sayfa tek başına kullanılamaz.",
