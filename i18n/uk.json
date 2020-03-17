@@ -5,11 +5,11 @@
 			"Piramidion"
 		]
 	},
-	"right-addpagetoanywatchlist": "[[Special:WhoIsWatching|додавання сторінок до списків спостереження інших користувачів]]",
+	"right-addpagetoanywatchlist": "[[Special:WhoIsWatching|Додавання сторінок до списків спостереження інших користувачів]]",
 	"action-addpagetoanywatchlist": "додавання сторінок до списків спостереження інших користувачів",
-	"right-removepagefromanywatchlist": "[[Special:WhoIsWatching|вилучення сторінок зі списків спостереження інших користувачів]]",
+	"right-removepagefromanywatchlist": "[[Special:WhoIsWatching|Вилучення сторінок зі списків спостереження інших користувачів]]",
 	"action-removepagefromanywatchlist": "вилучення сторінок зі списків спостереження інших користувачів",
-	"right-seepagewatchers": "перегляд користувачів, що [[Special:WhoIsWatching|спостерігають за сторінкою]]",
+	"right-seepagewatchers": "Перегляд користувачів, що [[Special:WhoIsWatching|спостерігають за сторінкою]]",
 	"action-seepagewatchers": "перегляд користувачів, що спостерігають за сторінкою",
 	"echo-category-title-whoiswatching": "Зміни до мого списку спостереження",
 	"echo-pref-tooltip-whoiswatching": "Повідомляти мене, коли хтось інший додає сторінку до мого списку спостереження.",
