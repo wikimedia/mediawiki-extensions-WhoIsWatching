@@ -1,11 +1,11 @@
 {
 	"@metadata": {
 		"authors": [
-			"Mark85296341",
-			"Wrightbus",
-			"LNDDYL",
 			"Cwlin0416",
-			"Kly"
+			"Kly",
+			"LNDDYL",
+			"Mark85296341",
+			"Wrightbus"
 		]
 	},
 	"right-addpagetoanywatchlist": "[[Special:WhoIsWatching|添加頁面至其他使用者的監視清單]]",

@@ -1,11 +1,11 @@
 {
 	"@metadata": {
 		"authors": [
-			"Geraki",
-			"ZaDiak",
-			"Περίεργος",
 			"GR",
-			"Nikosgranturismogt"
+			"Geraki",
+			"Nikosgranturismogt",
+			"ZaDiak",
+			"Περίεργος"
 		]
 	},
 	"action-seepagewatchers": "δείτε ποιοι χρήστες παρακολουθούν μια σελίδα",

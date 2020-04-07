@@ -1,12 +1,12 @@
 {
 	"@metadata": {
 		"authors": [
+			"Hex",
+			"Mainframe98",
+			"PiefPafPier",
 			"SPQRobin",
 			"Siebrand",
-			"Hex",
-			"Sjoerddebruin",
-			"Mainframe98",
-			"PiefPafPier"
+			"Sjoerddebruin"
 		]
 	},
 	"right-addpagetoanywatchlist": "[[Special:WhoIsWatching|Voeg pagina's toe aan volglijsten van andere gebruikers]]",
