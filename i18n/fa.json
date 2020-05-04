@@ -3,7 +3,8 @@
 		"authors": [
 			"Armin1392",
 			"Ebraminio",
-			"FarsiNevis"
+			"FarsiNevis",
+			"Huji"
 		]
 	},
 	"right-addpagetoanywatchlist": "[[Special:WhoIsWatching|افزودن صفحه‌هایی به فهرست پی‌گیری‌های کاربران دیگر]]",
@@ -33,9 +34,9 @@
 	"whoiswatching-lookup-title": "جستجوی عنوان",
 	"whoiswatching-title": "یک عنوان درج کنید",
 	"whoiswatching-select-title": "مشاهدهٔ فهرست پی‌گیری‌ها",
-	"whoiswatching-notification-whoiswatching-remove-header": "صفحهٔ مورد نظر از فهرست پی‌گیری‌ها حذف شد",
+	"whoiswatching-notification-whoiswatching-remove-header": "صفحهٔ موردنظر از فهرست پی‌گیری‌ها حذف شد",
 	"whoiswatching-notification-whoiswatching-remove-body": "$1 $4 را از فهرست پی‌گیری‌هایتان حذف کرد.",
-	"whoiswatching-notification-whoiswatching-add-header": "صفحهٔ مورد نظر به فهرست پی‌گیری‌ها افزوده شد",
+	"whoiswatching-notification-whoiswatching-add-header": "صفحهٔ موردنظر به فهرست پی‌گیری‌ها افزوده شد",
 	"whoiswatching-notification-whoiswatching-add-body": "$1 $4 را به فهرست پی‌گیری‌هایتان افزود.",
-	"whoiswatching-notification-bundle": "$1 تغییرات فهرست پی‌گیری‌ها"
+	"whoiswatching-notification-bundle": "$1 تغییر در فهرست پی‌گیری‌ها"
 }
