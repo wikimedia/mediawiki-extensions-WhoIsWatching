@@ -25,7 +25,6 @@ use EchoEvent;
 use GlobalVarConfig;
 use Html;
 use Parser;
-use QuickTemplate;
 use RequestContext;
 use Skin;
 use Title;
@@ -36,13 +35,14 @@ class Hook {
 	 * Hook to display link to page watchers
 	 *
 	 * @param Skin $template skin
-	 * @param QuickTemplate $tpl template
+	 * @param string $group
+	 * @param array $footerLinks
 	 * @return bool
 	 */
-	public static function onSkinTemplateOutputPageBeforeExec(
-		Skin $template, QuickTemplate $tpl
+	public static function onSkinAddFooterLinks(
+		Skin $sk, string $group, &$footerLinks
 	) {
-		$title = $template->getTitle();
+		$title = $sk->getTitle();
 		if ( $title->isRedirect() ) {
 			$article = Article::newFromID( $title->getArticleID() );
 			$title = $article->getRedirectTarget();
@@ -50,8 +50,8 @@ class Hook {
 
 		$ret = self::renderWhoIsWatchingLink( $title );
 
-		if ( $ret != false ) {
-			$tpl->set( 'numberofwatchingusers', $ret );
+		if ( $ret != false && $group === 'info' ) {
+			$footerLinks['number-of-watching-users'] = $ret;
 		}
 
 		return true;

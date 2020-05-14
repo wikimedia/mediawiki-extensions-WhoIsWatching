@@ -42,8 +42,8 @@
 		"EchoGetBundleRules": [
 			"MediaWiki\\Extension\\WhoIsWatching\\Hook::onEchoGetBundleRules"
 		],
-		"SkinTemplateOutputPageBeforeExec": [
-			"MediaWiki\\Extension\\WhoIsWatching\\Hook::onSkinTemplateOutputPageBeforeExec"
+		"SkinAddFooterLinks": [
+			"MediaWiki\\Extension\\WhoIsWatching\\Hook::onSkinAddFooterLinks"
 		],
 		"ParserFirstCallInit": [
 			"MediaWiki\\Extension\\WhoIsWatching\\Hook::onParserSetup"
