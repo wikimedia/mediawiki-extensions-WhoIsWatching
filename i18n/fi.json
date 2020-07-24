@@ -1,6 +1,7 @@
 {
 	"@metadata": {
 		"authors": [
+			"01miki10",
 			"Cimon Avaro",
 			"Crt",
 			"Nike",
@@ -18,7 +19,7 @@
 	"specialwhoiswatchingaddusers": "Lisää käyttäjiä tarkkailemaan sivua",
 	"specialwhoiswatchingaddbtn": "Lisää valitut käyttäjät",
 	"whoiswatching-usage-title": "Kuinka käyttää tätä sivua",
-	"whoiswatching-user-editname": "Kirjoita käyttäjätunnus:",
+	"whoiswatching-user-editname": "Kirjoita käyttäjänimi:",
 	"whoiswatching-adduser": "Lisää käyttäjä",
 	"whoiswatching-deluser": "Poista käyttäjä",
 	"whoiswatching-permission-denied-title": "Pääsy estetty",
