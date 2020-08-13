@@ -23,6 +23,7 @@
 
 namespace MediaWiki\Extension\WhoIsWatching;
 
+use Message;
 use Title;
 use WikiPage;
 
@@ -114,20 +115,18 @@ class EchoEventPresentationModel extends \EchoEventPresentationModel {
 	}
 
 	/**
-	 * Title of page
-	 *
-	 * @return Title|string
+	 * @return Title
 	 */
 	public function getPageTitle() {
 		wfDebugLog( 'WhoIsWatching', __METHOD__ );
 		$page = WikiPage::newFromId( $this->event->getExtraParam( 'pageid' ) );
-		return $page ? $page->getTitle() : new Title();
+		return $page ? $page->getTitle() : Title::makeTitle( NS_SPECIAL, 'Badtitle/' . __METHOD__ );
 	}
 
 	/**
 	 * Provide the main link
 	 *
-	 * @return string
+	 * @return array
 	 */
 	public function getPrimaryLink() {
 		wfDebugLog( 'WhoIsWatching', __METHOD__ );
