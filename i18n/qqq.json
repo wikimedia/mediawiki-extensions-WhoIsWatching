@@ -31,7 +31,7 @@
 	"whoiswatching-user-editname": "Prompt to enter a user name",
 	"whoiswatching-adduser": "Label for button to submit form\n{{Identical|Add user}}",
 	"whoiswatching-deluser": "Label for button to submit form",
-	"whoiswatching-list-user": "Wikitext for listing users",
+	"whoiswatching-list-user": "{{notranslate}}\nWikitext for listing users",
 	"whoiswatching-lookup-user": "User lookup",
 	"whoiswatching-permission-denied-title": "Title of the error page that shows permission denied",
 	"whoiswatching-permission-denied": "Message explaining what permissions are missiong",
