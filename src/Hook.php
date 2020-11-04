@@ -34,9 +34,9 @@ class Hook {
 	/**
 	 * Hook to display link to page watchers
 	 *
-	 * @param Skin $template skin
+	 * @param Skin $sk
 	 * @param string $group
-	 * @param array $footerLinks
+	 * @param array &$footerLinks
 	 * @return bool
 	 */
 	public static function onSkinAddFooterLinks(
