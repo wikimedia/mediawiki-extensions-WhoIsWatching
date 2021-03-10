@@ -269,7 +269,6 @@ class SpecialPage extends \SpecialPage {
 	 * Remove any posted for removal
 	 *
 	 * @param array $formData posted data
-	 * @param HTMLForm $form the whole form
 	 */
 	private function maybeRemoveWatcher( array $formData ) {
 		$redir = false;
