@@ -22,6 +22,7 @@ namespace MediaWiki\Extension\WhoIsWatching;
 
 use Config;
 use EchoEvent;
+use MediaWiki\MediaWikiServices;
 use Title;
 use User;
 
@@ -46,7 +47,12 @@ class Manager {
 	 */
 	public function addWatch( Title $title, User $user ) {
 		wfDebugLog( 'WhoIsWatching', __METHOD__ );
-		$user->addWatch( $title );
+		if ( method_exists( \MediaWiki\Watchlist\WatchlistManager::class, 'addWatch' ) ) {
+			// MW 1.37+
+			MediaWikiServices::getInstance()->getWatchlistManager()->addWatch( $user, $title );
+		} else {
+			$user->addWatch( $title );
+		}
 		$this->eNotifUser( 'add', $title, $user );
 	}
 
@@ -56,7 +62,12 @@ class Manager {
 	 */
 	public function removeWatch( Title $title, User $user ) {
 		wfDebugLog( 'WhoIsWatching', __METHOD__ );
-		$user->removeWatch( $title );
+		if ( method_exists( \MediaWiki\Watchlist\WatchlistManager::class, 'removeWatch' ) ) {
+			// MW 1.37+
+			MediaWikiServices::getInstance()->getWatchlistManager()->removeWatch( $user, $title );
+		} else {
+			$user->removeWatch( $title );
+		}
 		$this->eNotifUser( 'remove', $title, $user );
 	}
 
