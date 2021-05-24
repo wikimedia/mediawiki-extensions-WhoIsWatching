@@ -1,6 +1,7 @@
 {
 	"@metadata": {
 		"authors": [
+			"Jmarchn",
 			"Kippelboy",
 			"SMP",
 			"Solde"
@@ -8,7 +9,7 @@
 	},
 	"whoiswatching": "Qui està una pàgina wiki",
 	"whoiswatching-desc": "Proporciona una llista dels usuaris que estan mirant una pàgina wiki",
-	"specialwhoiswatchingusage": "Això la pàgina especial no pot ser utilitzada en sí mateixa.\nSi us plau utilitzeu la pàgina [[MediaWiki:Number_of_watching_users_pageview]] per definir un punt d'entrada a aquesta pàgina especial.",
+	"specialwhoiswatchingusage": "Aquesta pàgina especial no pot ser utilitzada per ella mateixa.",
 	"specialwhoiswatchingaddusers": "Afegir usuaris a patrullar la pàgina",
 	"specialwhoiswatchingaddbtn": "Afegir usuaris seleccionats"
 }
