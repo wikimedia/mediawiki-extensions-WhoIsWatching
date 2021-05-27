@@ -1,8 +1,0 @@
-{
-	"@metadata": {
-		"authors": [
-			"Papuass"
-		]
-	},
-	"whoiswatching_users_pageview": "[{{fullurl:Special:WhoIsWatching/$2}} $1] vēro {{PLURAL:$1|dalībnieki|dalībnieks|dalībnieki}}"
-}
