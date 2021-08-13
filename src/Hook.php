@@ -20,7 +20,7 @@
 
 namespace MediaWiki\Extension\WhoIsWatching;
 
-use Article;
+use WikiPage;
 use EchoEvent;
 use GlobalVarConfig;
 use Html;
@@ -44,7 +44,7 @@ class Hook {
 	) {
 		$title = $sk->getTitle();
 		if ( $title->isRedirect() ) {
-			$article = Article::newFromID( $title->getArticleID() );
+			$article = WikiPage::newFromID( $title->getArticleID() );
 			$title = $article->getRedirectTarget();
 		}
 
