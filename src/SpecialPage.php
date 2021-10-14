@@ -26,7 +26,7 @@ use ErrorPageError;
 use GlobalVarConfig;
 use HTMLForm;
 use MediaWiki\Extension\WhoIsWatching\Manager as Manager;
-use MWNamespace;
+use MediaWiki\MediaWikiServices;
 use Title;
 use User;
 
@@ -124,7 +124,8 @@ class SpecialPage extends \SpecialPage {
 		}
 
 		if ( $title ) {
-			$nsRevLookup = array_flip( MWNamespace::getCanonicalNamespaces() );
+			$namespaceInfo = MediaWikiServices::getInstance()->getNamespaceInfo();
+			$nsRevLookup = array_flip( $namespaceInfo->getCanonicalNamespaces() );
 			$nameSpace = $req->getVal( 'ns', '' );
 			if ( !ctype_digit( $nameSpace ) ) {
 				$nameSpace = isset( $nsRevLookup[ $nameSpace ] )
