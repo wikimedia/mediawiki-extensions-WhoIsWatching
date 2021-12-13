@@ -5,8 +5,8 @@
 			"Robby"
 		]
 	},
-	"right-addpagetoanywatchlist": "[[Special:WhoIsWatching|Säiten op d'Iwwerwaachungslëschte vun anere Benotzer dobäisetzen]]",
-	"action-addpagetoanywatchlist": "Säiten op d'Iwwerwaachungslëschte vun anere Benotzer dobäisetzen",
+	"right-addpagetoanywatchlist": "[[Special:WhoIsWatching|Säiten op d'Iwwerwaachungslëschte vun anere Benotzer derbäisetzen]]",
+	"action-addpagetoanywatchlist": "Säiten op d'Iwwerwaachungslëschte vun anere Benotzer derbäisetzen",
 	"right-seepagewatchers": "Weise watfireng Benotzer  [[Special:WhoIsWatching|eng Säit iwwerwaachen]]",
 	"action-seepagewatchers": "kucke wat fir eng Benotzer eng Säit iwwerwaachen",
 	"echo-category-title-whoiswatching": "Ännerungen op menger Iwwerwaachungalëscht",
@@ -21,7 +21,7 @@
 	"whoiswatching-not-possible": "Et ass net méiglech d'Säit [[$1]] z'iwwerwaachen.",
 	"whoiswatching-usage-title": "Wéi dës Säit benotzt gëtt",
 	"whoiswatching-user-editname": "Gitt e Benotzernmm an:",
-	"whoiswatching-adduser": "Benotzer dobäisetzen",
+	"whoiswatching-adduser": "Benotzer derbäisetzen",
 	"whoiswatching-deluser": "Benotzer ewechhuelen",
 	"whoiswatching-lookup-user": "No engem Benotzer sichen",
 	"whoiswatching-permission-denied-title": "Autorisatioun refuséiert",

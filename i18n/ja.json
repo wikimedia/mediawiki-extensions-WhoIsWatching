@@ -5,7 +5,8 @@
 			"Fryed-peach",
 			"Otokoume",
 			"Shirayuki",
-			"ネイ"
+			"ネイ",
+			"Foomin10"
 		]
 	},
 	"right-addpagetoanywatchlist": "[[Special:WhoIsWatching|他の利用者のウォッチリストにページを追加]]",
@@ -15,7 +16,7 @@
 	"specialwhoiswatchingusage": "この特別ページは単独では利用できません。",
 	"specialwhoiswatchingaddusers": "利用者のウォッチリストにページを追加",
 	"specialwhoiswatchingaddbtn": "選択した利用者を追加",
-	"whoiswatching_users_pageview": "[{{fullurl:Special:WhoIsWatching/$2}} $1]人の{{PLURAL:$1|利用者}}が閲覧中",
+	"whoiswatching_users_pageview": "[{{fullurl:Special:WhoIsWatching/$2}} $1人の{{PLURAL:$1|利用者}}が閲覧中]",
 	"whoiswatching-adduser": "利用者を追加",
 	"whoiswatching-deluser": "利用者を削除"
 }
