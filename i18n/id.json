@@ -1,12 +1,34 @@
 {
 	"@metadata": {
 		"authors": [
-			"Bennylin"
+			"Bennylin",
+			"Daud I.F. Argana"
 		]
 	},
+	"right-addpagetoanywatchlist": "[[Special:WhoIsWatching|Menambahkan halaman ke daftar pantauang pengguna lain]]",
+	"action-addpagetoanywatchlist": "menambahkan halaman ke daftar pantauan pengguna lain",
+	"right-removepagefromanywatchlist": "[[Special:WhoIsWatching|Menghapus halaman dari daftar pantauan pengguna lain]]",
+	"action-removepagefromanywatchlist": "menghapus halaman dari daftar pantauan pengguna lain",
+	"right-seepagewatchers": "Melihat [[Special:WhoIsWatching|pengguna mana saja yang memantau suatu halaman]]",
+	"action-seepagewatchers": "melihat pengguna mana saja yang memantau suatu halaman",
+	"echo-category-title-whoiswatching": "Perubahan pada daftar pantauan saya",
+	"echo-pref-tooltip-whoiswatching": "Beri tahu saya ketika orang lain menambahkan halaman ke daftar pantauan saya.",
 	"whoiswatching": "Siapa yang memantau sebuah halaman wiki",
 	"whoiswatching-desc": "Menampilkan daftar pengguna yang memantau sebuah halaman wiki",
-	"specialwhoiswatchingusage": "Ini adalah sebuah halaman istimewa yang tidak dapat digunakan sendirian.\nGunakan halaman [[MediaWiki:Number_of_watching_users_pageview]] untuk menetapkan titik masuk ke halaman istimewa ini.",
+	"specialwhoiswatchingpage": "Pemantau di [[:$1]]",
+	"specialwhoiswatchingusage": "Ini adalah sebuah halaman istimewa yang tidak dapat digunakan sendirian.",
 	"specialwhoiswatchingaddusers": "Tambahkan pengguna untuk memantau halaman",
-	"specialwhoiswatchingaddbtn": "Tambah pengguna yang dipilih"
+	"specialwhoiswatchingaddbtn": "Tambah pengguna yang dipilih",
+	"whoiswatching_users_pageview": "[{{fullurl:Special:WhoIsWatching/$2}} $1 {{PLURAL:$1|pengguna}} memantau]",
+	"whoiswatching-not-possible-title": "Halaman yang tidak bisa dipantau",
+	"whoiswatching-not-possible": "Tidak bisa memantau halaman [[$1]].",
+	"whoiswatching-usage-title": "Cara menggunakan halaman ini",
+	"whoiswatching-user-editname": "Masukkan nama pengguna:",
+	"whoiswatching-adduser": "Tambah pengguna",
+	"whoiswatching-deluser": "Hapus pengguna",
+	"whoiswatching-notification-whoiswatching-remove-header": "Halaman dihapus dari daftar pantauan",
+	"whoiswatching-notification-whoiswatching-remove-body": "$1 menghapus $4 dari daftar pantauan Anda.",
+	"whoiswatching-notification-whoiswatching-add-header": "Halaman ditambahkan ke daftar pantauan",
+	"whoiswatching-notification-whoiswatching-add-body": "$1 menambahkan $4 ke daftar pantauan Anda.",
+	"whoiswatching-notification-bundle": "Daftar pantauan $1 berubah"
 }
