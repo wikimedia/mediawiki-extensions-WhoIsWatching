@@ -96,13 +96,12 @@ class Hook {
 
 		if ( $title->getNamespace() >= 0 && $showWatchingUsers ) {
 			$dbr = wfGetDB( DB_REPLICA );
-			$res = $dbr->select(
+			$watch = $dbr->selectRow(
 				'watchlist', 'COUNT(*) as count', [
 					'wl_namespace' => $title->getNamespace(),
 					'wl_title' => $title->getDBkey(),
 				], __METHOD__
 			);
-			$watch = $dbr->fetchObject( $res );
 			return $watch->count;
 		}
 		return null;
