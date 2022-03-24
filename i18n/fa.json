@@ -2,6 +2,7 @@
 	"@metadata": {
 		"authors": [
 			"Armin1392",
+			"Beginneruser",
 			"Ebraminio",
 			"FarsiNevis",
 			"Huji"
@@ -13,8 +14,8 @@
 	"action-removepagefromanywatchlist": "حذف صفحه‌هایی از فهرست پی‌گیری‌های کاربران دیگر",
 	"right-seepagewatchers": "ببینید [[Special:WhoIsWatching|کدام کاربران در حال پی‌گیری یک صفحه‌اند]]",
 	"action-seepagewatchers": "ببینید کدام کاربران در حال پی‌گیری یک صفحه‌اند",
-	"echo-category-title-whoiswatching": "تغییرات فهرست پی‌گیری‌های من",
-	"echo-pref-tooltip-whoiswatching": "وقتی شخص دیگری صفحه‌ای را به فهرست پی‌گیری‌های من می‌افزاید، مرا آگاه کن.",
+	"echo-category-title-whoiswatching": "تغییرات فهرست پیگیری‌ من",
+	"echo-pref-tooltip-whoiswatching": "وقتی شخص دیگری صفحه‌ای را به فهرست پیگیری‌ام می‌افزاید، مرا آگاه کن.",
 	"whoiswatching": "چه کسی صفحهٔ ویکی را مشاهده می‌کند",
 	"whoiswatching-desc": "ارائه کردن فهرست مشاهدهٔ نام‌های کاربری صفحهٔ ویکی",
 	"specialwhoiswatchingpage": "پی‌گیری‌کنندگان [[:$1]]",
@@ -33,10 +34,10 @@
 	"whoiswatching-permission-denied": "شما نمی‌توانید کاری در این صفحه انجام دهید.\n\nدست‌کم یکی از این مجوزها لازم است: $1",
 	"whoiswatching-lookup-title": "جستجوی عنوان",
 	"whoiswatching-title": "یک عنوان درج کنید",
-	"whoiswatching-select-title": "مشاهدهٔ فهرست پی‌گیری‌ها",
-	"whoiswatching-notification-whoiswatching-remove-header": "صفحهٔ موردنظر از فهرست پی‌گیری‌ها حذف شد",
-	"whoiswatching-notification-whoiswatching-remove-body": "$1 $4 را از فهرست پی‌گیری‌هایتان حذف کرد.",
-	"whoiswatching-notification-whoiswatching-add-header": "صفحهٔ موردنظر به فهرست پی‌گیری‌ها افزوده شد",
-	"whoiswatching-notification-whoiswatching-add-body": "$1 $4 را به فهرست پی‌گیری‌هایتان افزود.",
-	"whoiswatching-notification-bundle": "$1 تغییر در فهرست پی‌گیری‌ها"
+	"whoiswatching-select-title": "مشاهدهٔ فهرست پیگیری‌",
+	"whoiswatching-notification-whoiswatching-remove-header": "صفحهٔ موردنظر از فهرست پیگیری‌ حذف شد",
+	"whoiswatching-notification-whoiswatching-remove-body": "$1 $4 را از فهرست پیگیری‌تان حذف کرد.",
+	"whoiswatching-notification-whoiswatching-add-header": "صفحهٔ موردنظر به فهرست پیگیری‌ افزوده شد",
+	"whoiswatching-notification-whoiswatching-add-body": "$1 $4 را به فهرست پیگیری‌تان افزود.",
+	"whoiswatching-notification-bundle": "$1 تغییر در فهرست پیگیری‌"
 }
