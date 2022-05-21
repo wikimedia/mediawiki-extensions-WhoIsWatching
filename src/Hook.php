@@ -20,7 +20,6 @@
 
 namespace MediaWiki\Extension\WhoIsWatching;
 
-use WikiPage;
 use EchoEvent;
 use GlobalVarConfig;
 use Html;
@@ -29,6 +28,7 @@ use RequestContext;
 use Skin;
 use Title;
 use User;
+use WikiPage;
 
 class Hook {
 	/**
