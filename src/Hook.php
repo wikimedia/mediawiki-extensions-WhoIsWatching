@@ -23,6 +23,7 @@ namespace MediaWiki\Extension\WhoIsWatching;
 use EchoEvent;
 use GlobalVarConfig;
 use Html;
+use MediaWiki\MediaWikiServices;
 use Parser;
 use RequestContext;
 use Skin;
@@ -44,7 +45,12 @@ class Hook {
 	) {
 		$title = $sk->getTitle();
 		if ( $title->isRedirect() ) {
-			$article = WikiPage::newFromID( $title->getArticleID() );
+			if ( method_exists( MediaWikiServices::class, 'getWikiPageFactory' ) ) {
+				// MW 1.36+
+				$article = MediaWikiServices::getInstance()->getWikiPageFactory()->newFromID( $title->getArticleID() );
+			} else {
+				$article = WikiPage::newFromID( $title->getArticleID() );
+			}
 			$title = $article->getRedirectTarget();
 		}
 
