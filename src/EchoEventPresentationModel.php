@@ -165,7 +165,7 @@ class EchoEventPresentationModel extends \EchoEventPresentationModel {
 	 * @return array
 	 * @throws TimestampException
 	 */
-	public function jsonSerialize() {
+	public function jsonSerialize(): array {
 		wfDebugLog( 'WhoIsWatching', __METHOD__ );
 		$body = $this->getBodyMessage();
 
