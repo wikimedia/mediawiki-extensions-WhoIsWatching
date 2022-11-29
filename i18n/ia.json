@@ -6,8 +6,12 @@
 	},
 	"right-addpagetoanywatchlist": "[[Special:WhoIsWatching|Adder paginas al observatorios de altere usatores]]",
 	"action-addpagetoanywatchlist": "adder paginas al observatorios de altere usatores",
+	"right-removepagefromanywatchlist": "[[Special:WhoIsWatching|Remover paginas del observatorios de altere usatores]]",
+	"action-removepagefromanywatchlist": "remover paginas del observatorios de altere usatores",
 	"right-seepagewatchers": "Vider [[Special:WhoIsWatching|qual usatores observa un pagina]]",
 	"action-seepagewatchers": "vider qual usatores observa un pagina",
+	"echo-category-title-whoiswatching": "Cambiamentos in mi observatorio",
+	"echo-pref-tooltip-whoiswatching": "Notificar me quando un altere persona adde un pagina a mi observatorio.",
 	"whoiswatching": "Qui observa un pagina wiki",
 	"whoiswatching-desc": "Forni un lista de nomines de usatores qui observa un pagina wiki",
 	"specialwhoiswatchingpage": "Observatores de [[:$1]]",
@@ -26,5 +30,10 @@
 	"whoiswatching-permission-denied": "Tu non pote facer alcun cosa sur iste pagina.\n\nAl minus un de iste permissiones es necessari: $1",
 	"whoiswatching-lookup-title": "Cercar titulo",
 	"whoiswatching-title": "Scribe un titulo",
-	"whoiswatching-select-title": "Vider observatorio"
+	"whoiswatching-select-title": "Vider observatorio",
+	"whoiswatching-notification-whoiswatching-remove-header": "Pagina removite del observatorio",
+	"whoiswatching-notification-whoiswatching-remove-body": "$1 ha removite $4 de tu observatorio.$4",
+	"whoiswatching-notification-whoiswatching-add-header": "Pagina addite al observatorio",
+	"whoiswatching-notification-whoiswatching-add-body": "$1 ha addite $4 a tu observatorio.",
+	"whoiswatching-notification-bundle": "$1 cambiamentos del observatorio"
 }
