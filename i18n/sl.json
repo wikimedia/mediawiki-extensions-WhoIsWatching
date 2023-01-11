@@ -7,5 +7,11 @@
 	"echo-category-title-whoiswatching": "Spremembe mojega spiska nadzorov",
 	"echo-pref-tooltip-whoiswatching": "Obvesti me, ko kdo drug doda stran na moj spisek nadzorov.",
 	"whoiswatching-lookup-title": "Iskanje naslova",
-	"whoiswatching-title": "Vtipkajte naslov"
+	"whoiswatching-title": "Vtipkajte naslov",
+	"whoiswatching-select-title": "Ogled spiska nadzorov",
+	"whoiswatching-notification-whoiswatching-remove-header": "Stran je bila odstranjena s spiska nadzorov",
+	"whoiswatching-notification-whoiswatching-remove-body": "$1 je odstranil_a $4 z vašega spiska nadzorov.",
+	"whoiswatching-notification-whoiswatching-add-header": "Stran je bila dodana na spisek nadzorov",
+	"whoiswatching-notification-whoiswatching-add-body": "$1 je dodal_a $4 na vaš spisek nadzorov.",
+	"whoiswatching-notification-bundle": "$1 sprememb spiska nadzorov"
 }
