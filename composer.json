@@ -61,5 +61,10 @@
 			"phpcbf"
 		],
 		"phpcs": "phpcs -p -s || :"
+	},
+	"config": {
+		"allow-plugins": {
+			"composer/installers": true
+		}
 	}
 }
