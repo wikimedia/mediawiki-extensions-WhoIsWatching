@@ -2,7 +2,8 @@
 	"@metadata": {
 		"authors": [
 			"Les Meloures",
-			"Robby"
+			"Robby",
+			"Volvox"
 		]
 	},
 	"right-addpagetoanywatchlist": "[[Special:WhoIsWatching|Säiten op d'Iwwerwaachungslëschte vun anere Benotzer derbäisetzen]]",
@@ -11,7 +12,7 @@
 	"action-seepagewatchers": "kucke wat fir eng Benotzer eng Säit iwwerwaachen",
 	"echo-category-title-whoiswatching": "Ännerungen op menger Iwwerwaachungalëscht",
 	"whoiswatching": "Wien iwwerwaacht eng Säit",
-	"whoiswatching-desc": "Liwwert eng Säit mat de Benotzer déi eng Wiki-Säit iwwerwaachen",
+	"whoiswatching-desc": "Liwwert eng Säit mat de Benotzer, déi eng Wiki-Säit iwwerwaachen",
 	"specialwhoiswatchingpage": "Iwwerwaacher op [[:$1]]",
 	"specialwhoiswatchingusage": "Dës Spezialsäit kann net eleng benotzt ginn.",
 	"specialwhoiswatchingaddusers": "Setzt Benotzer derbäi déi d'Säit iwwerwaachen",
