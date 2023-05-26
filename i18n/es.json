@@ -3,11 +3,14 @@
 		"authors": [
 			"Dgstranz",
 			"Fex25",
+			"No se",
 			"Sanbec"
 		]
 	},
 	"action-addpagetoanywatchlist": "Añadir páginas a listas de otros usuarios",
 	"action-seepagewatchers": "ver qué usuarios están viendo una página",
+	"echo-category-title-whoiswatching": "Cambios en mi lista de seguimiento",
+	"echo-pref-tooltip-whoiswatching": "Notificarme cuando alguien más agregue una página a mi lista de seguimiento.",
 	"whoiswatching": "Quien está vigilando una página",
 	"whoiswatching-desc": "Proporciona una lista de usuarios que vigilan una página de la wiki.",
 	"specialwhoiswatchingusage": "Esta página especial no puede ser usada por sí sola.",
