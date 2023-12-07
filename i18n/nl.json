@@ -6,7 +6,8 @@
 			"PiefPafPier",
 			"SPQRobin",
 			"Siebrand",
-			"Sjoerddebruin"
+			"Sjoerddebruin",
+			"McDutchie"
 		]
 	},
 	"right-addpagetoanywatchlist": "[[Special:WhoIsWatching|Voeg pagina's toe aan volglijsten van andere gebruikers]]",
@@ -30,8 +31,10 @@
 	"whoiswatching-user-editname": "Voer een gebruikersnaam in:",
 	"whoiswatching-adduser": "Gebruiker toevoegen",
 	"whoiswatching-deluser": "Gebruiker verwijderen",
+	"whoiswatching-lookup-user": "Gebruiker opzoeken",
 	"whoiswatching-permission-denied-title": "Toegang geweigerd",
 	"whoiswatching-permission-denied": "U kunt niets doen op deze pagina.\n\nTen minste één van de volgende machtigingen zijn nodig: $1",
+	"whoiswatching-lookup-title": "Titel opzoeken",
 	"whoiswatching-title": "Voer een titel in",
 	"whoiswatching-select-title": "Bekijk volglijst",
 	"whoiswatching-notification-whoiswatching-remove-header": "Pagina van de volglijst verwijderd",
