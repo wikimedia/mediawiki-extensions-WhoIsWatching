@@ -1,6 +1,7 @@
 {
 	"@metadata": {
 		"authors": [
+			"Hubaishan",
 			"Meno25",
 			"ديفيد"
 		]
@@ -36,5 +37,5 @@
 	"whoiswatching-notification-whoiswatching-remove-body": "$1 أزال $4 من قائمة مراقبتك.",
 	"whoiswatching-notification-whoiswatching-add-header": "تمت إضافة الصفحة إلى قائمة المراقبة",
 	"whoiswatching-notification-whoiswatching-add-body": "أضاف $1 $4 إلى قائمة مراقبتك.",
-	"whoiswatching-notification-bundle": "$1 تغييرات في قائمة المراقبة"
+	"whoiswatching-notification-bundle": "{{PLURAL:$1|لا تغيير|تغيير واحد|تغييران|$1 تغييرات|$1 تغييرًا|$1 تغييرٍ}} في قائمة المراقبة"
 }
