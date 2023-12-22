@@ -2,13 +2,14 @@
 	"@metadata": {
 		"authors": [
 			"Aftabuzzaman",
+			"Aishik Rehman",
 			"Leemon2010",
 			"Zaheen",
 			"আফতাবুজ্জামান"
 		]
 	},
 	"whoiswatching": "কে একটি উইকি পাতার উপর নজর রাখছেন",
-	"whoiswatching-desc": "উইকির কোন পাতা প্রত্যক্ষকারী ব্যবহারকারীরের একটি তালিকা প্রদান করে",
+	"whoiswatching-desc": "উইকির কোনো পাতা প্রত্যক্ষকারী ব্যবহারকারীরের একটি তালিকা প্রদান করে",
 	"specialwhoiswatchingusage": "এই বিশেষ পাতাটি এককভাবে ব্যবহার করা যাবে না।",
 	"specialwhoiswatchingaddusers": "নজরতালিকায় ব্যবহারকারীদের যোগ করুন",
 	"specialwhoiswatchingaddbtn": "নির্বাচিত ব্যবহারকারীদের যোগ করুন",
