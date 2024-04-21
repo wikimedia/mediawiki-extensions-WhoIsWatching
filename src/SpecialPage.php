@@ -25,7 +25,6 @@ namespace MediaWiki\Extension\WhoIsWatching;
 use ErrorPageError;
 use GlobalVarConfig;
 use HTMLForm;
-use MediaWiki\Extension\WhoIsWatching\Manager as Manager;
 use MediaWiki\MediaWikiServices;
 use Title;
 use User;
@@ -246,7 +245,7 @@ class SpecialPage extends \SpecialPage {
 				'label-message' => 'whoiswatching-title',
 				'size' => 40,
 				'id' => 'whoiswatching-target',
-				'value' => str_replace( '_', ' ', $this->targetPage ) ,
+				'value' => str_replace( '_', ' ', $this->targetPage ),
 				'cssclass' => 'mw-searchInput',
 				'required' => true
 			]

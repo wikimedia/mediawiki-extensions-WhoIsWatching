@@ -85,7 +85,7 @@ class Hook {
 		$title = Title::newFromDBKey( $pageTitle );
 		$output = self::renderWhoIsWatchingLink( $title );
 
-		return [ $output, 'noparse' => false,'isHTML' => true ];
+		return [ $output, 'noparse' => false, 'isHTML' => true ];
 	}
 
 	/**
@@ -187,10 +187,10 @@ class Hook {
 	public static function onEchoGetBundleRules( EchoEvent $event, &$bundleString ) {
 		wfDebugLog( 'WhoIsWatching', __METHOD__ );
 		switch ( $event->getType() ) {
-		case 'whoiswatching-add':
-		case 'whoiswatching-remove':
-			$bundleString = 'whoiswatching';
-			break;
+			case 'whoiswatching-add':
+			case 'whoiswatching-remove':
+				$bundleString = 'whoiswatching';
+				break;
 		}
 	}
 
