@@ -44,6 +44,9 @@ class Hook {
 		Skin $sk, string $group, &$footerLinks
 	) {
 		$title = $sk->getTitle();
+		if ( !$title ) {
+			return true;
+		}
 		if ( $title->isRedirect() ) {
 			if ( method_exists( MediaWikiServices::class, 'getWikiPageFactory' ) ) {
 				// MW 1.36+
