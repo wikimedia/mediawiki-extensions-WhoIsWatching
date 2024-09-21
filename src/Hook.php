@@ -104,7 +104,7 @@ class Hook {
 						   || $user->isAllowed( 'seepagewatchers' );
 
 		if ( $title->getNamespace() >= 0 && $showWatchingUsers ) {
-			$dbr = wfGetDB( DB_REPLICA );
+			$dbr = MediaWikiServices::getInstance()->getDBLoadBalancer()->getConnection( DB_REPLICA );
 			$watch = $dbr->selectRow(
 				'watchlist', 'COUNT(*) as count', [
 					'wl_namespace' => $title->getNamespace(),
