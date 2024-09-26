@@ -35,6 +35,7 @@ class SpecialPage extends \SpecialPage {
 	private $targetUser = null;
 	private $nameType;
 	private $allowAddingPeople;
+	private $allowRemovingPeople;
 	private $showWatchingUsers;
 	private $wiw;
 
