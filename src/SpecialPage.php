@@ -39,9 +39,6 @@ class SpecialPage extends \SpecialPage {
 	private $showWatchingUsers;
 	private $wiw;
 
-	/**
-	 * @return boolean
-	 */
 	public function __construct() {
 		parent::__construct( 'WhoIsWatching' );
 
@@ -59,8 +56,6 @@ class SpecialPage extends \SpecialPage {
 			= ( !$user->isAnon() && $conf->get( "showwatchingusers" ) )
 			|| $user->isAllowed( "seepagewatchers" );
 		$this->wiw = new Manager( $this->getUser(), $conf );
-
-		return true;
 	}
 
 	/**
@@ -127,10 +122,10 @@ class SpecialPage extends \SpecialPage {
 			$namespaceInfo = MediaWikiServices::getInstance()->getNamespaceInfo();
 			$nsRevLookup = array_flip( $namespaceInfo->getCanonicalNamespaces() );
 			$nameSpace = $req->getVal( 'ns', '' );
-			if ( !ctype_digit( $nameSpace ) ) {
-				$nameSpace = isset( $nsRevLookup[ $nameSpace ] )
-						   ? $nsRevLookup[ $nameSpace ]
-						   : null;
+			if ( ctype_digit( $nameSpace ) ) {
+				$nameSpace = intval( $nameSpace );
+			} else {
+				$nameSpace = $nsRevLookup[ $nameSpace ] ?? 0;
 			}
 			$this->targetPage = Title::newFromText( $title, $nameSpace );
 		} else {

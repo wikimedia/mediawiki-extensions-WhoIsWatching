@@ -23,7 +23,7 @@ namespace MediaWiki\Extension\WhoIsWatching;
 use Config;
 use EchoEvent;
 use MediaWiki\MediaWikiServices;
-use Title;
+use MediaWiki\Title\Title;
 use User;
 
 class Manager {

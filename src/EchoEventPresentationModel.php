@@ -26,6 +26,7 @@ namespace MediaWiki\Extension\WhoIsWatching;
 use MediaWiki\MediaWikiServices;
 use MediaWiki\Title\Title;
 use Message;
+use Wikimedia\Timestamp\TimestampException;
 
 class EchoEventPresentationModel extends \EchoEventPresentationModel {
 	/**
@@ -172,7 +173,7 @@ class EchoEventPresentationModel extends \EchoEventPresentationModel {
 		return [
 			'header' => $this->getHeaderMessage()->parse(),
 			'compactHeader' => $this->getCompactHeaderMessage()->parse(),
-			'body' => $body ? $body->toString() : '',
+			'body' => $body ? $body->plain() : '',
 			'icon' => $this->getIconType(),
 			'links' => [
 				'primary' => $this->getPrimaryLinkWithMarkAsRead() ?: [],

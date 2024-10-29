@@ -49,6 +49,9 @@ class Hook {
 		if ( $title->isRedirect() ) {
 			$article = MediaWikiServices::getInstance()->getWikiPageFactory()->newFromID( $title->getArticleID() );
 			$title = $article->getRedirectTarget();
+			if ( !$title ) {
+				return true;
+			}
 		}
 
 		$ret = self::renderWhoIsWatchingLink( $title );
@@ -90,7 +93,7 @@ class Hook {
 	 *
 	 * @param Title $title for checking
 	 * @param GlobalVarConfig $conf configuration
-	 * @return null/number of watching users
+	 * @return int|null number of watching users
 	 */
 	public static function getNumbersOfWhoIsWatching( Title $title, GlobalVarConfig $conf ) {
 		$user = RequestContext::getMain()->getUser();
@@ -114,7 +117,7 @@ class Hook {
 	 * Render the link to Special:WhoIsWatching showing the number of watching users
 	 *
 	 * @param Title $title we want
-	 * @return bool
+	 * @return string|false
 	 */
 	public static function renderWhoIsWatchingLink( Title $title ) {
 		$conf = new GlobalVarConfig( "whoiswatching_" );
@@ -178,7 +181,7 @@ class Hook {
 	}
 
 	/**
-	 * @param Event $event to bundle
+	 * @param EchoEvent $event to bundle
 	 * @param string &$bundleString to use
 	 */
 	public static function onEchoGetBundleRules( EchoEvent $event, &$bundleString ) {
