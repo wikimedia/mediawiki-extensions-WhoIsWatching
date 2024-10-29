@@ -35,19 +35,16 @@
 		"MediaWiki\\Extension\\WhoIsWatching\\SpecialPage": "src/SpecialPage.php",
 		"MediaWiki\\Extension\\WhoIsWatching\\Hook": "src/Hook.php"
 	},
+	"HookHandlers": {
+		"main": {
+			"class": "MediaWiki\\Extension\\WhoIsWatching\\Hook"
+		}
+	},
 	"Hooks": {
-		"BeforeCreateEchoEvent": [
-			"MediaWiki\\Extension\\WhoIsWatching\\Hook::onBeforeCreateEchoEvent"
-		],
-		"EchoGetBundleRules": [
-			"MediaWiki\\Extension\\WhoIsWatching\\Hook::onEchoGetBundleRules"
-		],
-		"SkinAddFooterLinks": [
-			"MediaWiki\\Extension\\WhoIsWatching\\Hook::onSkinAddFooterLinks"
-		],
-		"ParserFirstCallInit": [
-			"MediaWiki\\Extension\\WhoIsWatching\\Hook::onParserSetup"
-		]
+		"BeforeCreateEchoEvent": "main",
+		"EchoGetBundleRules": "main",
+		"SkinAddFooterLinks": "main",
+		"ParserFirstCallInit": "main"
 	},
 	"GroupPermissions": {
 		"sysop": {

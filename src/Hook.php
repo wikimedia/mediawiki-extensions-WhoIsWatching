@@ -30,7 +30,12 @@ use RequestContext;
 use Skin;
 use User;
 
-class Hook {
+class Hook implements
+	\MediaWiki\Extension\Notifications\Hooks\BeforeCreateEchoEventHook,
+	\MediaWiki\Extension\Notifications\Hooks\EchoGetBundleRulesHook,
+	\MediaWiki\Hook\ParserFirstCallInitHook,
+	\MediaWiki\Hook\SkinAddFooterLinksHook
+{
 	/**
 	 * Hook to display link to page watchers
 	 *
@@ -39,8 +44,8 @@ class Hook {
 	 * @param array &$footerLinks
 	 * @return bool
 	 */
-	public static function onSkinAddFooterLinks(
-		Skin $sk, string $group, &$footerLinks
+	public function onSkinAddFooterLinks(
+		Skin $sk, string $group, array &$footerLinks
 	) {
 		$title = $sk->getTitle();
 		if ( !$title ) {
@@ -68,7 +73,7 @@ class Hook {
 	 *
 	 * @param Parser $parser current parser
 	 */
-	public static function onParserSetup( Parser $parser ) {
+	public function onParserFirstCallInit( $parser ) {
 		$parser->setFunctionHook(
 			'whoiswatching', 'MediaWiki\\Extension\\WhoIsWatching\\Hook::whoIsWatching'
 		);
@@ -142,7 +147,7 @@ class Hook {
 	 *        categories
 	 * @param array &$icons assoc array of icons we define
 	 */
-	public static function onBeforeCreateEchoEvent(
+	public function onBeforeCreateEchoEvent(
 		array &$notifications, array &$notificationCategories, array &$icons
 	) {
 		wfDebugLog( 'WhoIsWatching', __METHOD__ );
@@ -184,7 +189,7 @@ class Hook {
 	 * @param EchoEvent $event to bundle
 	 * @param string &$bundleString to use
 	 */
-	public static function onEchoGetBundleRules( EchoEvent $event, &$bundleString ) {
+	public function onEchoGetBundleRules( EchoEvent $event, string &$bundleString ) {
 		wfDebugLog( 'WhoIsWatching', __METHOD__ );
 		switch ( $event->getType() ) {
 			case 'whoiswatching-add':
