@@ -330,8 +330,7 @@ class SpecialPage extends \SpecialPage {
 		}
 		if ( $this->allowRemovingPeople ) {
 			$form = HTMLForm::factory( 'ooui', $users, $this->getContext() );
-			$form->setSubmitText
-				( $this->msg( 'whoiswatching-deluser' )->text() );
+			$form->setSubmitText( $this->msg( 'whoiswatching-deluser' )->text() );
 			$form->setSubmitCallback(
 				function ( $formData, $form ) {
 					return $this->maybeRemoveWatcher( $formData );
