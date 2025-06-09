@@ -9,7 +9,7 @@
 		"[http://web.nichework.com Mark A. Hershberger]"
 	],
 	"requires": {
-		"MediaWiki": ">= 1.34.0",
+		"MediaWiki": ">= 1.40.0",
 		"extensions": {
 			"Echo": "*"
 		}

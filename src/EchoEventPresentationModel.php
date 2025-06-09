@@ -24,9 +24,8 @@
 namespace MediaWiki\Extension\WhoIsWatching;
 
 use MediaWiki\MediaWikiServices;
+use MediaWiki\Title\Title;
 use Message;
-use Title;
-use WikiPage;
 
 class EchoEventPresentationModel extends \EchoEventPresentationModel {
 	/**
@@ -120,12 +119,7 @@ class EchoEventPresentationModel extends \EchoEventPresentationModel {
 	 */
 	public function getPageTitle() {
 		wfDebugLog( 'WhoIsWatching', __METHOD__ );
-		if ( method_exists( MediaWikiServices::class, 'getWikiPageFactory' ) ) {
-			// MW 1.36+
-			$page = MediaWikiServices::getInstance()->getWikiPageFactory()->newFromID( $this->event->getExtraParam( 'pageid' ) );
-		} else {
-			$page = WikiPage::newFromId( $this->event->getExtraParam( 'pageid' ) );
-		}
+		$page = MediaWikiServices::getInstance()->getWikiPageFactory()->newFromID( $this->event->getExtraParam( 'pageid' ) );
 		return $page ? $page->getTitle() : Title::makeTitle( NS_SPECIAL, 'Badtitle/' . __METHOD__ );
 	}
 
