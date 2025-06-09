@@ -26,7 +26,7 @@ use ErrorPageError;
 use GlobalVarConfig;
 use HTMLForm;
 use MediaWiki\MediaWikiServices;
-use Title;
+use MediaWiki\Title\Title;
 use User;
 
 class SpecialPage extends \SpecialPage {
