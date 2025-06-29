@@ -1,7 +1,7 @@
 <?php
 
 /**
- * Copyright (C) 2018  NicheWork, LLC
+ * Copyright (C) 2018, 2025  NicheWork, LLC
  *
  * This program is free software: you can redistribute it and/or modify
  * it under the terms of the GNU General Public License as published by
@@ -20,25 +20,30 @@
  */
 namespace MediaWiki\Extension\WhoIsWatching;
 
-use Config;
-use EchoEvent;
+use MediaWiki\Extension\Notifications\Model\Event;
+use MediaWiki\Logger\LoggerFactory;
 use MediaWiki\MediaWikiServices;
-use Title;
-use User;
+use MediaWiki\Title\Title;
+use MediaWiki\User\User;
+use MediaWiki\Watchlist\WatchlistManager;
+use Psr\Log\LoggerInterface;
 
 class Manager {
 
-	private $agent;
-	private $config;
+	private User $agent;
+	private Config $config;
+	private WatchlistManager $watchListManager;
+	private LoggerInterface $logger;
 
 	/**
 	 * @param User $agent user
 	 * @param Config $config object
 	 */
 	public function __construct( User $agent, Config $config ) {
-		wfDebugLog( 'WhoIsWatching', __METHOD__ );
 		$this->agent = $agent;
 		$this->config = $config;
+		$this->watchListManager = MediaWikiServices::getInstance()->getWatchlistManager();
+		$this->logger = LoggerFactory::getInstance( "WhoIsWatching" );
 	}
 
 	/**
@@ -46,13 +51,8 @@ class Manager {
 	 * @param User $user affected
 	 */
 	public function addWatch( Title $title, User $user ) {
-		wfDebugLog( 'WhoIsWatching', __METHOD__ );
-		if ( method_exists( \MediaWiki\Watchlist\WatchlistManager::class, 'addWatch' ) ) {
-			// MW 1.37+
-			MediaWikiServices::getInstance()->getWatchlistManager()->addWatch( $user, $title );
-		} else {
-			$user->addWatch( $title );
-		}
+		$this->logger->debug( __METHOD__ );
+		$this->watchListManager->addWatch( $user, $title );
 		$this->eNotifUser( 'add', $title, $user );
 	}
 
@@ -61,13 +61,8 @@ class Manager {
 	 * @param User $user affected
 	 */
 	public function removeWatch( Title $title, User $user ) {
-		wfDebugLog( 'WhoIsWatching', __METHOD__ );
-		if ( method_exists( \MediaWiki\Watchlist\WatchlistManager::class, 'removeWatch' ) ) {
-			// MW 1.37+
-			MediaWikiServices::getInstance()->getWatchlistManager()->removeWatch( $user, $title );
-		} else {
-			$user->removeWatch( $title );
-		}
+		$this->logger->debug( __METHOD__ );
+		$this->watchListManager->removeWatch( $user, $title );
 		$this->eNotifUser( 'remove', $title, $user );
 	}
 
@@ -76,13 +71,13 @@ class Manager {
 	 * @param Title $title page updated
 	 * @param User $user affected
 	 */
-	public function eNotifUser( $action, Title $title, User $user ) {
-		wfDebugLog( 'WhoIsWatching', __METHOD__ );
-		$type = $this->config->get( "notificationTypes" );
-		wfDebugLog( 'WhoIsWatching', "Called on $action" );
+	public function eNotifUser( string $action, Title $title, User $user ) {
+		$this->logger->debug( __METHOD__ );
+		$type = $this->config->get( Config::NOTIFICATION_TYPES );
+		$this->logger->debug( "Called on $action" );
 		if ( $type[$action] ) {
-			wfDebugLog( 'WhoIsWatching', "Creating event for $action/$title/$user/{$this->agent}" );
-			EchoEvent::create( [
+			$this->logger->debug( "Creating event for $action/$title/$user/{$this->agent}" );
+			Event::create( [
 				'type' => 'whoiswatching-' . $action,
 				'title' => $title,
 				'agent' => $this->agent,

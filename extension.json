@@ -1,6 +1,6 @@
 {
 	"name": "WhoIsWatching",
-	"version": "0.13.0",
+	"version": "1.0.0",
 	"license-name": "GPL-2.0-only",
 	"author": [
 		"Paul Grinberg",
@@ -9,7 +9,7 @@
 		"[http://web.nichework.com Mark A. Hershberger]"
 	],
 	"requires": {
-		"MediaWiki": ">= 1.34.0",
+		"MediaWiki": ">= 1.43.0",
 		"extensions": {
 			"Echo": "*"
 		}
@@ -18,36 +18,47 @@
 	"descriptionmsg": "whoiswatching-desc",
 	"type": "specialpage",
 	"SpecialPages": {
-		"WhoIsWatching": "MediaWiki\\Extension\\WhoIsWatching\\SpecialPage"
+		"WhoIsWatching": {
+			"class": "MediaWiki\\Extension\\WhoIsWatching\\SpecialPage",
+			"services": [
+				"UserFactory",
+				"WhoIsWatchingConfig"
+			]
+		}
 	},
 	"MessagesDirs": {
 		"WhoIsWatching": [
 			"i18n"
 		]
 	},
+	"ServiceWiringFiles": [
+		"src/ServiceWiring.php"
+	],
 	"ExtensionMessagesFiles": {
 		"WhoIsWatchingAlias": "src/i18n/Alias.php",
 		"WhoIsWatchingMagic": "src/i18n/Magic.php"
 	},
-	"AutoloadClasses": {
-		"MediaWiki\\Extension\\WhoIsWatching\\Manager": "src/Manager.php",
-		"MediaWiki\\Extension\\WhoIsWatching\\EchoEventPresentationModel": "src/EchoEventPresentationModel.php",
-		"MediaWiki\\Extension\\WhoIsWatching\\SpecialPage": "src/SpecialPage.php",
-		"MediaWiki\\Extension\\WhoIsWatching\\Hook": "src/Hook.php"
+	"AutoloadNamespaces": {
+		"MediaWiki\\Extension\\WhoIsWatching\\": "src/"
+	},
+	"HookHandlers": {
+		"main": {
+			"class": "MediaWiki\\Extension\\WhoIsWatching\\Hook",
+			"services": [
+				"RedirectLookup",
+				"WhoIsWatchingConfig",
+				"WhoIsWatchingLogger",
+				"DBLoadBalancer",
+				"UserFactory"
+			]
+		}
 	},
 	"Hooks": {
-		"BeforeCreateEchoEvent": [
-			"MediaWiki\\Extension\\WhoIsWatching\\Hook::onBeforeCreateEchoEvent"
-		],
-		"EchoGetBundleRules": [
-			"MediaWiki\\Extension\\WhoIsWatching\\Hook::onEchoGetBundleRules"
-		],
-		"SkinAddFooterLinks": [
-			"MediaWiki\\Extension\\WhoIsWatching\\Hook::onSkinAddFooterLinks"
-		],
-		"ParserFirstCallInit": [
-			"MediaWiki\\Extension\\WhoIsWatching\\Hook::onParserSetup"
-		]
+		"BeforeCreateEchoEvent": "main",
+		"EchoGetBundleRules": "main",
+		"GetPreferences": "main",
+		"ParserFirstCallInit": "main",
+		"SkinAddFooterLinks": "main"
 	},
 	"GroupPermissions": {
 		"sysop": {

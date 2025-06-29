@@ -1,4 +1,5 @@
 <?php
+
 /**
  * Copyright (C) 2017, 2018  NicheWork, LLC
  *
@@ -20,44 +21,73 @@
 
 namespace MediaWiki\Extension\WhoIsWatching;
 
-use EchoEvent;
-use GlobalVarConfig;
-use Html;
-use MediaWiki\MediaWikiServices;
-use Parser;
-use RequestContext;
+use MediaWiki\Context\RequestContext;
+use MediaWiki\Extension\Notifications\Hooks\BeforeCreateEchoEventHook;
+use MediaWiki\Extension\Notifications\Hooks\EchoGetBundleRulesHook;
+use MediaWiki\Extension\Notifications\Model\Event;
+use MediaWiki\Hook\ParserFirstCallInitHook;
+use MediaWiki\Hook\SkinAddFooterLinksHook;
+use MediaWiki\Html\Html;
+use MediaWiki\Linker\LinkTarget;
+use MediaWiki\Message\Message;
+use MediaWiki\Page\RedirectLookup;
+use MediaWiki\Parser\Parser;
+use MediaWiki\Preferences\Hook\GetPreferencesHook;
+use MediaWiki\Title\Title;
+use MediaWiki\User\UserFactory;
+use Psr\Log\LoggerInterface;
 use Skin;
-use Title;
-use User;
-use WikiPage;
+use Wikimedia\Rdbms\LoadBalancer;
 
-class Hook {
+class Hook implements
+	BeforeCreateEchoEventHook,
+	EchoGetBundleRulesHook,
+	GetPreferencesHook,
+	ParserFirstCallInitHook,
+	SkinAddFooterLinksHook
+{
+	private RedirectLookup $redirectLookup;
+	private Config $config;
+	private LoadBalancer $loadBalancer;
+	private RequestContext $request;
+	private UserFactory $userFactory;
+	private LoggerInterface $logger;
+
+	public function __construct(
+		RedirectLookup $redirectLookup,
+		Config $config,
+		LoggerInterface $logger,
+		LoadBalancer $loadBalancer,
+		UserFactory $userFactory
+	) {
+		$this->redirectLookup = $redirectLookup;
+		$this->config = $config;
+		$this->logger = $logger;
+		$this->loadBalancer = $loadBalancer;
+		$this->userFactory = $userFactory;
+		$this->request = RequestContext::getMain();
+		$this->logger->debug( __METHOD__ );
+	}
+
 	/**
 	 * Hook to display link to page watchers
 	 *
-	 * @param Skin $sk
-	 * @param string $group
-	 * @param array &$footerLinks
-	 * @return bool
+	 * @return true
 	 */
-	public static function onSkinAddFooterLinks(
-		Skin $sk, string $group, &$footerLinks
+	public function onSkinAddFooterLinks(
+		Skin $skin, string $group, array &$footerLinks
 	) {
-		$title = $sk->getTitle();
-		if ( !$title ) {
+		$this->logger->debug( __METHOD__ );
+		$title = $skin->getTitle();
+		if ( $title && $title->isRedirect() ) {
+			$article = $skin->getWikiPage();
+			$title = $this->redirectLookup->getRedirectTarget( $article );
+		}
+		if ( !$title || $title->getNamespace() < 0 ) {
 			return true;
 		}
-		if ( $title->isRedirect() ) {
-			if ( method_exists( MediaWikiServices::class, 'getWikiPageFactory' ) ) {
-				// MW 1.36+
-				$article = MediaWikiServices::getInstance()->getWikiPageFactory()->newFromID( $title->getArticleID() );
-			} else {
-				$article = WikiPage::newFromID( $title->getArticleID() );
-			}
-			$title = $article->getRedirectTarget();
-		}
 
-		$ret = self::renderWhoIsWatchingLink( $title );
+		$ret = $this->renderWhoIsWatchingLink( $title );
 
 		if ( $ret != false && $group === 'info' ) {
 			$footerLinks['number-of-watching-users'] = $ret;
@@ -71,10 +101,9 @@ class Hook {
 	 *
 	 * @param Parser $parser current parser
 	 */
-	public static function onParserSetup( Parser $parser ) {
-		$parser->setFunctionHook(
-			'whoiswatching', 'MediaWiki\\Extension\\WhoIsWatching\\Hook::whoIsWatching'
-		);
+	public function onParserFirstCallInit( $parser ) {
+		$this->logger->debug( __METHOD__ );
+		$parser->setFunctionHook( 'whoiswatching', [ $this, 'whoIsWatching' ] );
 	}
 
 	/**
@@ -84,9 +113,10 @@ class Hook {
 	 *
 	 * @SuppressWarnings(PHPMD.UnusedFormalParameter)
 	 */
-	public static function whoIsWatching( Parser $parser, $pageTitle ) {
+	public function whoIsWatching( Parser $parser, $pageTitle ) {
+		$this->logger->debug( __METHOD__ );
 		$title = Title::newFromDBKey( $pageTitle );
-		$output = self::renderWhoIsWatchingLink( $title );
+		$output = $this->renderWhoIsWatchingLink( $title );
 
 		return [ $output, 'noparse' => false, 'isHTML' => true ];
 	}
@@ -94,21 +124,21 @@ class Hook {
 	/**
 	 * Get the number of watching users for a page
 	 *
-	 * @param Title $title for checking
-	 * @param GlobalVarConfig $conf configuration
-	 * @return null/number of watching users
+	 * @param LinkTarget $page for checking
+	 * @return null|int number of watching users
 	 */
-	public static function getNumbersOfWhoIsWatching( Title $title, GlobalVarConfig $conf ) {
-		$user = RequestContext::getMain()->getUser();
-		$showWatchingUsers = $conf->get( "showwatchingusers" )
-						   || $user->isAllowed( 'seepagewatchers' );
+	public function getNumbersOfWhoIsWatching( LinkTarget $page ): ?int {
+		$this->logger->debug( __METHOD__ );
+		$user = $this->request->getUser();
+		$showWatchingUsers = $this->config->get( Config::SHOW_WATCHING_USERS )
+			|| $user->isAllowed( Right::SEE_PAGE_WATCHERS );
 
-		if ( $title->getNamespace() >= 0 && $showWatchingUsers ) {
-			$dbr = MediaWikiServices::getInstance()->getDBLoadBalancer()->getConnection( DB_REPLICA );
+		if ( $page->getNamespace() >= 0 && $showWatchingUsers ) {
+			$dbr = $this->loadBalancer->getConnection( DB_REPLICA );
 			$watch = $dbr->selectRow(
 				'watchlist', 'COUNT(*) as count', [
-					'wl_namespace' => $title->getNamespace(),
-					'wl_title' => $title->getDBkey(),
+					'wl_namespace' => $page->getNamespace(),
+					'wl_title' => $page->getDBkey(),
 				], __METHOD__
 			);
 			return $watch->count;
@@ -119,19 +149,21 @@ class Hook {
 	/**
 	 * Render the link to Special:WhoIsWatching showing the number of watching users
 	 *
-	 * @param Title $title we want
+	 * @param LinkTarget $page we we want
 	 * @return bool
 	 */
-	public static function renderWhoIsWatchingLink( Title $title ) {
-		$conf = new GlobalVarConfig( "whoiswatching_" );
-		$showIfZero = $conf->get( "showifzero" );
-		$count = self::getNumbersOfWhoIsWatching( $title, $conf );
+	public function renderWhoIsWatchingLink( LinkTarget $page ) {
+		$this->logger->debug( __METHOD__ );
+		$showIfZero = $this->config->get( Config::SHOW_IF_ZERO );
+		$count = $this->getNumbersOfWhoIsWatching( $page );
 
 		if ( $count > 0 || ( $showIfZero && $count == 0 ) ) {
-			$lang = RequestContext::getMain()->getLanguage();
-			return Html::rawElement( "span", [ 'class' => 'plainlinks' ], wfMessage(
-				'whoiswatching_users_pageview', $lang->formatNum( (int)$count ), $title
-			)->parse() );
+			$lang = $this->request->getLanguage();
+			return Html::rawElement(
+				"span", [ 'class' => 'plainlinks' ],
+				Message::newFromSpecifier( 'whoiswatching_users_pageview' )->
+					params( $lang->formatNum( (int)$count ), $page )->parse()
+			);
 		}
 
 		return false;
@@ -145,10 +177,10 @@ class Hook {
 	 *        categories
 	 * @param array &$icons assoc array of icons we define
 	 */
-	public static function onBeforeCreateEchoEvent(
+	public function onBeforeCreateEchoEvent(
 		array &$notifications, array &$notificationCategories, array &$icons
 	) {
-		wfDebugLog( 'WhoIsWatching', __METHOD__ );
+		$this->logger->debug( __METHOD__ );
 		$icons['whoiswatching']['path'] = 'WhoIsWatching/assets/WhoIsWatching.svg';
 
 		$notifications['whoiswatching-add'] = [
@@ -173,8 +205,8 @@ class Hook {
 			'title-message' => 'whoiswatching-remove-title',
 			'category' => 'whoiswatching',
 			'group' => 'neutral',
-			'user-locators' => [ 'MediaWiki\\Extension\\WhoIsWatching\\Hook::userLocater' ],
-			'presentation-model' => 'MediaWiki\\Extension\\WhoIsWatching\\EchoEventPresentationModel',
+			'user-locators' => [ self::class, 'userLocater' ],
+			'presentation-model' => EchoEventPresentationModel::class,
 		];
 
 		$notificationCategories['whoiswatching'] = [
@@ -187,8 +219,8 @@ class Hook {
 	 * @param Event $event to bundle
 	 * @param string &$bundleString to use
 	 */
-	public static function onEchoGetBundleRules( EchoEvent $event, &$bundleString ) {
-		wfDebugLog( 'WhoIsWatching', __METHOD__ );
+	public function onEchoGetBundleRules( Event $event, string &$bundleString ) {
+		$this->logger->debug( __METHOD__ );
 		switch ( $event->getType() ) {
 			case 'whoiswatching-add':
 			case 'whoiswatching-remove':
@@ -198,25 +230,29 @@ class Hook {
 	}
 
 	/**
-	 * Get users that should be notified for this event.
-	 *
-	 * @param EchoEvent $event to be looked at
-	 * @return array
+	 * @inheritDoc
 	 */
-	public static function userLocater( EchoEvent $event ) {
-		wfDebugLog( 'WhoIsWatching', __METHOD__ );
-		$extra = $event->getExtra();
-		$user = User::newFromID( $extra['userID'] );
-		return [ $user ];
+	public function onGetPreferences( $user, &$preferences ) {
+		$this->logger->debug( __METHOD__ );
+		$option = [
+			'type' => 'toggle',
+			'label-message' => 'something-something',
+			'help-message' => 'something-else',
+			'section' => 'watchlist/changeswatchlist',
+		];
+		$preferences["whoiswatching-page-something"] = $option;
 	}
 
 	/**
-	 * Static function to help us determine if WiW is available.
+	 * Get users that should be notified for this event.
 	 *
-	 * @return string
+	 * @param Event $event to be looked at
+	 * @return array
 	 */
-	public static function getVersion() {
-		$extension = json_decode( file_get_contents( __DIR__ . "/../extension.json" ) );
-		return $extension->version;
+	public function userLocater( Event $event ) {
+		$this->logger->debug( __METHOD__ );
+		$extra = $event->getExtra();
+		$user = $this->userFactory->newFromId( $extra['userID'] );
+		return [ $user ];
 	}
 }

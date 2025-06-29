@@ -23,19 +23,41 @@
 
 namespace MediaWiki\Extension\WhoIsWatching;
 
+use MediaWiki\Extension\Notifications\Formatters\EchoEventPresentationModel as ParentModel;
+use MediaWiki\Extension\Notifications\Model\Event;
+use MediaWiki\Language\Language;
+use MediaWiki\Logger\LoggerFactory;
 use MediaWiki\MediaWikiServices;
-use Message;
-use Title;
-use WikiPage;
+use MediaWiki\Page\WikiPageFactory;
+use MediaWiki\Title\Title;
+use MediaWiki\User\User;
+use Psr\Log\LoggerInterface;
 
-class EchoEventPresentationModel extends \EchoEventPresentationModel {
+class EchoEventPresentationModel extends ParentModel {
+	private LoggerInterface $logger;
+	private WikiPageFactory $wikiPageFactory;
+
+	/**
+	 * @inheritDoc
+	 */
+	protected function __construct(
+		Event $event,
+		Language $language,
+		User $user,
+		$distributionType
+	) {
+		parent::__construct( $event, $language, $user, $distributionType );
+		$this->logger = LoggerFactory::getInstance( "WhoIsWatching" );
+		$this->wikiPageFactory = MediaWikiServices::getInstance()->getWikiPageFactory();
+	}
+
 	/**
 	 * Tell the caller if this event can be rendered.
 	 *
 	 * @return bool
 	 */
 	public function canRender() {
-		wfDebugLog( 'WhoIsWatching', __METHOD__ );
+		$this->logger->debug( __METHOD__ );
 		return (bool)$this->event->getTitle();
 	}
 
@@ -45,7 +67,7 @@ class EchoEventPresentationModel extends \EchoEventPresentationModel {
 	 * @return string
 	 */
 	public function getIconType() {
-		wfDebugLog( 'WhoIsWatching', __METHOD__ );
+		$this->logger->debug( __METHOD__ );
 		return 'whoiswatching';
 	}
 
@@ -55,7 +77,7 @@ class EchoEventPresentationModel extends \EchoEventPresentationModel {
 	 * @return Message
 	 */
 	public function getHeaderMessage() {
-		wfDebugLog( 'WhoIsWatching', __METHOD__ );
+		$this->logger->debug( __METHOD__ );
 		if ( $this->isBundled() ) {
 			$msg = $this->msg( 'whoiswatching-notification-bundle' );
 			$msg->params( $this->getBundleCount() );
@@ -77,7 +99,7 @@ class EchoEventPresentationModel extends \EchoEventPresentationModel {
 	 * @return Message
 	 */
 	public function getCompactHeaderMessage() {
-		wfDebugLog( 'WhoIsWatching', __METHOD__ );
+		$this->logger->debug( __METHOD__ );
 		$msg = parent::getCompactHeaderMessage();
 		$msg->params( $this->getViewingUserForGender() );
 		return $msg;
@@ -89,7 +111,7 @@ class EchoEventPresentationModel extends \EchoEventPresentationModel {
 	 * @return string
 	 */
 	public function getRevisionEditSummary() {
-		wfDebugLog( 'WhoIsWatching', __METHOD__ );
+		$this->logger->debug( __METHOD__ );
 		$msg = $this->getMessageWithAgent(
 			'whoiswatching-notification-' . $this->event->getType() . '-summary'
 		);
@@ -106,7 +128,7 @@ class EchoEventPresentationModel extends \EchoEventPresentationModel {
 	 * @return Message
 	 */
 	public function getBodyMessage() {
-		wfDebugLog( 'WhoIsWatching', __METHOD__ );
+		$this->logger->debug( __METHOD__ );
 		$msg = $this->getMessageWithAgent(
 			'whoiswatching-notification-' . $this->event->getType() . '-body'
 		);
@@ -119,13 +141,9 @@ class EchoEventPresentationModel extends \EchoEventPresentationModel {
 	 * @return Title
 	 */
 	public function getPageTitle() {
-		wfDebugLog( 'WhoIsWatching', __METHOD__ );
-		if ( method_exists( MediaWikiServices::class, 'getWikiPageFactory' ) ) {
-			// MW 1.36+
-			$page = MediaWikiServices::getInstance()->getWikiPageFactory()->newFromID( $this->event->getExtraParam( 'pageid' ) );
-		} else {
-			$page = WikiPage::newFromId( $this->event->getExtraParam( 'pageid' ) );
-		}
+		$this->logger->debug( __METHOD__ );
+		$page = $this->wikiPageFactory->newFromID( $this->event->getExtraParam( 'pageid' ) );
+
 		return $page ? $page->getTitle() : Title::makeTitle( NS_SPECIAL, 'Badtitle/' . __METHOD__ );
 	}
 
@@ -135,7 +153,7 @@ class EchoEventPresentationModel extends \EchoEventPresentationModel {
 	 * @return array
 	 */
 	public function getPrimaryLink() {
-		wfDebugLog( 'WhoIsWatching', __METHOD__ );
+		$this->logger->debug( __METHOD__ );
 		$title = $this->event->getTitle();
 		$msg = $this->msg( 'whoiswatching-notification-link' );
 		$msg->params( $title );
@@ -151,7 +169,7 @@ class EchoEventPresentationModel extends \EchoEventPresentationModel {
 	 * @return array
 	 */
 	public function getSecondaryLinks() {
-		wfDebugLog( 'WhoIsWatching', __METHOD__ );
+		$this->logger->debug( __METHOD__ );
 		if ( $this->isBundled() ) {
 			// For the bundle, we don't need secondary actions
 			return [];
@@ -172,7 +190,7 @@ class EchoEventPresentationModel extends \EchoEventPresentationModel {
 	 * @throws TimestampException
 	 */
 	public function jsonSerialize(): array {
-		wfDebugLog( 'WhoIsWatching', __METHOD__ );
+		$this->logger->debug( __METHOD__ );
 		$body = $this->getBodyMessage();
 
 		return [

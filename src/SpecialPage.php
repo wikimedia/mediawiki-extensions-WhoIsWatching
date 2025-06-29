@@ -2,7 +2,7 @@
 /**
  * Special page for WhoIsWatching
  *
- * Copyright (C) 2017  NicheWork, LLC
+ * Copyright (C) 2017, 2025  NicheWork, LLC
  *
  * This program is free software: you can redistribute it and/or modify
  * it under the terms of the GNU General Public License as published by
@@ -23,44 +23,48 @@
 namespace MediaWiki\Extension\WhoIsWatching;
 
 use ErrorPageError;
-use GlobalVarConfig;
-use HTMLForm;
+use MediaWiki\HTMLForm\HTMLForm;
 use MediaWiki\MediaWikiServices;
-use Title;
-use User;
+use MediaWiki\Request\WebRequest;
+use MediaWiki\Session\CsrfTokenSet;
+use MediaWiki\SpecialPage\SpecialPage as SpecialPageParent;
+use MediaWiki\Title\Title;
+use MediaWiki\User\User;
+use MediaWiki\User\UserFactory;
+use MediaWiki\User\UserRigorOptions;
 
-class SpecialPage extends \SpecialPage {
+class SpecialPage extends SpecialPageParent {
 
-	private $targetPage = null;
-	private $targetUser = null;
-	private $nameType;
-	private $allowAddingPeople;
-	private $allowRemovingPeople;
-	private $showWatchingUsers;
-	private $wiw;
+	private const TOKEN_FIELD_NAME = 'addToken';
 
-	/**
-	 * @return boolean
-	 */
-	public function __construct() {
+	private ?Title $targetPage = null;
+	private ?User $targetUser = null;
+	private string $nameType;
+	private bool $allowAddingPeople;
+	private bool $allowRemovingPeople;
+	private bool $showWatchingUsers;
+	private Manager $wiw;
+	private UserFactory $userFactory;
+	private Config $config;
+
+	public function __construct( UserFactory $userFactory, Config $config ) {
 		parent::__construct( 'WhoIsWatching' );
 
-		$conf = new GlobalVarConfig( "whoiswatching_" );
 		$user = $this->getUser();
-		$this->nameType = $conf->get( "nametype" );
+		$this->config = $config;
+		$this->nameType = $this->config->get( Config::NAME_TYPE );
 
 		$this->allowAddingPeople
-			= ( !$user->isAnon() && $conf->get( "allowaddingpeople" ) )
-			|| $user->isAllowed( "addpagetoanywatchlist" );
+			= ( !$user->isAnon() && $this->config->get( Config::ALLOW_ADDING_PEOPLE ) )
+				|| $user->isAllowed( Right::ADD_PAGE_TO_ANY_WATCHLIST );
 		$this->allowRemovingPeople
-			= ( !$user->isAnon() && $conf->get( "allowaddingpeople" ) )
-			|| $user->isAllowed( "removepagefromanywatchlist" );
+				= ( !$user->isAnon() && $this->config->get( Config::ALLOW_ADDING_PEOPLE ) )
+				|| $user->isAllowed( Right::REMOVE_PAGE_FROM_ANY_WATCHLIST );
 		$this->showWatchingUsers
-			= ( !$user->isAnon() && $conf->get( "showwatchingusers" ) )
-			|| $user->isAllowed( "seepagewatchers" );
-		$this->wiw = new Manager( $this->getUser(), $conf );
-
-		return true;
+			= ( !$user->isAnon() && $this->config->get( Config::SHOW_WATCHING_USERS ) )
+			|| $user->isAllowed( Right::SEE_PAGE_WATCHERS );
+		$this->wiw = new Manager( $this->getUser(), $this->config );
+		$this->userFactory = $userFactory;
 	}
 
 	/**
@@ -101,9 +105,9 @@ class SpecialPage extends \SpecialPage {
 			"whoiswatching-permission-denied",
 			[ $this->getLanguage()->commaList(
 				[
-					"addpagetoanywatchlist",
-					"removepagefromanywatchlist",
-					"seepagewatchers"
+					Right::ADD_PAGE_TO_ANY_WATCHLIST,
+					Right::REMOVE_PAGE_FROM_ANY_WATCHLIST,
+					Right::SEE_PAGE_WATCHERS
 				]
 			) ]
 		);
@@ -136,7 +140,11 @@ class SpecialPage extends \SpecialPage {
 		} else {
 			$this->targetPage = Title::newFromText( $par );
 		}
-		$this->targetUser = User::newFromName( $req->getVal( 'user' ) );
+		$this->targetUser = null;
+		$targetUser = $req->getVal( 'user' );
+		if ( $targetUser ) {
+			$this->targetUser = $this->userFactory->newFromName( $targetUser, UserRigorOptions::RIGOR_NONE );
+		}
 
 		if ( !$this->targetPage ) {
 			throw new ErrorPageError(
@@ -181,8 +189,9 @@ class SpecialPage extends \SpecialPage {
 		];
 
 		$htmlForm = HTMLForm::factory( 'ooui', $formDescriptor, $this->getContext() );
+		$csrfToken = new CsrfTokenSet( $this->getRequest() );
 		$htmlForm
-			->addHiddenField( 'addToken', $this->getUser()->getEditToken( __CLASS__ ) )
+			->addHiddenField( self::TOKEN_FIELD_NAME, $csrfToken->getToken( __CLASS__ ) )
 			->setAction( $this->getPageTitle( $this->targetPage )->getLocalUrl() )
 			->setId( 'mw-whoiswatching-form1' )
 			->setMethod( 'post' )
@@ -192,8 +201,8 @@ class SpecialPage extends \SpecialPage {
 			->prepareForm()
 			->displayForm( false );
 
-		if ( $this->targetUser ) {
-			$this->maybeAddWatcher();
+		if ( $this->targetUser && $this->getRequest()->wasPosted() ) {
+			$this->maybeAddWatcher( $this->getRequest() );
 		}
 		return false;
 	}
@@ -204,25 +213,21 @@ class SpecialPage extends \SpecialPage {
 	 * @return bool
 	 * @throws ErrorPageError
 	 */
-	private function maybeAddWatcher() {
-		$req = $this->getRequest();
-		$token = $req->getVal( 'addToken' );
-		if ( $req->wasPosted() && $token ) {
-			if ( $this->getUser()->matchEditToken( $token, __CLASS__ ) ) {
-				$title = $this->targetPage;
-				$this->getOutput()->redirect(
-					$this->getPageTitle( $title )->getLocalUrl()
-				);
-				return $this->wiw->addWatch(
-					$title, $this->targetUser
-				);
-			}
-
-			throw new ErrorPageError(
-				'sessionfailure-title', 'sessionfailure'
+	private function maybeAddWatcher( WebRequest $req, ) {
+		$csrfToken = new CsrfTokenSet( $req );
+		if ( $csrfToken->matchTokenField( self::TOKEN_FIELD_NAME, __CLASS__ ) ) {
+			$title = $this->targetPage;
+			$this->getOutput()->redirect(
+				$this->getPageTitle( $title )->getLocalUrl()
+			);
+			return $this->wiw->addWatch(
+				$title, $this->targetUser
 			);
 		}
-		return true;
+
+		throw new ErrorPageError(
+			'sessionfailure-title', 'sessionfailure'
+		);
 	}
 
 	/**
@@ -246,7 +251,7 @@ class SpecialPage extends \SpecialPage {
 				'label-message' => 'whoiswatching-title',
 				'size' => 40,
 				'id' => 'whoiswatching-target',
-				'value' => str_replace( '_', ' ', $this->targetPage ),
+				'value' => str_replace( '_', ' ', $this->targetPage ?? "" ),
 				'cssclass' => 'mw-searchInput',
 				'required' => true
 			]
@@ -271,13 +276,13 @@ class SpecialPage extends \SpecialPage {
 	 *
 	 * @param array $formData posted data
 	 */
-	private function maybeRemoveWatcher( array $formData ) {
+	private function maybeRemoveWatcher( array $formData, HTMLForm $form ) {
 		$redir = false;
 		foreach ( $formData as $watcherID => $remove ) {
 			if ( $remove ) {
 				$this->wiw->removeWatch(
 					$this->targetPage,
-					User::newFromId( $watcherID )
+					$this->userFactory->newFromId( $watcherID )
 				);
 				$redir = true;
 			}
@@ -313,11 +318,11 @@ class SpecialPage extends \SpecialPage {
 			  'wl_title' => $this->targetPage->getDBkey() ], __METHOD__
 		);
 		foreach ( $res as $row ) {
-			$u = User::newFromID( $row->wl_user );
-			$key = $u->mId;
-			$display = $u->getRealName();
-			if ( ( $this->nameType == 'UserName' ) || !$u->getRealName() ) {
-				$display = $u->getName();
+			$user = $this->userFactory->newFromID( $row->wl_user );
+			$key = $user->mId;
+			$display = $user->getRealName();
+			if ( ( $this->nameType == 'UserName' ) || !$user->getRealName() ) {
+				$display = $user->getName();
 			}
 			$watchingusers[$key] = $display;
 		}
@@ -333,7 +338,7 @@ class SpecialPage extends \SpecialPage {
 			$form->setSubmitText( $this->msg( 'whoiswatching-deluser' )->text() );
 			$form->setSubmitCallback(
 				function ( $formData, $form ) {
-					return $this->maybeRemoveWatcher( $formData );
+					return $this->maybeRemoveWatcher( $formData, $form );
 				} );
 			$form->setSubmitDestructive();
 			$form->show();
