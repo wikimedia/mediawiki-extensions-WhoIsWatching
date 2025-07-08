@@ -20,15 +20,15 @@
 
 namespace MediaWiki\Extension\WhoIsWatching;
 
-use EchoEvent;
-use GlobalVarConfig;
+use MediaWiki\Config\GlobalVarConfig;
+use MediaWiki\Context\RequestContext;
+use MediaWiki\Extension\Notifications\Model\Event;
 use MediaWiki\Html\Html;
 use MediaWiki\MediaWikiServices;
+use MediaWiki\Parser\Parser;
 use MediaWiki\Title\Title;
-use Parser;
-use RequestContext;
+use MediaWiki\User\User;
 use Skin;
-use User;
 
 class Hook implements
 	\MediaWiki\Extension\Notifications\Hooks\BeforeCreateEchoEventHook,
@@ -186,10 +186,10 @@ class Hook implements
 	}
 
 	/**
-	 * @param EchoEvent $event to bundle
+	 * @param Event $event to bundle
 	 * @param string &$bundleString to use
 	 */
-	public function onEchoGetBundleRules( EchoEvent $event, string &$bundleString ) {
+	public function onEchoGetBundleRules( Event $event, string &$bundleString ) {
 		wfDebugLog( 'WhoIsWatching', __METHOD__ );
 		switch ( $event->getType() ) {
 			case 'whoiswatching-add':
@@ -202,10 +202,10 @@ class Hook implements
 	/**
 	 * Get users that should be notified for this event.
 	 *
-	 * @param EchoEvent $event to be looked at
+	 * @param Event $event to be looked at
 	 * @return array
 	 */
-	public static function userLocater( EchoEvent $event ) {
+	public static function userLocater( Event $event ) {
 		wfDebugLog( 'WhoIsWatching', __METHOD__ );
 		$extra = $event->getExtra();
 		$user = User::newFromID( $extra['userID'] );

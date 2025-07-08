@@ -24,11 +24,11 @@
 namespace MediaWiki\Extension\WhoIsWatching;
 
 use MediaWiki\MediaWikiServices;
+use MediaWiki\Message\Message;
 use MediaWiki\Title\Title;
-use Message;
 use Wikimedia\Timestamp\TimestampException;
 
-class EchoEventPresentationModel extends \EchoEventPresentationModel {
+class EchoEventPresentationModel extends \MediaWiki\Extension\Notifications\Formatters\EchoEventPresentationModel {
 	/**
 	 * Tell the caller if this event can be rendered.
 	 *

@@ -23,13 +23,13 @@
 namespace MediaWiki\Extension\WhoIsWatching;
 
 use ErrorPageError;
-use GlobalVarConfig;
-use HTMLForm;
+use MediaWiki\Config\GlobalVarConfig;
+use MediaWiki\HTMLForm\HTMLForm;
 use MediaWiki\MediaWikiServices;
 use MediaWiki\Title\Title;
-use User;
+use MediaWiki\User\User;
 
-class SpecialPage extends \SpecialPage {
+class SpecialPage extends \MediaWiki\SpecialPage\SpecialPage {
 
 	private $targetPage = null;
 	private $targetUser = null;

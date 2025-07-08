@@ -20,11 +20,11 @@
  */
 namespace MediaWiki\Extension\WhoIsWatching;
 
-use Config;
-use EchoEvent;
+use MediaWiki\Config\Config;
+use MediaWiki\Extension\Notifications\Model\Event;
 use MediaWiki\MediaWikiServices;
 use MediaWiki\Title\Title;
-use User;
+use MediaWiki\User\User;
 
 class Manager {
 
@@ -72,7 +72,7 @@ class Manager {
 		wfDebugLog( 'WhoIsWatching', "Called on $action" );
 		if ( $type[$action] ) {
 			wfDebugLog( 'WhoIsWatching', "Creating event for $action/$title/$user/{$this->agent}" );
-			EchoEvent::create( [
+			Event::create( [
 				'type' => 'whoiswatching-' . $action,
 				'title' => $title,
 				'agent' => $this->agent,
