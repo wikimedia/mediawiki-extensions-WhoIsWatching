@@ -260,12 +260,17 @@ $specialPageAliases['yi'] = [
 	'WhoIsWatching' => [ 'ווער_פאסט_אויף' ],
 ];
 
-/** Simplified Chinese (中文（简体）‎) */
+/** Chinese (中文) */
+$specialPageAliases['zh'] = [
+	'WhoIsWatching' => [ 'WhoIsWatching' ],
+];
+
+/** Simplified Chinese (中文（简体）) */
 $specialPageAliases['zh-hans'] = [
 	'WhoIsWatching' => [ '谁在监视' ],
 ];
 
-/** Traditional Chinese (中文（繁體）‎) */
+/** Traditional Chinese (中文（繁體）) */
 $specialPageAliases['zh-hant'] = [
 	'WhoIsWatching' => [ '誰在監視' ],
 ];
