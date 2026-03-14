@@ -63,9 +63,9 @@ class EchoEventPresentationModel extends \MediaWiki\Extension\Notifications\Form
 			$msg->params( $this->getViewingUserForGender() );
 		} else {
 			$msg = $this->msg( 'whoiswatching-notification-' . $this->event->getType() . '-header' );
-			$msg->params( $this->getPageTitle() );
+			$msg->params( $this->getPageTitle()->getPrefixedText() );
 			$msg->params( $this->getTruncatedTitleText( $this->getPageTitle(), true ) );
-			$msg->params( $this->event->getTitle() );
+			$msg->params( $this->event->getTitle()->getPrefixedText() );
 			$msg->params( $this->getTruncatedTitleText( $this->event->getTitle(), true ) );
 		}
 		return $msg;
@@ -93,9 +93,9 @@ class EchoEventPresentationModel extends \MediaWiki\Extension\Notifications\Form
 		$msg = $this->getMessageWithAgent(
 			'whoiswatching-notification-' . $this->event->getType() . '-summary'
 		);
-		$msg->params( $this->getPageTitle() );
+		$msg->params( $this->getPageTitle()->getPrefixedText() );
 		$msg->params( $this->getTruncatedTitleText( $this->getPageTitle(), true ) );
-		$msg->params( $this->event->getTitle() );
+		$msg->params( $this->event->getTitle()->getPrefixedText() );
 		$msg->params( $this->getTruncatedTitleText( $this->event->getTitle(), true ) );
 		return $msg;
 	}
@@ -110,8 +110,8 @@ class EchoEventPresentationModel extends \MediaWiki\Extension\Notifications\Form
 		$msg = $this->getMessageWithAgent(
 			'whoiswatching-notification-' . $this->event->getType() . '-body'
 		);
-		$msg->params( $this->getPageTitle() );
-		$msg->params( $this->event->getTitle() );
+		$msg->params( $this->getPageTitle()->getPrefixedText() );
+		$msg->params( $this->event->getTitle()->getPrefixedText() );
 		return $msg;
 	}
 
@@ -133,7 +133,7 @@ class EchoEventPresentationModel extends \MediaWiki\Extension\Notifications\Form
 		wfDebugLog( 'WhoIsWatching', __METHOD__ );
 		$title = $this->event->getTitle();
 		$msg = $this->msg( 'whoiswatching-notification-link' );
-		$msg->params( $title );
+		$msg->params( $title->getPrefixedText() );
 		return [
 			'url' => $title->getFullURL(),
 			'label' => $title->getPrefixedText()

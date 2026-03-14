@@ -132,7 +132,7 @@ class Hook implements
 		if ( $count > 0 || ( $showIfZero && $count == 0 ) ) {
 			$lang = RequestContext::getMain()->getLanguage();
 			return Html::rawElement( "span", [ 'class' => 'plainlinks' ], wfMessage(
-				'whoiswatching_users_pageview', $lang->formatNum( (int)$count ), $title
+				'whoiswatching_users_pageview', $lang->formatNum( (int)$count ), $title->getPrefixedText()
 			)->parse() );
 		}
 

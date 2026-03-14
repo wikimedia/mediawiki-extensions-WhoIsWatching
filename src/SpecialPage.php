@@ -230,7 +230,7 @@ class SpecialPage extends \MediaWiki\SpecialPage\SpecialPage {
 		$target = Title::newFromText( $this->getRequest()->getVal( "target" ) );
 		if ( $target ) {
 			$this->getOutput()->redirect(
-				$this->getPageTitle( $target )->getLocalUrl()
+				$this->getPageTitle( $target->getPrefixedText() )->getLocalUrl()
 			);
 			return false;
 		}
@@ -297,7 +297,7 @@ class SpecialPage extends \MediaWiki\SpecialPage\SpecialPage {
 		$out = $this->getOutput();
 		$out->addWikiTextAsInterface(
 			"== " . wfMessage( 'specialwhoiswatchingpage' )
-			->params( $this->targetPage )->plain() . " =="
+			->params( $this->targetPage->getPrefixedText() )->plain() . " =="
 		);
 
 		$dbr = MediaWikiServices::getInstance()->getDBLoadBalancer()->getConnection( DB_REPLICA );
