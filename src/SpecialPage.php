@@ -335,7 +335,7 @@ class SpecialPage extends \MediaWiki\SpecialPage\SpecialPage {
 		} elseif ( $this->showWatchingUsers ) {
 			foreach ( $watchingusers as $link ) {
 				$out->addWikiTextAsInterface(
-					$this->msg( 'whoiswatching-list-user' )->params( $link )
+					$this->msg( 'whoiswatching-list-user' )->params( $link )->text()
 				);
 			}
 		}

@@ -97,7 +97,7 @@ class EchoEventPresentationModel extends \MediaWiki\Extension\Notifications\Form
 		$msg->params( $this->getTruncatedTitleText( $this->getPageTitle(), true ) );
 		$msg->params( $this->event->getTitle()->getPrefixedText() );
 		$msg->params( $this->getTruncatedTitleText( $this->event->getTitle(), true ) );
-		return $msg;
+		return $msg->parse();
 	}
 
 	/**
