@@ -59,7 +59,7 @@ class Hook implements
 			}
 		}
 
-		$ret = self::renderWhoIsWatchingLink( $title );
+		$ret = $this->renderWhoIsWatchingLink( $title );
 
 		if ( $ret != false && $group === 'info' ) {
 			$footerLinks['number-of-watching-users'] = $ret;
@@ -74,9 +74,7 @@ class Hook implements
 	 * @param Parser $parser current parser
 	 */
 	public function onParserFirstCallInit( $parser ) {
-		$parser->setFunctionHook(
-			'whoiswatching', 'MediaWiki\\Extension\\WhoIsWatching\\Hook::whoIsWatching'
-		);
+		$parser->setFunctionHook( 'whoiswatching', $this->whoIsWatching( ... ) );
 	}
 
 	/**
@@ -86,9 +84,9 @@ class Hook implements
 	 *
 	 * @SuppressWarnings(PHPMD.UnusedFormalParameter)
 	 */
-	public static function whoIsWatching( Parser $parser, $pageTitle ) {
+	public function whoIsWatching( Parser $parser, $pageTitle ) {
 		$title = Title::newFromDBKey( $pageTitle );
-		$output = self::renderWhoIsWatchingLink( $title );
+		$output = $this->renderWhoIsWatchingLink( $title );
 
 		return [ $output, 'noparse' => false, 'isHTML' => true ];
 	}
@@ -100,7 +98,7 @@ class Hook implements
 	 * @param GlobalVarConfig $conf configuration
 	 * @return int|null number of watching users
 	 */
-	public static function getNumbersOfWhoIsWatching( Title $title, GlobalVarConfig $conf ) {
+	public function getNumbersOfWhoIsWatching( Title $title, GlobalVarConfig $conf ) {
 		$user = RequestContext::getMain()->getUser();
 		$showWatchingUsers = $conf->get( "showwatchingusers" )
 						   || $user->isAllowed( 'seepagewatchers' );
@@ -124,10 +122,10 @@ class Hook implements
 	 * @param Title $title we want
 	 * @return string|false
 	 */
-	public static function renderWhoIsWatchingLink( Title $title ) {
+	public function renderWhoIsWatchingLink( Title $title ) {
 		$conf = new GlobalVarConfig( "whoiswatching_" );
 		$showIfZero = $conf->get( "showifzero" );
-		$count = self::getNumbersOfWhoIsWatching( $title, $conf );
+		$count = $this->getNumbersOfWhoIsWatching( $title, $conf );
 
 		if ( $count > 0 || ( $showIfZero && $count == 0 ) ) {
 			$lang = RequestContext::getMain()->getLanguage();
@@ -162,8 +160,8 @@ class Hook implements
 			'title-message' => 'whoiswatching-add-title',
 			'category' => 'whoiswatching',
 			'group' => 'neutral',
-			'user-locators' => [ 'MediaWiki\\Extension\\WhoIsWatching\\Hook::userLocater' ],
-			'presentation-model' => 'MediaWiki\\Extension\\WhoIsWatching\\EchoEventPresentationModel',
+			'user-locators' => [ $this->userLocater( ... ) ],
+			'presentation-model' => EchoEventPresentationModel::class,
 		];
 
 		$notifications['whoiswatching-remove'] = [
@@ -175,8 +173,8 @@ class Hook implements
 			'title-message' => 'whoiswatching-remove-title',
 			'category' => 'whoiswatching',
 			'group' => 'neutral',
-			'user-locators' => [ 'MediaWiki\\Extension\\WhoIsWatching\\Hook::userLocater' ],
-			'presentation-model' => 'MediaWiki\\Extension\\WhoIsWatching\\EchoEventPresentationModel',
+			'user-locators' => [ $this->userLocater( ... ) ],
+			'presentation-model' => EchoEventPresentationModel::class,
 		];
 
 		$notificationCategories['whoiswatching'] = [
@@ -205,7 +203,7 @@ class Hook implements
 	 * @param Event $event to be looked at
 	 * @return array
 	 */
-	public static function userLocater( Event $event ) {
+	public function userLocater( Event $event ) {
 		wfDebugLog( 'WhoIsWatching', __METHOD__ );
 		$extra = $event->getExtra();
 		$user = User::newFromID( $extra['userID'] );
