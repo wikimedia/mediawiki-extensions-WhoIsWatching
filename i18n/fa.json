@@ -6,7 +6,8 @@
 			"Ebrahim",
 			"Ebraminio",
 			"FarsiNevis",
-			"Huji"
+			"Huji",
+			"LordProfo"
 		]
 	},
 	"right-addpagetoanywatchlist": "[[Special:WhoIsWatching|افزودن صفحه‌هایی به فهرست پی‌گیری‌های کاربران دیگر]]",
@@ -25,7 +26,7 @@
 	"specialwhoiswatchingaddbtn": "افزودن کاربران انتخاب‌شده",
 	"whoiswatching_users_pageview": "{{fullurl:Special:WhoIsWatching/$2}} $1 کاربر پی‌گیری‌کننده",
 	"whoiswatching-not-possible-title": "پیگیری صفحه ممکن نیست",
-	"whoiswatching-not-possible": "پی‌گیری صفحهٔ [[$1]] امکان‌پذیر نیست.",
+	"whoiswatching-not-possible": "پیگیری صفحهٔ [[$1]] امکان‌پذیر نیست.",
 	"whoiswatching-usage-title": "نحوهٔ استفاده از این صفحه",
 	"whoiswatching-user-editname": "یک نام کاربری وارد کنید:",
 	"whoiswatching-adduser": "افزودن کاربر",
