@@ -7,7 +7,8 @@
 			"Ebraminio",
 			"FarsiNevis",
 			"Huji",
-			"LordProfo"
+			"LordProfo",
+			"LProfo"
 		]
 	},
 	"right-addpagetoanywatchlist": "[[Special:WhoIsWatching|افزودن صفحه‌هایی به فهرست پی‌گیری‌های کاربران دیگر]]",
@@ -15,7 +16,7 @@
 	"right-removepagefromanywatchlist": "[[Special:WhoIsWatching|حذف صفحه‌هایی از فهرست پی‌گیری‌های کاربران دیگر]]",
 	"action-removepagefromanywatchlist": "حذف صفحه‌هایی از فهرست پی‌گیری‌های کاربران دیگر",
 	"right-seepagewatchers": "ببینید [[Special:WhoIsWatching|کدام کاربران در حال پیگیری یک صفحه‌اند]]",
-	"action-seepagewatchers": "ببینید کدام کاربران در حال پی‌گیری یک صفحه‌اند",
+	"action-seepagewatchers": "ببینید کدام کاربران در حال پیگیری یک صفحه‌اند",
 	"echo-category-title-whoiswatching": "تغییرات فهرست پیگیری‌ من",
 	"echo-pref-tooltip-whoiswatching": "وقتی شخص دیگری صفحه‌ای را به فهرست پیگیری‌ام می‌افزاید، مرا آگاه کن.",
 	"whoiswatching": "چه کسی صفحهٔ ویکی را مشاهده می‌کند",
