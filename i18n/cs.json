@@ -5,6 +5,7 @@
 			"Mormegil"
 		]
 	},
+	"echo-category-title-whoiswatching": "změny v mém seznamu sledovaných stránek",
 	"whoiswatching": "Kdo sleduje wiki stránku",
 	"whoiswatching-desc": "Poskytuje seznam uživatelů, kteří sledují určitou wiki stránku",
 	"specialwhoiswatchingusage": "Tuto speciální stránku není možné používat samostatně.",
